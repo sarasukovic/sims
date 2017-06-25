@@ -4,6 +4,8 @@ public class Main {
     	//lala
     	System.out.println("SIMS");
     	System.out.println("cao saro");
+    	System.out.println("opet");
+    	
     }
 	
 	
