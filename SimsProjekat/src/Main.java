@@ -5,6 +5,7 @@ public class Main {
     	System.out.println("SIMS");
     	System.out.println("cao saro");
     	System.out.println("opet");
+    	System.out.println("cao boksi");
     	//aaaaA
     }
 	
