@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class Editor extends JFrame {
     private MenuBar menu;	
-	
+    private ToolBar toolb;	
 	
 
 	
@@ -27,7 +27,9 @@ public class Editor extends JFrame {
 		
 
 		menu = new MenuBar(this);
+		toolb = new ToolBar(this);
 		setJMenuBar(menu);
+	    this.add(toolb);
 		setVisible(true);
 	}
 	
