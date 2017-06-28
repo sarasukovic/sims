@@ -5,6 +5,7 @@ public class MenuBar extends JMenuBar {
 	protected Editor parent;
 	
 	
+	
 	public MenuBar(final Editor parent) {
 		this.parent = parent;
 		JMenu file = new JMenu("File");
