@@ -3,16 +3,17 @@
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridBagLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JToolBar;
 
 
 
-public class ToolBar extends JPanel {
-	
+public class ToolBar extends JToolBar {
 	public JButton capacitor = new JButton(new ImageIcon("capacitor.png"));
 	public JButton currentSrc = new JButton(new ImageIcon("currentSrc.png"));
 	public JButton ground= new JButton(new ImageIcon("ground.png"));
@@ -27,7 +28,7 @@ public class ToolBar extends JPanel {
 	protected Editor editor;
 	
 	private JButton addImageButton(JButton b) {
-		Dimension d = new Dimension(36, 36);
+		Dimension d = new Dimension(30, 30);
 		b.setPreferredSize(d);
 		b.setMinimumSize(d);
 		b.setMaximumSize(d);
@@ -46,29 +47,27 @@ public class ToolBar extends JPanel {
 	public ToolBar(Editor editor) {
 		
 		this.editor = editor;
+		setOrientation(HORIZONTAL);
+		setFloatable(false);
 		
-		GridBagLayout l = new GridBagLayout();
-		
-		setLayout(l);
-		
-		
-		JPanel panel = new JPanel();
-		
-		add(panel);
-		
-		panel = new JPanel();
-		panel.add(addImageButton(capacitor));
-		panel.add(addImageButton(currentSrc));
-		panel.add(addImageButton(ground));
-		panel.add(addImageButton(inductor));
-		panel.add(addImageButton(resistor));
-		panel.add(addImageButton(voltageSrc));
-		add(panel);
-		
-		
-	
-		
-		
+		add(addImageButton(capacitor));
+		addSeparator();
+		add(addImageButton(currentSrc));
+		addSeparator();
+		add(addImageButton(ground));
+		addSeparator();
+		add(addImageButton(inductor));
+		addSeparator();
+		add(addImageButton(resistor));
+		addSeparator();
+		add(addImageButton(voltageSrc));
+		addSeparator();
+		JCheckBox ser = new JCheckBox("Serial link");
+		add(ser);
+		addSeparator();
+		JCheckBox par = new JCheckBox("Parallel link");
+		add(par);
+		addSeparator();
 	}
 
 	

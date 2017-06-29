@@ -17,6 +17,8 @@ public class Editor extends JFrame {
 		setMinimumSize(new Dimension(400, 300));
 		setLocationRelativeTo(null);
 		setTitle("ADMS Editor");
+		ImageIcon img = new ImageIcon("icon.jpg");
+		setIconImage(img.getImage());
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -29,8 +31,10 @@ public class Editor extends JFrame {
 		menu = new MenuBar(this);
 		toolb = new ToolBar(this);
 		setJMenuBar(menu);
-	    this.add(toolb);
+		
+	    this.add(toolb,BorderLayout.NORTH);
 		setVisible(true);
+
 	}
 	
 	
