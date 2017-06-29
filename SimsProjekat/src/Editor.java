@@ -1,15 +1,20 @@
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 
 public class Editor extends JFrame {
     private MenuBar menu;	
     private ToolBar toolb;	
-	
 
 	
 	public Editor() {
@@ -33,6 +38,12 @@ public class Editor extends JFrame {
 		setJMenuBar(menu);
 		
 	    this.add(toolb,BorderLayout.NORTH);
+	    
+	    // drawing area
+	    JPanel panel = new JPanel();   
+        panel.setBackground(Color.white);
+        this.add(panel);
+	    
 		setVisible(true);
 
 	}

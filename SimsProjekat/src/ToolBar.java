@@ -1,6 +1,5 @@
 
 
-import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.util.ArrayList;
@@ -22,8 +21,8 @@ public class ToolBar extends JToolBar {
 	public JButton voltageSrc = new JButton(new ImageIcon("voltageSrc.png"));
 	protected List<JButton> buttons = new ArrayList<JButton>();
 
-	protected Canvas newCanvas = new Canvas();
-	protected Canvas strokeColor = new Canvas();
+	/*protected Canvas newCanvas = new Canvas();
+	protected Canvas strokeColor = new Canvas();*/
 	
 	protected Editor editor;
 	
