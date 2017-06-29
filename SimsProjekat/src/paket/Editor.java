@@ -1,3 +1,4 @@
+package paket;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -38,11 +39,6 @@ public class Editor extends JFrame {
 		setJMenuBar(menu);
 		
 	    this.add(toolb,BorderLayout.NORTH);
-	    
-	    // drawing area
-	    JPanel panel = new JPanel();   
-        panel.setBackground(Color.white);
-        this.add(panel);
 	    
 		setVisible(true);
 
