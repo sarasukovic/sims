@@ -3,6 +3,8 @@ package paket;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,6 +70,22 @@ public class ToolBar extends JToolBar {
 		JCheckBox par = new JCheckBox("Parallel link");
 		add(par);
 		addSeparator();
+	
+		ser.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Serial connection");
+			}
+		});
+		
+		par.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Parallel connection");
+			}
+		});
 	}
 
 	
