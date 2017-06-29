@@ -34,6 +34,7 @@ public class MenuBar extends JMenuBar {
 		file.add(saveAs);
 		file.add(close);
 		add(file);
+		
 		newFile.addActionListener(new ActionListener(){
 			
 			@Override
@@ -44,6 +45,30 @@ public class MenuBar extends JMenuBar {
                 editor.add(panel);
                 editor.setVisible(true);
             }
+		});
+		
+		open.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println("Open file from disk");
+			}
+		});
+		
+		save.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println("Save file");				
+			}
+		});
+		
+		saveAs.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent ARG0) {
+				System.out.println("Save as");
+			}
 		});
 	
 		close.addActionListener(new ActionListener() {
