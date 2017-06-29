@@ -2,6 +2,8 @@ package paket;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -24,14 +26,17 @@ public class MenuBar extends JMenuBar {
 		JMenuItem open = new JMenuItem("Open");
 		JMenuItem save = new JMenuItem("Save");
 		JMenuItem saveAs = new JMenuItem("Save as");
-		
+		JMenuItem close = new JMenuItem("Close");
 		
 		file.add(newFile);
 		file.add(open);
 		file.add(save);
 		file.add(saveAs);
+		file.add(close);
 		add(file);
 		newFile.addActionListener(new ActionListener(){
+			
+			@Override
             public void actionPerformed(ActionEvent arg0) {
             	// drawing area
         	    JPanel panel = new JPanel();   
@@ -39,6 +44,15 @@ public class MenuBar extends JMenuBar {
                 editor.add(panel);
                 editor.setVisible(true);
             }
+		});
+	
+		close.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(editor.confirm("Are you sure you want to close ?"))
+					System.exit(0);
+			}
 		});
 	}
 };

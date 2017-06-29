@@ -1,21 +1,20 @@
 package paket;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 
 public class Editor extends JFrame {
     private MenuBar menu;	
-    private ToolBar toolb;	
+    private ToolBar toolb;
+    protected File opened;
 
 	
 	public Editor() {
