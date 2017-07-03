@@ -106,7 +106,7 @@ public class Editor extends JFrame implements ActionListener{
 	
 	public boolean checkPosition(Element e){
 		for(Element el : panel.getElements()){
-			if((el.getX() == e.getX()) && (el.getY() == e.getY())){
+			if(e1.rect.contains(e.getX(), e.getY())){
 				return true;
 			}
 		}
@@ -149,9 +149,11 @@ public class Editor extends JFrame implements ActionListener{
      	    	
      	    	e1.setX((int)panel.getMousePosition().getX());
      	    	e1.setY((int)panel.getMousePosition().getY());
+     	    	e1.rect.x = e1.getX();
+     	    	e1.rect.y = e1.getY();
      	    	
      	    	if(checkPosition(e1) == false){
-     	    		
+                      	    		
      	    		System.out.println("EVO ME");
     	    		group.getElements().add(e1);
     	    		panel.getElements().add(e1);

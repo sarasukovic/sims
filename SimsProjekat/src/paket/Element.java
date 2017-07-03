@@ -1,5 +1,6 @@
 package paket;
 
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +15,7 @@ public class Element {
 	private int y;
 	private int heigth;
 	private int width;
+	public Rectangle rect;
 	
 	public int getX() {
 		return x;
@@ -47,6 +49,7 @@ public class Element {
 	}
 	private BufferedImage image;
 	public Element() {
+		
 	}
 	
 	
@@ -54,6 +57,7 @@ public class Element {
 		this.image = image;
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
+		this.rect = new Rectangle(0, 0, image.getWidth(), image.getHeight());
 	}
 	public Element(String path) {
 		try {
@@ -64,7 +68,7 @@ public class Element {
 		   }
 		this.heigth = this.image.getHeight();
 		this.width =this.image.getWidth();
-	
+		this.rect = new Rectangle(0, 0, image.getWidth(), image.getHeight());
 	}
 	
 	public Element(int x, int y, BufferedImage image) {
@@ -74,6 +78,7 @@ public class Element {
 		this.heigth = image.getHeight();
 		this.width = image.getWidth();
 		this.image = image;
+		this.rect = new Rectangle(x, y, image.getWidth(), image.getHeight());
 	}
 	public Element(int x, int y, String path) {
 		super();
@@ -87,6 +92,7 @@ public class Element {
 		   }
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
+		this.rect = new Rectangle(x, y, image.getWidth(), image.getHeight());
 	
 	}
 
