@@ -3,9 +3,6 @@ package paket;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.MouseInfo;
-import java.awt.Point;
-import java.awt.PointerInfo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -18,16 +15,29 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 
-public class Editor extends JFrame {
+public class Editor extends JFrame implements ActionListener{
 	public final int element_size = 20;
 	public final int line_size = 20;
     private MenuBar menu;	
     private ToolBar toolb;	
     private Panel panel;
-    private int x;
-    private int y;
+    private Element e1;
 	private GroupOfElements group;
+	private ActionEvent event;
+	
+	private enum element{
+		
+		GROUND,
+		CAPACITOR,
+		VOLTAGESRC,
+		CURRENTSRC,
+		INDUCTOR,
+		RESISTOR
+	};
+	
 	public Editor() {
+	
+		
 		group = new GroupOfElements();
 		setBounds(0, 0, 800, 600);
 		setMinimumSize(new Dimension(400, 300));
@@ -42,179 +52,30 @@ public class Editor extends JFrame {
 					System.exit(0);
 			}
 		});
+		
+		panel = new Panel(); 
+        panel.setBackground(Color.white);
 		menu = new MenuBar(this);
 		toolb = new ToolBar(this);
 		setJMenuBar(menu);		
 	    this.add(toolb,BorderLayout.NORTH);
 	    
-	    
-	    // drawing area
-	    panel = new Panel(); 
-        panel.setBackground(Color.white);
+	    toolb.ground.setActionCommand(element.GROUND.name());
+        toolb.capacitor.setActionCommand(element.CAPACITOR.name());
+        toolb.voltageSrc.setActionCommand(element.VOLTAGESRC.name());
+        toolb.currentSrc.setActionCommand(element.CURRENTSRC.name());
+        toolb.inductor.setActionCommand(element.INDUCTOR.name());
+        toolb.resistor.setActionCommand(element.RESISTOR.name());
         
-        toolb.ground.addActionListener(new ActionListener() {
-        	Element e1;
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	addMouseListener(new MouseAdapter() {
-            	    @Override
-            	    public void mouseClicked(MouseEvent e) {
-            	    	e1 = new Element("ground.png");
-	            		group.setHeigth(e1.getHeigth());
-	         	    	group.setWidth(e1.getWidth());
-	         	    	
-	         	    	e1.setX((int)panel.getMousePosition().getX());
-	         	    	e1.setY((int)panel.getMousePosition().getY());
-	         	    	
-	         	    	group.getElements().add(e1);
-	            	    panel.getElements().add(e1);
-	            	    panel.repaint();
-		        	    
-	         	    	updateGroupSize(e1);    
-            	    }
-            	});
-            	
-	            }
-        });
-        
-        toolb.capacitor.addActionListener(new ActionListener() {
-        	Element e1;
-        	
- 	    	
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	addMouseListener(new MouseAdapter() {
-            	    @Override
-            	    public void mouseClicked(MouseEvent e) {
-            	    	e1 = new Element("capacitor.png");
-	            		group.setHeigth(e1.getHeigth());
-	         	    	group.setWidth(e1.getWidth());
-	         	    	e1.setX((int)panel.getMousePosition().getX());
-	         	    	e1.setY((int)panel.getMousePosition().getY());
-	         	    	
-	         	    	group.getElements().add(e1);
-	            	    panel.getElements().add(e1);
-	            	    panel.repaint();
-		        	    
-	         	    	updateGroupSize(e1);
-            	    }
-            	});
-            }
-        });
-        
-        toolb.voltageSrc.addActionListener(new ActionListener() {
-        	Element e1;
-        	
- 	    	
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	addMouseListener(new MouseAdapter() {
-            	    @Override
-            	    public void mouseClicked(MouseEvent e) {
-            	    	e1 = new Element("voltageSrc.png");
-	            		group.setHeigth(e1.getHeigth());
-	         	    	group.setWidth(e1.getWidth());
-	         	    	e1.setX((int)panel.getMousePosition().getX());
-	         	    	e1.setY((int)panel.getMousePosition().getY());
-	         	    	
-	         	    	group.getElements().add(e1);
-	            	    panel.getElements().add(e1);
-	            	    panel.repaint();
-		        	    
-	         	    	updateGroupSize(e1);
-            	    }
-            	});
-            }
-        });
-        
-
-        toolb.currentSrc.addActionListener(new ActionListener() {
-        	Element e1;
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	addMouseListener(new MouseAdapter() {
-            	    @Override
-            	    public void mouseClicked(MouseEvent e) {
-            	    	e1 = new Element("currentSrc.png");
-	            		group.setHeigth(e1.getHeigth());
-	         	    	group.setWidth(e1.getWidth());
-	         	    	e1.setX((int)panel.getMousePosition().getX());
-	         	    	e1.setY((int)panel.getMousePosition().getY());
-	         	    	
-	         	    	group.getElements().add(e1);
-	            	    panel.getElements().add(e1);
-	            	    panel.repaint();
-		        	    
-	         	    	updateGroupSize(e1);
-            	    }
-            	});
-            	
-	            }
-        });
-        
-        toolb.inductor.addActionListener(new ActionListener() {
-        	Element e1;
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	addMouseListener(new MouseAdapter() {
-            	    @Override
-            	    public void mouseClicked(MouseEvent e) {
-            	    	e1 = new Element("inductor.png");
-	            		group.setHeigth(e1.getHeigth());
-	         	    	group.setWidth(e1.getWidth());
-	         	    	e1.setX((int)panel.getMousePosition().getX());
-	         	    	e1.setY((int)panel.getMousePosition().getY());
-	         	    	
-	         	    	group.getElements().add(e1);
-	            	    panel.getElements().add(e1);
-	            	    panel.repaint();
-		        	    
-	         	    	updateGroupSize(e1);
-            	    }
-            	});
-            	
-	            }
-        });
-        
-        toolb.resistor.addActionListener(new ActionListener() {
-        	Element e1;
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	addMouseListener(new MouseAdapter() {
-            	    @Override
-            	    public void mouseClicked(MouseEvent e) {
-            	    	e1 = new Element("resistor.png");
-	            		group.setHeigth(e1.getHeigth());
-	         	    	group.setWidth(e1.getWidth());
-	         	    	e1.setX((int)panel.getMousePosition().getX());
-	         	    	e1.setY((int)panel.getMousePosition().getY());
-	         	    	
-	         	    	group.getElements().add(e1);
-	            	    panel.getElements().add(e1);
-	            	    panel.repaint();
-		        	    
-	         	    	updateGroupSize(e1);
-	         	    	//updateGroupSize(e1);
-            	    }
-            	});
-            	
-	            }
-        });
-        
-
-             
-
-        
-
-        
-        
-        
-        
-        
+        toolb.ground.addActionListener(this);
+        toolb.capacitor.addActionListener(this);
+        toolb.voltageSrc.addActionListener(this);
+        toolb.currentSrc.addActionListener(this);
+        toolb.inductor.addActionListener(this);
+        toolb.resistor.addActionListener(this);
         
         this.add(panel);
 		setVisible(true);
-
 	}
 	
 	
@@ -241,6 +102,44 @@ public class Editor extends JFrame {
 	public boolean confirm(String message) {
 		return confirm(message, null);
 	}
-	
-	
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		event = e;
+		addMouseListener(new MouseAdapter() {
+    	    @Override
+    	    public void mouseClicked(MouseEvent e) {
+    	    	
+    	    	if(event.getActionCommand() == element.GROUND.name()){
+    	    		e1 = new Element("ground.png");
+    	    	}
+    	    	else if(event.getActionCommand() == element.CAPACITOR.name()){
+    	    		e1 = new Element("capacitor.png");
+    	    	}
+    	    	else if(event.getActionCommand() == element.VOLTAGESRC.name()){
+    	    		e1 = new Element("voltageSrc.png");
+    	    	}
+    	    	else if(event.getActionCommand() == element.CURRENTSRC.name()){
+    	    		e1 = new Element("currentSrc.png");
+    	    	}
+    	    	else if(event.getActionCommand() == element.INDUCTOR.name()){
+    	    		e1 = new Element("inductor.png");
+    	    	}
+    	    	else if(event.getActionCommand() == element.RESISTOR.name()){
+    	    		e1 = new Element("resistor.png");
+    	    	}
+    	    	
+        		group.setHeigth(e1.getHeigth());
+     	    	group.setWidth(e1.getWidth());
+     	    	
+     	    	e1.setX((int)panel.getMousePosition().getX());
+     	    	e1.setY((int)panel.getMousePosition().getY());
+     	    	
+     	    	group.getElements().add(e1);
+        	    panel.getElements().add(e1);
+        	    panel.repaint();
+    	    };
+		});
+	}
 }
