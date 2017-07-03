@@ -3,23 +3,19 @@ package paket;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.PointerInfo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-
-import java.io.File;
-import java.io.IOException;
-
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 
 public class Editor extends JFrame {
@@ -56,45 +52,172 @@ public class Editor extends JFrame {
 	    panel = new Panel(); 
         panel.setBackground(Color.white);
         
-        //akcija za ground dugme
-        //za ostale je bukvalno copy - paste samo naziv ikone drugi
-        //treba videti jel moze to nekako jednostavnije, da nemamo 6 istih stvari
-        //tj. jel moze jedan listener za svu dugmad u toolbar-u
-        //trebalo bi da moze al ja nisam skontala kako
         toolb.ground.addActionListener(new ActionListener() {
+        	Element e1;
             @Override
             public void actionPerformed(ActionEvent e) {
-            	//ako nisu oba ili ni jedan selektovani ili ako jos nista nije iscrtano
-            	if((!(toolb.ser.isSelected() && toolb.par.isSelected())
-            			&& !(!toolb.ser.isSelected() && !toolb.par.isSelected())) 
-            			|| panel.getElements().size() == 0){ //kraj if-a
-	            	Element e1;
-	            	//ako nema jos elemenata, grupu podesi po prvom
-	         	     if(panel.getElements().size() == 0){
-	         	    	e1 = new Element(0, 0,"ground.png");
-	         	    	group.setHeigth(e1.getHeigth());
+            	addMouseListener(new MouseAdapter() {
+            	    @Override
+            	    public void mouseClicked(MouseEvent e) {
+            	    	e1 = new Element("ground.png");
+            	        System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
+	            		group.setHeigth(e1.getHeigth());
 	         	    	group.setWidth(e1.getWidth());
-	         	    	group.setX(e1.getX());
-	         	    	group.setY(e1.getY());
-	         	     }
-	         	     else{
-	         	    	//inace se izracunava koordinata novog elementa 
-	         	    	//i podesava velicina grupe nakon njegovog dodavanja
-	         	    	e1 = new Element("ground.png");
-	         	    	e1.setX(newX(e1));
-	         	    	e1.setY(newY(e1));
-	         	    	updateGroupSize(e1);
-	         	     }
-	         	     //element dodajemo u grupu i u panelovu listu za crtanje
-	         	     group.getElements().add(e1);
-	        	     panel.getElements().add(e1);
-	        	     //crtanje
-	         	     panel.repaint();
+	         	    	
+	         	    	e1.setX((int)panel.getMousePosition().getX());
+	         	    	e1.setY((int)panel.getMousePosition().getY());
+	         	    	
+	         	    	group.getElements().add(e1);
+	            	    panel.getElements().add(e1);
+	            	    panel.repaint();
+		        	    
+	         	    	updateGroupSize(e1);    
+            	    }
+            	});
+            	
 	            }
+        });
+        
+        toolb.capacitor.addActionListener(new ActionListener() {
+        	Element e1;
+        	
+ 	    	
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	addMouseListener(new MouseAdapter() {
+            	    @Override
+            	    public void mouseClicked(MouseEvent e) {
+            	    	e1 = new Element("capacitor.png");
+	            		group.setHeigth(e1.getHeigth());
+	         	    	group.setWidth(e1.getWidth());
+	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
+	         	    	e1.setX((int)panel.getMousePosition().getX());
+	         	    	e1.setY((int)panel.getMousePosition().getY());
+	         	    	
+	         	    	group.getElements().add(e1);
+	            	    panel.getElements().add(e1);
+	            	    panel.repaint();
+		        	    
+	         	    	updateGroupSize(e1);
+            	    }
+            	});
             }
         });
+        
+        toolb.voltageSrc.addActionListener(new ActionListener() {
+        	Element e1;
+        	
+ 	    	
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	addMouseListener(new MouseAdapter() {
+            	    @Override
+            	    public void mouseClicked(MouseEvent e) {
+            	    	e1 = new Element("voltageSrc.png");
+	            		group.setHeigth(e1.getHeigth());
+	         	    	group.setWidth(e1.getWidth());
+	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
+	         	    	e1.setX((int)panel.getMousePosition().getX());
+	         	    	e1.setY((int)panel.getMousePosition().getY());
+	         	    	
+	         	    	group.getElements().add(e1);
+	            	    panel.getElements().add(e1);
+	            	    panel.repaint();
+		        	    
+	         	    	updateGroupSize(e1);
+            	    }
+            	});
+            }
+        });
+        
 
+        toolb.currentSrc.addActionListener(new ActionListener() {
+        	Element e1;
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	addMouseListener(new MouseAdapter() {
+            	    @Override
+            	    public void mouseClicked(MouseEvent e) {
+            	    	e1 = new Element("currentSrc.png");
+	            		group.setHeigth(e1.getHeigth());
+	         	    	group.setWidth(e1.getWidth());
+	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
+	         	    	e1.setX((int)panel.getMousePosition().getX());
+	         	    	e1.setY((int)panel.getMousePosition().getY());
+	         	    	
+	         	    	group.getElements().add(e1);
+	            	    panel.getElements().add(e1);
+	            	    panel.repaint();
+		        	    
+	         	    	updateGroupSize(e1);
+            	    }
+            	});
+            	
+	            }
+        });
+        
+        toolb.inductor.addActionListener(new ActionListener() {
+        	Element e1;
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	addMouseListener(new MouseAdapter() {
+            	    @Override
+            	    public void mouseClicked(MouseEvent e) {
+            	    	e1 = new Element("inductor.png");
+	            		group.setHeigth(e1.getHeigth());
+	         	    	group.setWidth(e1.getWidth());
+	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
+	         	    	e1.setX((int)panel.getMousePosition().getX());
+	         	    	e1.setY((int)panel.getMousePosition().getY());
+	         	    	
+	         	    	group.getElements().add(e1);
+	            	    panel.getElements().add(e1);
+	            	    panel.repaint();
+		        	    
+	         	    	updateGroupSize(e1);
+            	    }
+            	});
+            	
+	            }
+        });
+        
+        toolb.resistor.addActionListener(new ActionListener() {
+        	Element e1;
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	addMouseListener(new MouseAdapter() {
+            	    @Override
+            	    public void mouseClicked(MouseEvent e) {
+            	    	e1 = new Element("resistor.png");
+	            		group.setHeigth(e1.getHeigth());
+	         	    	group.setWidth(e1.getWidth());
+	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
+	         	    	e1.setX((int)panel.getMousePosition().getX());
+	         	    	e1.setY((int)panel.getMousePosition().getY());
+	         	    	
+	         	    	group.getElements().add(e1);
+	            	    panel.getElements().add(e1);
+	            	    panel.repaint();
+		        	    
+	         	    	updateGroupSize(e1);
+	         	    	//updateGroupSize(e1);
+            	    }
+            	});
+            	
+	            }
+        });
+        
 
+             
+
+        
+
+        
+        
+        
+        
+        
+        
         this.add(panel);
 		setVisible(true);
 
@@ -115,33 +238,6 @@ public class Editor extends JFrame {
 		
 	}
 	
-	public int newX(Element e){
-		//serijski
-		if(toolb.ser.isSelected() && !toolb.par.isSelected()){
-			//element treba spojiti desno od cele grupe
-			//tj x koordinata je sirina grupe + linija (+ x koordinata grupe (default 0))			
-			return group.getWidth()+ line_size + group.getX();
-		}
-		//paralelno
-		else {
-			//element se dodaje po sredini ispod
-			//tj x koordinata je polovina sirine grupe (- pomeraj za pola sirine same slicice)
-			//+ x kooordinara cele grupe (default 0))
-			return group.getWidth()/2 - e.getWidth()/2 + group.getX();
-		}
-	
-
-	}
-	//kao za x samo sve obrnuto
-	public int newY(Element e){
-		if(toolb.par.isSelected() && !toolb.ser.isSelected()){
-			return group.getHeigth()+ line_size + group.getY();
-			
-		}
-		else {
-			return group.getHeigth()/2 - e.getHeigth()/2 + group.getY();
-		}
-	}
 	public boolean confirm(String message, String title) {
 		return JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(this, message, title, 
 										JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);

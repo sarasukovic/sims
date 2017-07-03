@@ -15,7 +15,7 @@ import javax.swing.JToolBar;
 
 
 public class ToolBar extends JToolBar {
-	private JButton capacitor;
+	public JButton capacitor = new JButton(new ImageIcon("capacitor.png"));
 	public JButton currentSrc = new JButton(new ImageIcon("currentSrc.png"));
 	public JButton ground= new JButton(new ImageIcon("ground.png"));
 	public JButton inductor = new JButton(new ImageIcon("inductor.png"));
