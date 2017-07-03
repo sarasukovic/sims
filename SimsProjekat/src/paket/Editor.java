@@ -152,19 +152,24 @@ public class Editor extends JFrame implements ActionListener{
      	    	e1.rect.x = e1.getX();
      	    	e1.rect.y = e1.getY();
      	    	
+     	    	// doda u listu pa ako postoji na toj poziciji obrise ga
+     	    	group.getElements().add(e1);
+	    		panel.getElements().add(e1);
+     	    	
      	    	if(checkPosition(e1) == false){
                       	    		
-    	    		group.getElements().add(e1);
-    	    		panel.getElements().add(e1);
+    	    		/*group.getElements().add(e1);
+    	    		panel.getElements().add(e1);*/
         	    	panel.repaint();
      	    		
      	    	}else{
-
-        	    	JOptionPane.showMessageDialog(null, "Symbol is already on this position ",
-    	    				"InfoBox: " + " Error",	JOptionPane.INFORMATION_MESSAGE);
      	    		panel.getElements().remove(e1);
+     	    		panel.revalidate();
      	    		panel.repaint();
+        	    /*	JOptionPane.showMessageDialog(null, "Symbol is already on this position ",
+    	    				"InfoBox: " + " Error",	JOptionPane.INFORMATION_MESSAGE);
      	    		
+     	    		*/
     	    	}
     	    };
 		});
