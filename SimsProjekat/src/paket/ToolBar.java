@@ -23,25 +23,18 @@ public class ToolBar extends JToolBar {
 	public JButton voltageSrc = new JButton(new ImageIcon("voltageSrc.png"));
 	public JCheckBox ser = new JCheckBox("Serial link");
 	public JCheckBox par = new JCheckBox("Parallel link");
-
+	public JButton deleteB = new JButton(new ImageIcon("delete.jpg"));
+	public JButton moveB = new JButton(new ImageIcon("move.jpg"));
+	
 	protected List<JButton> buttons = new ArrayList<JButton>();
-
-	
-	
-	/*protected Canvas newCanvas = new Canvas();
-	protected Canvas strokeColor = new Canvas();*/
 	
 	public JButton getCapacitor() {
 		return capacitor;
 	}
 
-
-
 	public void setCapacitor(JButton capacitor) {
 		this.capacitor = capacitor;
 	}
-
-
 
 	protected Editor editor;
 	
@@ -65,7 +58,6 @@ public class ToolBar extends JToolBar {
 	
 	
 	public ToolBar(Editor editor) {
-		capacitor = new JButton(new ImageIcon("capacitor.png"));
 		this.editor = editor;
 		setOrientation(HORIZONTAL);
 		setFloatable(false);
@@ -85,6 +77,10 @@ public class ToolBar extends JToolBar {
 		add(ser);
 		addSeparator();
 		add(par);
+		addSeparator();
+		add(addImageButton(deleteB));
+		addSeparator();
+		add(addImageButton(moveB));
 		addSeparator();
 	}	
 }

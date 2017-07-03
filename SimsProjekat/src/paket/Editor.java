@@ -67,6 +67,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.currentSrc.setActionCommand(element.CURRENTSRC.name());
         toolb.inductor.setActionCommand(element.INDUCTOR.name());
         toolb.resistor.setActionCommand(element.RESISTOR.name());
+        toolb.deleteB.setActionCommand("DeleteElement");
         
         toolb.ground.addActionListener(this);
         toolb.capacitor.addActionListener(this);
@@ -74,6 +75,13 @@ public class Editor extends JFrame implements ActionListener{
         toolb.currentSrc.addActionListener(this);
         toolb.inductor.addActionListener(this);
         toolb.resistor.addActionListener(this);
+        toolb.deleteB.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// brisanje
+			}
+		});
         
         this.add(panel);
 		setVisible(true);
@@ -173,5 +181,6 @@ public class Editor extends JFrame implements ActionListener{
     	    	}
     	    };
 		});
+	
 	}
 }
