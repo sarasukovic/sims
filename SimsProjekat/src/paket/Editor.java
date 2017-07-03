@@ -60,7 +60,6 @@ public class Editor extends JFrame {
             	    @Override
             	    public void mouseClicked(MouseEvent e) {
             	    	e1 = new Element("ground.png");
-            	        System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
 	            		group.setHeigth(e1.getHeigth());
 	         	    	group.setWidth(e1.getWidth());
 	         	    	
@@ -90,7 +89,6 @@ public class Editor extends JFrame {
             	    	e1 = new Element("capacitor.png");
 	            		group.setHeigth(e1.getHeigth());
 	         	    	group.setWidth(e1.getWidth());
-	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
 	         	    	e1.setX((int)panel.getMousePosition().getX());
 	         	    	e1.setY((int)panel.getMousePosition().getY());
 	         	    	
@@ -116,7 +114,6 @@ public class Editor extends JFrame {
             	    	e1 = new Element("voltageSrc.png");
 	            		group.setHeigth(e1.getHeigth());
 	         	    	group.setWidth(e1.getWidth());
-	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
 	         	    	e1.setX((int)panel.getMousePosition().getX());
 	         	    	e1.setY((int)panel.getMousePosition().getY());
 	         	    	
@@ -141,7 +138,6 @@ public class Editor extends JFrame {
             	    	e1 = new Element("currentSrc.png");
 	            		group.setHeigth(e1.getHeigth());
 	         	    	group.setWidth(e1.getWidth());
-	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
 	         	    	e1.setX((int)panel.getMousePosition().getX());
 	         	    	e1.setY((int)panel.getMousePosition().getY());
 	         	    	
@@ -166,7 +162,6 @@ public class Editor extends JFrame {
             	    	e1 = new Element("inductor.png");
 	            		group.setHeigth(e1.getHeigth());
 	         	    	group.setWidth(e1.getWidth());
-	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
 	         	    	e1.setX((int)panel.getMousePosition().getX());
 	         	    	e1.setY((int)panel.getMousePosition().getY());
 	         	    	
@@ -191,7 +186,6 @@ public class Editor extends JFrame {
             	    	e1 = new Element("resistor.png");
 	            		group.setHeigth(e1.getHeigth());
 	         	    	group.setWidth(e1.getWidth());
-	         	    	System.out.println(("x : " +  e.getX()) + "" + ("y: " + e.getY()));
 	         	    	e1.setX((int)panel.getMousePosition().getX());
 	         	    	e1.setY((int)panel.getMousePosition().getY());
 	         	    	
