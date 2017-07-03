@@ -2,6 +2,7 @@ package paket;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -102,6 +103,15 @@ public class Editor extends JFrame implements ActionListener{
 	public boolean confirm(String message) {
 		return confirm(message, null);
 	}
+	
+	public boolean checkPosition(Element e){
+		for(Element el : panel.getElements()){
+			if((el.getX() == e.getX()) && (el.getY() == e.getY())){
+				return true;
+			}
+		}
+		return false;
+	}
 
 
 	@Override
@@ -128,17 +138,34 @@ public class Editor extends JFrame implements ActionListener{
     	    	}
     	    	else if(event.getActionCommand() == element.RESISTOR.name()){
     	    		e1 = new Element("resistor.png");
+    	    	}else{
+    	    		JOptionPane.showMessageDialog(null, "Symbol is not chosen ",
+    	    				"InfoBox: " + "Error",	JOptionPane.INFORMATION_MESSAGE);
     	    	}
     	    	
         		group.setHeigth(e1.getHeigth());
      	    	group.setWidth(e1.getWidth());
      	    	
+     	    	
      	    	e1.setX((int)panel.getMousePosition().getX());
      	    	e1.setY((int)panel.getMousePosition().getY());
      	    	
-     	    	group.getElements().add(e1);
-        	    panel.getElements().add(e1);
-        	    panel.repaint();
+     	    	if(checkPosition(e1) == false){
+     	    		
+     	    		System.out.println("EVO ME");
+    	    		group.getElements().add(e1);
+    	    		panel.getElements().add(e1);
+        	    	panel.repaint();
+     	    		
+     	    	}else{
+
+        	    	JOptionPane.showMessageDialog(null, "Symbol is already on this position ",
+    	    				"InfoBox: " + " Error",	JOptionPane.INFORMATION_MESSAGE);
+     	    		System.out.println("IF");
+     	    		panel.getElements().remove(e1);
+     	    		panel.repaint();
+     	    		
+    	    	}
     	    };
 		});
 	}
