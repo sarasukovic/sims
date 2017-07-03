@@ -105,8 +105,8 @@ public class Editor extends JFrame implements ActionListener{
 	}
 	
 	public boolean checkPosition(Element e){
-		for(Element el : panel.getElements()){
-			if(e1.rect.contains(e.getX(), e.getY())){
+		for(int i = 0; i < panel.getElements().size()-1; i++){
+			if(panel.getElements().get(i).rect.contains(e.getX(), e.getY())){
 				return true;
 			}
 		}
@@ -154,7 +154,6 @@ public class Editor extends JFrame implements ActionListener{
      	    	
      	    	if(checkPosition(e1) == false){
                       	    		
-     	    		System.out.println("EVO ME");
     	    		group.getElements().add(e1);
     	    		panel.getElements().add(e1);
         	    	panel.repaint();
@@ -163,7 +162,6 @@ public class Editor extends JFrame implements ActionListener{
 
         	    	JOptionPane.showMessageDialog(null, "Symbol is already on this position ",
     	    				"InfoBox: " + " Error",	JOptionPane.INFORMATION_MESSAGE);
-     	    		System.out.println("IF");
      	    		panel.getElements().remove(e1);
      	    		panel.repaint();
      	    		
