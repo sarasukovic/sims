@@ -3,16 +3,14 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JPanel;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -60,15 +58,16 @@ public class MenuBar extends JMenuBar {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Open file from disk");
 				XStream xstream = new XStream(new DomDriver());
-				xstream.alias("panel", Panel.class);
-				InputStream in;
+				FileReader fileReader = null;
 				try {
-					in = new FileInputStream("saveFile.xml");
-					editor.getPanel().repaint();
+					fileReader = new FileReader("saveFile.xml");
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				Panel p = (Panel)xstream.fromXML(fileReader);
+				editor.panel = p;
+				editor.panel.repaint();
 				
 			}
 		});
