@@ -158,8 +158,8 @@ public class Editor extends JFrame implements ActionListener{
      	    	
      	    	e1.setX((int)panel.getMousePosition().getX());
      	    	e1.setY((int)panel.getMousePosition().getY());
-     	    	e1.rect.x = e1.getX();
-     	    	e1.rect.y = e1.getY();
+     	    	e1.rect.x = e1.getX()-30;
+     	    	e1.rect.y = e1.getY()-30;
      	    	
      	    	// doda u listu pa ako postoji na toj poziciji obrise ga
      	    	group.getElements().add(e1);
