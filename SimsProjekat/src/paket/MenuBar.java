@@ -70,6 +70,7 @@ public class MenuBar extends JMenuBar {
 				
 				editor.panel = p;
 				System.out.println(editor.panel.getElements().get(0).getHeigth());
+				editor.panel.revalidate();
 				editor.panel.repaint();
 				
 			}
@@ -80,7 +81,7 @@ public class MenuBar extends JMenuBar {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Save file");
-				XStream xstream = new XStream();
+				XStream xstream = new XStream(new DomDriver());
 				//xstream.alias("editor", Editor.class);
 				try {
 					FileOutputStream fs = new FileOutputStream("saveFile.xml");
