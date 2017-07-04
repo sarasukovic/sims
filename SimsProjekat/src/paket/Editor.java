@@ -21,7 +21,7 @@ public class Editor extends JFrame implements ActionListener{
 	public final int line_size = 20;
     private MenuBar menu;	
     private ToolBar toolb;	
-    private Panel panel;
+    public Panel panel;
     private Element e1;
 	private GroupOfElements group;
 	private ActionEvent event;
@@ -35,6 +35,8 @@ public class Editor extends JFrame implements ActionListener{
 		INDUCTOR,
 		RESISTOR
 	};
+	
+	public Panel getPanel() {return panel;}
 	
 	public Editor() {
 	
@@ -55,7 +57,6 @@ public class Editor extends JFrame implements ActionListener{
 		});
 		
 		panel = new Panel(); 
-        panel.setBackground(Color.white);
 		menu = new MenuBar(this);
 		toolb = new ToolBar(this);
 		setJMenuBar(menu);		

@@ -2,16 +2,21 @@ package paket;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
 
 public class MenuBar extends JMenuBar {
 
@@ -40,9 +45,11 @@ public class MenuBar extends JMenuBar {
 			@Override
             public void actionPerformed(ActionEvent arg0) {
             	// drawing area
-        	    JPanel panel = new JPanel();   
-                panel.setBackground(Color.white);
-                editor.add(panel);
+				editor.panel.removeAll();
+				editor.panel.getElements().clear();
+				editor.panel.repaint();
+                editor.getPanel().setBackground(Color.white);
+                editor.add(editor.getPanel());
                 editor.setVisible(true);
             }
 		});
@@ -52,6 +59,17 @@ public class MenuBar extends JMenuBar {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Open file from disk");
+				XStream xstream = new XStream(new DomDriver());
+				xstream.alias("panel", Panel.class);
+				InputStream in;
+				try {
+					in = new FileInputStream("saveFile.xml");
+					editor.getPanel().repaint();
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 			}
 		});
 		
@@ -59,7 +77,14 @@ public class MenuBar extends JMenuBar {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("Save file");				
+				System.out.println("Save file");
+				XStream xstream = new XStream(new DomDriver());
+				//xstream.alias("editor", Editor.class);
+				try {
+					xstream.toXML(editor.getPanel(), new FileWriter("saveFile.xml"));
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 		
