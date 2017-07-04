@@ -57,7 +57,8 @@ public class Element {
 		this.image = image;
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
-		this.rect = new Rectangle(0, 0, image.getWidth(), image.getHeight());
+		//System.out.println(image.getHeight());
+		this.rect = new Rectangle(0, 0, image.getWidth()+60, image.getHeight()+60);
 	}
 	public Element(String path) {
 		try {
@@ -67,8 +68,9 @@ public class Element {
 			   e.printStackTrace();
 		   }
 		this.heigth = this.image.getHeight();
+		//System.out.println(image.getHeight());
 		this.width =this.image.getWidth();
-		this.rect = new Rectangle(0, 0, image.getWidth(), image.getHeight());
+		this.rect = new Rectangle(0, 0, image.getWidth()+60, image.getHeight()+60);
 	}
 	
 	public Element(int x, int y, BufferedImage image) {
@@ -78,7 +80,8 @@ public class Element {
 		this.heigth = image.getHeight();
 		this.width = image.getWidth();
 		this.image = image;
-		this.rect = new Rectangle(x, y, image.getWidth(), image.getHeight());
+		//System.out.println(image.getHeight());
+		this.rect = new Rectangle(x-30, y-30, image.getWidth()+60, image.getHeight()+60);
 	}
 	public Element(int x, int y, String path) {
 		super();
@@ -90,9 +93,10 @@ public class Element {
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
+		//System.out.println(image.getHeight());
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
-		this.rect = new Rectangle(x, y, image.getWidth(), image.getHeight());
+		this.rect = new Rectangle(x-30, y-30, image.getWidth()+60, image.getHeight()+60);
 	
 	}
 
