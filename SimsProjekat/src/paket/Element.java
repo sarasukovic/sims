@@ -10,7 +10,8 @@ import javax.imageio.ImageIO;
  Klasa koja predstavlja element koji se iscrtava. 
  atributi: x, y koordinate, sirina i visina*/
 public class Element {
-	private enum elementType{		
+	
+	enum elementType{		
 		GROUND,
 		CAPACITOR,
 		VOLTAGESRC,
@@ -18,6 +19,7 @@ public class Element {
 		INDUCTOR,
 		RESISTOR
 	};
+	
 	private Element.elementType type;
 	private int x;
 	private int y;
@@ -77,19 +79,17 @@ public class Element {
 		this.image = image;
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
-		
-		//System.out.println(image.getHeight());
 		this.rect = new Rectangle(0, 0, image.getWidth()+60, image.getHeight()+60);
 	}
 	public Element(String path) {
 		try {
 		       this.image = ImageIO.read(new File(path));
-		       if(path.compareTo("capacitor.png")==0) this.type = elementType.CAPACITOR;
-		       if(path.compareTo("currentSrc.png")==0) this.type = elementType.CURRENTSRC;
-		       if(path.compareTo("ground.png")==0) this.type = elementType.GROUND;
-		       if(path.compareTo("inductor.png")==0) this.type = elementType.INDUCTOR;
-		       if(path.compareTo("resistor.png")==0) this.type = elementType.RESISTOR;
-		       if(path.compareTo("voltageSrc.png")==0) this.type = elementType.VOLTAGESRC;
+		       if(path.compareTo("images/capacitor.png")==0) this.type = elementType.CAPACITOR;
+		       if(path.compareTo("images/currentSrc.png")==0) this.type = elementType.CURRENTSRC;
+		       if(path.compareTo("images/ground.png")==0) this.type = elementType.GROUND;
+		       if(path.compareTo("images/inductor.png")==0) this.type = elementType.INDUCTOR;
+		       if(path.compareTo("images/resistor.png")==0) this.type = elementType.RESISTOR;
+		       if(path.compareTo("images/voltageSrc.png")==0) this.type = elementType.VOLTAGESRC;
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
@@ -105,12 +105,12 @@ public class Element {
 		type = e.type;
 		
 		String path="";
-		 if(type == elementType.CAPACITOR) path = "capacitor.png";
-	       if(this.type == elementType.CURRENTSRC) path="currentSrc.png" ;
-	       if(this.type == elementType.GROUND) path="ground.png" ;
-	       if(this.type == elementType.INDUCTOR) path="inductor.png" ;
-	       if(this.type == elementType.RESISTOR) path="resistor.png" ;
-	       if(this.type == elementType.VOLTAGESRC) path="voltageSrc.png" ;
+		 if(type == elementType.CAPACITOR) path = "images/capacitor.png";
+	       if(this.type == elementType.CURRENTSRC) path="images/currentSrc.png" ;
+	       if(this.type == elementType.GROUND) path="images/ground.png" ;
+	       if(this.type == elementType.INDUCTOR) path="images/inductor.png" ;
+	       if(this.type == elementType.RESISTOR) path="images/resistor.png" ;
+	       if(this.type == elementType.VOLTAGESRC) path="images/voltageSrc.png" ;
 
 	       try {
 		       this.image = ImageIO.read(new File(path));
@@ -131,7 +131,6 @@ public class Element {
 		this.heigth = image.getHeight();
 		this.width = image.getWidth();
 		this.image = image;
-		//System.out.println(image.getHeight());
 		this.rect = new Rectangle(x-30, y-30, image.getWidth()+60, image.getHeight()+60);
 	}
 	public Element(int x, int y, String path) {
@@ -144,14 +143,14 @@ public class Element {
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
-		 if(path.compareTo("capacitor.png")==1) this.type = elementType.CAPACITOR;
-	       if(path.compareTo("currentSrc.png")==1) this.type = elementType.CURRENTSRC;
-	       if(path.compareTo("ground.png")==1) this.type = elementType.GROUND;
-	       if(path.compareTo("inductor.png")==1) this.type = elementType.INDUCTOR;
-	       if(path.compareTo("resistor.png")==1) this.type = elementType.RESISTOR;
-	       if(path.compareTo("voltageSrc.png")==1) this.type = elementType.VOLTAGESRC;
-		//System.out.println(image.getHeight());
-		this.heigth = image.getHeight();
+		 if(path.compareTo("images/capacitor.png")==1) this.type = elementType.CAPACITOR;
+	       if(path.compareTo("images/currentSrc.png")==1) this.type = elementType.CURRENTSRC;
+	       if(path.compareTo("images/ground.png")==1) this.type = elementType.GROUND;
+	       if(path.compareTo("images/inductor.png")==1) this.type = elementType.INDUCTOR;
+	       if(path.compareTo("images/resistor.png")==1) this.type = elementType.RESISTOR;
+	       if(path.compareTo("images/voltageSrc.png")==1) this.type = elementType.VOLTAGESRC;
+
+	    this.heigth = image.getHeight();
 		this.width =image.getWidth();
 		this.rect = new Rectangle(x-30, y-30, image.getWidth()+60, image.getHeight()+60);
 	

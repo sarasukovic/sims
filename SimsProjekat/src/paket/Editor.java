@@ -26,16 +26,7 @@ public class Editor extends JFrame implements ActionListener{
 	private GroupOfElements group;
 	private ActionEvent event;
 	private State activeState;
-	
-	public enum element{
-		
-		GROUND,
-		CAPACITOR,
-		VOLTAGESRC,
-		CURRENTSRC,
-		INDUCTOR,
-		RESISTOR
-	};
+
 	
 	public Panel getPanel() {return panel;}
 	
@@ -88,12 +79,12 @@ public class Editor extends JFrame implements ActionListener{
 		setJMenuBar(menu);		
 	    this.add(toolb,BorderLayout.NORTH);
 	    
-	    toolb.ground.setActionCommand(element.GROUND.name());
-        toolb.capacitor.setActionCommand(element.CAPACITOR.name());
-        toolb.voltageSrc.setActionCommand(element.VOLTAGESRC.name());
-        toolb.currentSrc.setActionCommand(element.CURRENTSRC.name());
-        toolb.inductor.setActionCommand(element.INDUCTOR.name());
-        toolb.resistor.setActionCommand(element.RESISTOR.name());
+	    toolb.ground.setActionCommand(Element.elementType.GROUND.name());
+        toolb.capacitor.setActionCommand(Element.elementType.CAPACITOR.name());
+        toolb.voltageSrc.setActionCommand(Element.elementType.VOLTAGESRC.name());
+        toolb.currentSrc.setActionCommand(Element.elementType.CURRENTSRC.name());
+        toolb.inductor.setActionCommand(Element.elementType.INDUCTOR.name());
+        toolb.resistor.setActionCommand(Element.elementType.RESISTOR.name());
         toolb.deleteB.setActionCommand("DeleteElement");
         
         toolb.ground.addActionListener(this);

@@ -2,7 +2,6 @@ package paket;
 
 import javax.swing.JOptionPane;
 
-import paket.Editor.element;
 
 public class AddElement extends State {
 
@@ -13,22 +12,22 @@ public class AddElement extends State {
 	@Override
 	public void doAction(){
 		
-		if(editor.getEvent().getActionCommand() == element.GROUND.name()){
+		if(editor.getEvent().getActionCommand() == Element.elementType.GROUND.name()){
     		editor.setElementOnPanel(new Element("images/ground.png"));
     	}
-    	else if(editor.getEvent().getActionCommand() == element.CAPACITOR.name()){
+    	else if(editor.getEvent().getActionCommand() == Element.elementType.CAPACITOR.name()){
     		editor.setElementOnPanel(new Element("images/capacitor.png"));
     	}
-    	else if(editor.getEvent().getActionCommand() == element.VOLTAGESRC.name()){
+    	else if(editor.getEvent().getActionCommand() == Element.elementType.VOLTAGESRC.name()){
     		editor.setElementOnPanel(new Element("images/voltageSrc.png"));
     	}
-    	else if(editor.getEvent().getActionCommand() == element.CURRENTSRC.name()){
+    	else if(editor.getEvent().getActionCommand() == Element.elementType.CURRENTSRC.name()){
     		editor.setElementOnPanel(new Element("images/currentSrc.png"));
     	}
-    	else if(editor.getEvent().getActionCommand() == element.INDUCTOR.name()){
+    	else if(editor.getEvent().getActionCommand() == Element.elementType.INDUCTOR.name()){
     		editor.setElementOnPanel(new Element("images/inductor.png"));
     	}
-    	else if(editor.getEvent().getActionCommand() == element.RESISTOR.name()){
+    	else if(editor.getEvent().getActionCommand() == Element.elementType.RESISTOR.name()){
     		editor.setElementOnPanel(new Element("images/resistor.png"));
     	}else{
     		JOptionPane.showMessageDialog(null, "Symbol is not chosen ",
