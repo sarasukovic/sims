@@ -25,8 +25,9 @@ public class Editor extends JFrame implements ActionListener{
     private Element e1;
 	private GroupOfElements group;
 	private ActionEvent event;
+	private State activeState;
 	
-	private enum element{
+	public enum element{
 		
 		GROUND,
 		CAPACITOR,
@@ -37,6 +38,27 @@ public class Editor extends JFrame implements ActionListener{
 	};
 	
 	public Panel getPanel() {return panel;}
+	
+	public Element getElementFromPanel(){
+		return e1;
+	}
+	
+	public void setElementOnPanel(Element el){
+		e1 = el;
+	}
+	
+	public GroupOfElements getGroup() {
+		return group;
+	}
+	
+	public void doAction() {
+		activeState.doAction();
+	}
+	
+	public ActionEvent getEvent(){
+		return event;
+	}
+	
 	
 	public Editor() {
 	
