@@ -14,6 +14,7 @@ import javax.swing.JMenuItem;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.mapper.Mapper.Null;
 
 
 public class MenuBar extends JMenuBar {
@@ -60,27 +61,29 @@ public class MenuBar extends JMenuBar {
 			public void actionPerformed(ActionEvent arg0) {
 				editor.panel.removeAll();
 				editor.panel.getElements().clear();
-				System.out.println("Open file from disk");
 				XStream xstream = new XStream(new DomDriver());
 				Panel p = new Panel();
-				//FileReader fileReader = null;
-				try {
-					FileInputStream fis= new FileInputStream("saveFile.xml");
-				    xstream.fromXML(fis, p);
-				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				JFileChooser openFile = new JFileChooser();
+                int code = openFile.showOpenDialog(editor);
+                if(code == openFile.APPROVE_OPTION){
+                
+                	String path = openFile.getSelectedFile().getAbsolutePath();
+                	try {
+                		FileInputStream fis= new FileInputStream(path);
+                		xstream.fromXML(fis, p);
+                	} catch (FileNotFoundException e) {
+                		e.printStackTrace();
+                	}
 				
 
-				//Element eli = new Element(p.getElements().get(0).getImage());
-				Element eli;
-				for(Element elem: p.getElements()){ //kopira elemente
-					eli = new Element(elem);
-					editor.panel.getElements().add(eli);
-				}
-				editor.panel.revalidate();	
-				editor.panel.repaint();
+                	Element eli;
+                	for(Element elem: p.getElements()){ //kopira elemente
+                		eli = new Element(elem);
+                		editor.panel.getElements().add(eli);
+                	}
+                	editor.panel.revalidate();	
+                	editor.panel.repaint();
+                }
 			}
 		});
 		
@@ -102,18 +105,22 @@ public class MenuBar extends JMenuBar {
 		
 		saveAs.addActionListener(new ActionListener() {
 			
+			//save as
 			@Override
 			public void actionPerformed(ActionEvent ARG0) {
 				XStream xstream = new XStream(new DomDriver());
 				JFileChooser saveFile = new JFileChooser();
-                saveFile.showSaveDialog(null);
-                String path = saveFile.getSelectedFile().getAbsolutePath();
-                try {
-					FileOutputStream fs = new FileOutputStream(path);
-					xstream.toXML(editor.getPanel(), fs);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+                int code = saveFile.showSaveDialog(editor);
+                	
+                if(code == saveFile.APPROVE_OPTION){
+               		String path = saveFile.getSelectedFile().getAbsolutePath();
+               		try {
+               			FileOutputStream fs = new FileOutputStream(path);
+               			xstream.toXML(editor.getPanel(), fs);
+               		} catch (IOException e) {
+               			e.printStackTrace();
+               		}
+               	}
 			}
 		});
 	
