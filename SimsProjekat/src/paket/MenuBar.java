@@ -1,5 +1,4 @@
 package paket;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -8,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -104,7 +104,16 @@ public class MenuBar extends JMenuBar {
 			
 			@Override
 			public void actionPerformed(ActionEvent ARG0) {
-				System.out.println("Save as");
+				XStream xstream = new XStream(new DomDriver());
+				JFileChooser saveFile = new JFileChooser();
+                saveFile.showSaveDialog(null);
+                String path = saveFile.getSelectedFile().getAbsolutePath();
+                try {
+					FileOutputStream fs = new FileOutputStream(path);
+					xstream.toXML(editor.getPanel(), fs);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 	
