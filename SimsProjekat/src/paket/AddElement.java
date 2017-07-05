@@ -14,22 +14,22 @@ public class AddElement extends State {
 	public void doAction(){
 		
 		if(editor.getEvent().getActionCommand() == element.GROUND.name()){
-    		editor.setElementOnPanel(new Element("ground.png"));
+    		editor.setElementOnPanel(new Element("images/ground.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == element.CAPACITOR.name()){
-    		editor.setElementOnPanel(new Element("capacitor.png"));
+    		editor.setElementOnPanel(new Element("images/capacitor.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == element.VOLTAGESRC.name()){
-    		editor.setElementOnPanel(new Element("voltageSrc.png"));
+    		editor.setElementOnPanel(new Element("images/voltageSrc.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == element.CURRENTSRC.name()){
-    		editor.setElementOnPanel(new Element("currentSrc.png"));
+    		editor.setElementOnPanel(new Element("images/currentSrc.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == element.INDUCTOR.name()){
-    		editor.setElementOnPanel(new Element("inductor.png"));
+    		editor.setElementOnPanel(new Element("images/inductor.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == element.RESISTOR.name()){
-    		editor.setElementOnPanel(new Element("resistor.png"));
+    		editor.setElementOnPanel(new Element("images/resistor.png"));
     	}else{
     		JOptionPane.showMessageDialog(null, "Symbol is not chosen ",
     				"InfoBox: " + "Error",	JOptionPane.INFORMATION_MESSAGE);

@@ -15,17 +15,17 @@ import javax.swing.JToolBar;
 
 
 public class ToolBar extends JToolBar {
-	public JButton capacitor = new JButton(new ImageIcon("capacitor.png"));
-	public JButton currentSrc = new JButton(new ImageIcon("currentSrc.png"));
-	public JButton ground= new JButton(new ImageIcon("ground.png"));
-	public JButton inductor = new JButton(new ImageIcon("inductor.png"));
-	public JButton resistor = new JButton(new ImageIcon("resistor.png"));
-	public JButton voltageSrc = new JButton(new ImageIcon("voltageSrc.png"));
+	public JButton capacitor = new JButton(new ImageIcon("images/capacitor.png"));
+	public JButton currentSrc = new JButton(new ImageIcon("images/currentSrc.png"));
+	public JButton ground= new JButton(new ImageIcon("images/ground.png"));
+	public JButton inductor = new JButton(new ImageIcon("images/inductor.png"));
+	public JButton resistor = new JButton(new ImageIcon("images/resistor.png"));
+	public JButton voltageSrc = new JButton(new ImageIcon("images/voltageSrc.png"));
 	public JCheckBox ser = new JCheckBox("Serial link");
 	public JCheckBox par = new JCheckBox("Parallel link");
-	public JButton deleteB = new JButton(new ImageIcon("delete.jpg"));
-	public JButton moveB = new JButton(new ImageIcon("move.jpg"));
-	public JButton select = new JButton(new ImageIcon("select.jpg"));
+	public JButton deleteB = new JButton(new ImageIcon("images/delete.jpg"));
+	public JButton moveB = new JButton(new ImageIcon("images/move.jpg"));
+	public JButton select = new JButton(new ImageIcon("images/select.jpg"));
 	
 	protected List<JButton> buttons = new ArrayList<JButton>();
 	
