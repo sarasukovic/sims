@@ -83,7 +83,9 @@ public class Editor extends JFrame implements ActionListener{
 				// brisanje
 			}
 		});
-        
+		//setVisible(true);
+		panel.setBackground(Color.white);
+		panel.setVisible(true);
         this.add(panel);
 		setVisible(true);
 	}
@@ -151,7 +153,7 @@ public class Editor extends JFrame implements ActionListener{
     	    		JOptionPane.showMessageDialog(null, "Symbol is not chosen ",
     	    				"InfoBox: " + "Error",	JOptionPane.INFORMATION_MESSAGE);
     	    	}
-    	    	
+    	    	//System.out.println(e1.getType());
         		group.setHeigth(e1.getHeigth());
      	    	group.setWidth(e1.getWidth());
      	    	

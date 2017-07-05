@@ -36,6 +36,7 @@ public class Panel extends JPanel {
         super.paintComponent(g);
         for(Element e : elements){
         	g.drawImage(e.getImage(), e.getX(), e.getY(), null);
+        	//System.out.println("_______"+e.getType());
         	//g.drawRect(e.rect.x, e.rect.y, e.rect.width, e.rect.width);
         }
         //isto i za linije

@@ -45,10 +45,12 @@ public class MenuBar extends JMenuBar {
             	// drawing area
 				editor.panel.removeAll();
 				editor.panel.getElements().clear();
+                //editor.getPanel().setBackground(Color.white);
+                //editor.setVisible(true);
 				editor.panel.repaint();
-                editor.getPanel().setBackground(Color.white);
-                editor.add(editor.getPanel());
-                editor.setVisible(true);
+
+                //editor.add(editor.getPanel());
+                
             }
 		});
 		
@@ -56,6 +58,8 @@ public class MenuBar extends JMenuBar {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				editor.panel.removeAll();
+				editor.panel.getElements().clear();
 				System.out.println("Open file from disk");
 				XStream xstream = new XStream(new DomDriver());
 				Panel p = new Panel();
@@ -68,11 +72,15 @@ public class MenuBar extends JMenuBar {
 					e.printStackTrace();
 				}
 				
-				editor.panel = p;
-				System.out.println(editor.panel.getElements().get(0).getHeigth());
-				editor.panel.revalidate();
+
+				//Element eli = new Element(p.getElements().get(0).getImage());
+				Element eli;
+				for(Element elem: p.getElements()){ //kopira elemente
+					eli = new Element(elem);
+					editor.panel.getElements().add(eli);
+				}
+				editor.panel.revalidate();	
 				editor.panel.repaint();
-				
 			}
 		});
 		
