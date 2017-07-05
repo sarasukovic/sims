@@ -46,12 +46,7 @@ public class MenuBar extends JMenuBar {
             	// drawing area
 				editor.panel.removeAll();
 				editor.panel.getElements().clear();
-                //editor.getPanel().setBackground(Color.white);
-                //editor.setVisible(true);
 				editor.panel.repaint();
-
-                //editor.add(editor.getPanel());
-                
             }
 		});
 		
@@ -92,7 +87,6 @@ public class MenuBar extends JMenuBar {
 			// save uvek cuva u folderu projekta sa imenom koje korisnik zeli
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("Save file");
 				String input = JOptionPane.showInputDialog("Enter file name:");
 				if (input != null){
 					XStream xstream = new XStream(new DomDriver());
