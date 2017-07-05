@@ -11,10 +11,10 @@ import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-import com.thoughtworks.xstream.mapper.Mapper.Null;
 
 
 public class MenuBar extends JMenuBar {
@@ -89,16 +89,19 @@ public class MenuBar extends JMenuBar {
 		
 		save.addActionListener(new ActionListener() {
 			
+			// save uvek cuva u folderu projekta sa imenom koje korisnik zeli
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Save file");
-				XStream xstream = new XStream(new DomDriver());
-				//xstream.alias("editor", Editor.class);
-				try {
-					FileOutputStream fs = new FileOutputStream("saveFile.xml");
-					xstream.toXML(editor.getPanel(), fs);
-				} catch (IOException e) {
-					e.printStackTrace();
+				String input = JOptionPane.showInputDialog("Enter file name:");
+				if (input != null){
+					XStream xstream = new XStream(new DomDriver());
+					try {
+						FileOutputStream fs = new FileOutputStream(input);
+						xstream.toXML(editor.getPanel(), fs);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		});
