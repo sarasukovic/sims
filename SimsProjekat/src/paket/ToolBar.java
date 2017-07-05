@@ -25,6 +25,7 @@ public class ToolBar extends JToolBar {
 	public JCheckBox par = new JCheckBox("Parallel link");
 	public JButton deleteB = new JButton(new ImageIcon("delete.jpg"));
 	public JButton moveB = new JButton(new ImageIcon("move.jpg"));
+	public JButton select = new JButton(new ImageIcon("select.jpg"));
 	
 	protected List<JButton> buttons = new ArrayList<JButton>();
 	
@@ -81,6 +82,8 @@ public class ToolBar extends JToolBar {
 		add(addImageButton(deleteB));
 		addSeparator();
 		add(addImageButton(moveB));
+		addSeparator();
+		add(addImageButton(select));
 		addSeparator();
 	}	
 }
