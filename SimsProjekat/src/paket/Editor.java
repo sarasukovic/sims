@@ -39,6 +39,10 @@ public class Editor extends JFrame implements ActionListener{
 	
 	public Panel getPanel() {return panel;}
 	
+	public void setState(State newState){
+		activeState = newState;
+	}
+	
 	public Element getElementFromPanel(){
 		return e1;
 	}
@@ -150,60 +154,14 @@ public class Editor extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		event = e;
+		
 		addMouseListener(new MouseAdapter() {
     	    @Override
     	    public void mouseClicked(MouseEvent e) {
+    	    	setState(new AddElement(Editor.this));
+    	    	doAction();
     	    	
-    	    	if(event.getActionCommand() == element.GROUND.name()){
-    	    		e1 = new Element("ground.png");
-    	    	}
-    	    	else if(event.getActionCommand() == element.CAPACITOR.name()){
-    	    		e1 = new Element("capacitor.png");
-    	    	}
-    	    	else if(event.getActionCommand() == element.VOLTAGESRC.name()){
-    	    		e1 = new Element("voltageSrc.png");
-    	    	}
-    	    	else if(event.getActionCommand() == element.CURRENTSRC.name()){
-    	    		e1 = new Element("currentSrc.png");
-    	    	}
-    	    	else if(event.getActionCommand() == element.INDUCTOR.name()){
-    	    		e1 = new Element("inductor.png");
-    	    	}
-    	    	else if(event.getActionCommand() == element.RESISTOR.name()){
-    	    		e1 = new Element("resistor.png");
-    	    	}else{
-    	    		JOptionPane.showMessageDialog(null, "Symbol is not chosen ",
-    	    				"InfoBox: " + "Error",	JOptionPane.INFORMATION_MESSAGE);
-    	    	}
-    	    	//System.out.println(e1.getType());
-        		group.setHeigth(e1.getHeigth());
-     	    	group.setWidth(e1.getWidth());
-     	    	
-     	    	
-     	    	e1.setX((int)panel.getMousePosition().getX());
-     	    	e1.setY((int)panel.getMousePosition().getY());
-     	    	e1.rect.x = e1.getX()-30;
-     	    	e1.rect.y = e1.getY()-30;
-     	    	
-     	    	// doda u listu pa ako postoji na toj poziciji obrise ga
-     	    	group.getElements().add(e1);
-	    		panel.getElements().add(e1);
-     	    	
-     	    	if(checkPosition(e1) == false){
-                      	    		
-    	    		/*group.getElements().add(e1);
-    	    		panel.getElements().add(e1);*/
-        	    	panel.repaint();
-     	    		
-     	    	}else{
-     	    		panel.getElements().remove(e1);
-     	    		panel.revalidate();
-     	    		panel.repaint();
-        	    /*	JOptionPane.showMessageDialog(null, "Symbol is already on this position ",
-    	    				"InfoBox: " + " Error",	JOptionPane.INFORMATION_MESSAGE);
-     	    		
-     	    		*/
-    	    	}
+    	    	
     	    };
 		});
 	
