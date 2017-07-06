@@ -26,7 +26,15 @@ public class Editor extends JFrame implements ActionListener{
 	private GroupOfElements group;
 	private ActionEvent event;
 	private State activeState;
+	private int selectedElements;
 
+	public int getSelectedElements() {
+		return selectedElements;
+	}
+
+	public void setSelectedElements(int selectedElements) {
+		this.selectedElements = selectedElements;
+	}
 	
 	public Panel getPanel() {return panel;}
 	
@@ -85,7 +93,10 @@ public class Editor extends JFrame implements ActionListener{
         toolb.currentSrc.setActionCommand(Element.elementType.CURRENTSRC.name());
         toolb.inductor.setActionCommand(Element.elementType.INDUCTOR.name());
         toolb.resistor.setActionCommand(Element.elementType.RESISTOR.name());
-        toolb.deleteB.setActionCommand("DeleteElement");
+        toolb.deleteB.setActionCommand("deleteElement");
+        toolb.select.setActionCommand("selectElement");
+        
+
         
         toolb.ground.addActionListener(this);
         toolb.capacitor.addActionListener(this);
@@ -93,11 +104,22 @@ public class Editor extends JFrame implements ActionListener{
         toolb.currentSrc.addActionListener(this);
         toolb.inductor.addActionListener(this);
         toolb.resistor.addActionListener(this);
+        toolb.select.addActionListener(this);
         toolb.deleteB.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// brisanje
+				System.out.println("pokusaj brisanja");
+				while(selectedElements>0){
+			    	for(Element el: panel.getElements()){
+			    		if(el.isSelect()){
+			    			panel.getElements().remove(el);
+			    			selectedElements--;
+			    			break;
+			    		}
+			    	}
+				}
+		    	panel.repaint();
 			}
 		});
 		//setVisible(true);
@@ -149,11 +171,20 @@ public class Editor extends JFrame implements ActionListener{
 		addMouseListener(new MouseAdapter() {
     	    @Override
     	    public void mouseClicked(MouseEvent e) {
-    	    	setState(new AddElement(Editor.this));
+    	    	if(event.getActionCommand() == "selectElement"){
+		    		setState(new SelectElement(Editor.this));
+		    	}
+    	    	else{
+    	    		selectedElements = 0;
+    	    		for(Element elem: panel.getElements()){
+    	    			elem.setSelect(false);
+    	    		}
+    	    		setState(new AddElement(Editor.this));
+    	    	}
+    	    	System.out.println("ima "+selectedElements +" selekt elemenataa");
     	    	doAction();
     	    	
-    	    	
-    	    };
+    	    };    
 		});
 	
 	}

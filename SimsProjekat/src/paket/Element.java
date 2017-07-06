@@ -1,5 +1,5 @@
-package paket;
 
+package paket;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -26,7 +26,14 @@ public class Element {
 	private int heigth;
 	private int width;
 	public Rectangle rect;
+	private boolean select;
 	
+	public boolean isSelect() {
+		return select;
+	}
+	public void setSelect(boolean select) {
+		this.select = select;
+	}
 	public int getX() {
 		return x;
 	}
@@ -76,6 +83,7 @@ public class Element {
 	
 	public Element(BufferedImage image, Element.elementType t) {
 		this.type = t;
+		this.select = false;
 		this.image = image;
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
@@ -93,7 +101,7 @@ public class Element {
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
-		
+		this.select = false;
 		this.heigth = this.image.getHeight();
 		//System.out.println(image.getHeight());
 		this.width =this.image.getWidth();
@@ -103,7 +111,7 @@ public class Element {
 		x = e.x;
 		y = e.y;
 		type = e.type;
-		
+		this.select = false;
 		String path="";
 		 if(type == elementType.CAPACITOR) path = "images/capacitor.png";
 	       if(this.type == elementType.CURRENTSRC) path="images/currentSrc.png" ;
@@ -128,6 +136,7 @@ public class Element {
 		type = t;
 		this.x = x;
 		this.y = y;
+		this.select = false;
 		this.heigth = image.getHeight();
 		this.width = image.getWidth();
 		this.image = image;
@@ -137,6 +146,7 @@ public class Element {
 		super();
 		this.x = x;
 		this.y = y;
+		this.select = false;
 		try {
 		       this.image = ImageIO.read(new File(path));
 		       
