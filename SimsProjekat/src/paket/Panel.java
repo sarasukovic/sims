@@ -18,9 +18,10 @@ import javax.swing.JPanel;
  */
 public class Panel extends JPanel {
 	private ArrayList<Element> elements;
-	private ArrayList<Line> lines;
+	private ArrayList<CustomLine> lines;
 	public Panel() {
 		this.elements= new ArrayList<Element>();
+		this.lines = new ArrayList<CustomLine>();
     }
 
     public ArrayList<Element> getElements() {
@@ -31,6 +32,14 @@ public class Panel extends JPanel {
 		this.elements = elements;
 	}
 
+	public ArrayList<CustomLine> getLines() {
+		return lines;
+	}
+
+	public void setLines(ArrayList<CustomLine> lines) {
+		this.lines = lines;
+	}
+
 	@Override
     protected void paintComponent(final Graphics g) {
         super.paintComponent(g);
@@ -39,7 +48,9 @@ public class Panel extends JPanel {
         	//System.out.println("_______"+e.getType());
         	//g.drawRect(e.rect.x, e.rect.y, e.rect.width, e.rect.width);
         }
-        //isto i za linije
+        for(CustomLine l : lines){
+        	g.drawLine(l.getX1(),l.getY1(),l.getX2(),l.getY2());
+        }
     }
 
 

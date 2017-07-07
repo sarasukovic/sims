@@ -105,8 +105,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.resistor.setActionCommand(Element.elementType.RESISTOR.name());
         toolb.deleteB.setActionCommand("deleteElement");
         toolb.select.setActionCommand("selectElement");
-        
-
+        toolb.connect.setActionCommand("connectElements");
         
         toolb.ground.addActionListener(this);
         toolb.capacitor.addActionListener(this);
@@ -131,6 +130,35 @@ public class Editor extends JFrame implements ActionListener{
 				}
 				panel.revalidate();
 		    	panel.repaint();
+			}
+		});
+        toolb.connect.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(selectedElements == 2){
+					boolean prva = true;
+					CustomLine l = new CustomLine();
+					for (Element el : panel.getElements()){
+						if (el.isSelect() ){
+							if(!prva){
+								l.setX1(el.getX());
+								l.setY1(el.getY());
+							}
+							else{
+								prva = false;
+								l.setX2(el.getX());
+								l.setY2(el.getY());
+							}
+						}
+					}
+					panel.getLines().add(l);
+					panel.revalidate();
+			    	panel.repaint();
+				}
+				else{
+					System.out.println("moraju biti 2 elementa selektovana");
+				}
 			}
 		});
 		//setVisible(true);
