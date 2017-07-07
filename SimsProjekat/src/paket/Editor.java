@@ -105,7 +105,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.inductor.addActionListener(this);
         toolb.resistor.addActionListener(this);
         toolb.select.addActionListener(this);
-        toolb.deleteB.addActionListener(new ActionListener() {
+       /* toolb.deleteB.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -121,7 +121,7 @@ public class Editor extends JFrame implements ActionListener{
 				}
 		    	panel.repaint();
 			}
-		});
+		});*/
 		//setVisible(true);
 		panel.setBackground(Color.white);
 		panel.setVisible(true);
@@ -173,16 +173,23 @@ public class Editor extends JFrame implements ActionListener{
     	    public void mouseClicked(MouseEvent e) {
     	    	if(event.getActionCommand() == "selectElement"){
 		    		setState(new SelectElement(Editor.this));
+		    		System.out.println("set state selct");
 		    	}
     	    	else{
-    	    		selectedElements = 0;
+		    		System.out.println("set state add");
+
+    	    		/*selectedElements = 0;
     	    		for(Element elem: panel.getElements()){
     	    			elem.setSelect(false);
-    	    		}
+    	    		}*/
     	    		setState(new AddElement(Editor.this));
     	    	}
-    	    	System.out.println("ima "+selectedElements +" selekt elemenataa");
+	    		System.out.println("posle set state");
+
     	    	doAction();
+    	    	panel.revalidate();
+    	    	System.out.println("posle do action : ima "+selectedElements +" selekt elemenataa");
+
     	    	
     	    };    
 		});

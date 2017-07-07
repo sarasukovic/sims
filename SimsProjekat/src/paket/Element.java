@@ -111,7 +111,7 @@ public class Element {
 		x = e.x;
 		y = e.y;
 		type = e.type;
-		this.select = false;
+		this.select = e.select;
 		String path="";
 		 if(type == elementType.CAPACITOR) path = "images/capacitor.png";
 	       if(this.type == elementType.CURRENTSRC) path="images/currentSrc.png" ;

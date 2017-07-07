@@ -11,7 +11,8 @@ public class AddElement extends State {
 	
 	@Override
 	public void doAction(){
-		
+		System.out.println("add do action");
+
 		if(editor.getEvent().getActionCommand() == Element.elementType.GROUND.name()){
     		editor.setElementOnPanel(new Element("images/ground.png"));
     	}
