@@ -11,7 +11,7 @@ import javax.imageio.ImageIO;
  atributi: x, y koordinate, sirina i visina*/
 public class Element {
 	
-	enum elementType{		
+	public enum elementType{		
 		GROUND,
 		CAPACITOR,
 		VOLTAGESRC,

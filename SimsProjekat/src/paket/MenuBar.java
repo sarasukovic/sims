@@ -1,5 +1,7 @@
 package paket;
 import java.awt.event.ActionEvent;
+import electricalElements.*;
+
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
@@ -65,16 +67,37 @@ public class MenuBar extends JMenuBar {
                 	String path = openFile.getSelectedFile().getAbsolutePath();
                 	try {
                 		FileInputStream fis= new FileInputStream(path);
-                		xstream.fromXML(fis, p);
+                		try{
+                			xstream.fromXML(fis, p);
+                		}catch(com.thoughtworks.xstream.io.StreamException e){
+                			JOptionPane.showMessageDialog(null, "Error!\n File is not"
+                           	+ " .xml ", "InfoBox: " + "Error message", JOptionPane.INFORMATION_MESSAGE);
+                		}
                 	} catch (FileNotFoundException e) {
                 		e.printStackTrace();
                 	}
 				
 
-                	Element eli;
                 	for(Element elem: p.getElements()){ //kopira elemente
-                		eli = new Element(elem);
-                		editor.panel.getElements().add(eli);
+                		if(elem.getType().name() ==  Element.elementType.GROUND.name()){
+                			Element eli = new Ground(elem);
+                			editor.panel.getElements().add(eli);
+                		}else if(elem.getType().name() == Element.elementType.CAPACITOR.name()){
+                			Element eli = new Capacitor(elem);
+                			editor.panel.getElements().add(eli);
+                		}else if(elem.getType().name() == Element.elementType.CURRENTSRC.name()){
+                			Element eli = new CurrentSource(elem);
+                			editor.panel.getElements().add(eli);
+                		}else if(elem.getType().name() == Element.elementType.INDUCTOR.name()){
+                			Element eli = new Inductor(elem);
+                			editor.panel.getElements().add(eli);
+                		}else if(elem.getType().name() == Element.elementType.RESISTOR.name()){
+                			Element eli = new Resistor(elem);
+                			editor.panel.getElements().add(eli);
+                		}else if(elem.getType().name() == Element.elementType.VOLTAGESRC.name()){
+                			Element eli = new VoltageSource(elem);
+                			editor.panel.getElements().add(eli);
+                		}
                 	}
                 	editor.panel.revalidate();	
                 	editor.panel.repaint();
@@ -107,17 +130,21 @@ public class MenuBar extends JMenuBar {
 			public void actionPerformed(ActionEvent ARG0) {
 				XStream xstream = new XStream(new DomDriver());
 				JFileChooser saveFile = new JFileChooser();
-                int code = saveFile.showSaveDialog(editor);
-                	
-                if(code == saveFile.APPROVE_OPTION){
-               		String path = saveFile.getSelectedFile().getAbsolutePath();
-               		try {
-               			FileOutputStream fs = new FileOutputStream(path);
-               			xstream.toXML(editor.getPanel(), fs);
-               		} catch (IOException e) {
-               			e.printStackTrace();
-               		}
-               	}
+				int code = saveFile.showSaveDialog(editor);
+				
+                if(saveFile.getSelectedFile().getName().contains(".xml")){	
+                	if(code == saveFile.APPROVE_OPTION){
+                		String path = saveFile.getSelectedFile().getAbsolutePath();
+                		try {
+                			FileOutputStream fs = new FileOutputStream(path);               				xstream.toXML(editor.getPanel(), fs);
+                		} catch (IOException e) {
+                			e.printStackTrace();
+                		}
+                	}
+                }else{
+                	JOptionPane.showMessageDialog(null, "Error!\n File is not"
+                  	+ " .xml ", "InfoBox: " + "Error message", JOptionPane.INFORMATION_MESSAGE);
+                }
 			}
 		});
 	

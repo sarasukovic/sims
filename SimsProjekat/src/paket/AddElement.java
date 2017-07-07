@@ -1,5 +1,6 @@
 package paket;
 
+import electricalElements.*;
 import javax.swing.JOptionPane;
 
 
@@ -14,22 +15,22 @@ public class AddElement extends State {
 		System.out.println("add do action");
 
 		if(editor.getEvent().getActionCommand() == Element.elementType.GROUND.name()){
-    		editor.setElementOnPanel(new Element("images/ground.png"));
+    		editor.setElementOnPanel(new Ground("images/ground.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.CAPACITOR.name()){
-    		editor.setElementOnPanel(new Element("images/capacitor.png"));
+    		editor.setElementOnPanel(new Capacitor("images/capacitor.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.VOLTAGESRC.name()){
-    		editor.setElementOnPanel(new Element("images/voltageSrc.png"));
+    		editor.setElementOnPanel(new VoltageSource("images/voltageSrc.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.CURRENTSRC.name()){
-    		editor.setElementOnPanel(new Element("images/currentSrc.png"));
+    		editor.setElementOnPanel(new CurrentSource("images/currentSrc.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.INDUCTOR.name()){
-    		editor.setElementOnPanel(new Element("images/inductor.png"));
+    		editor.setElementOnPanel(new Inductor("images/inductor.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.RESISTOR.name()){
-    		editor.setElementOnPanel(new Element("images/resistor.png"));
+    		editor.setElementOnPanel(new Resistor("images/resistor.png"));
     	}else{
     		JOptionPane.showMessageDialog(null, "Symbol is not chosen ",
     				"InfoBox: " + "Error",	JOptionPane.INFORMATION_MESSAGE);
