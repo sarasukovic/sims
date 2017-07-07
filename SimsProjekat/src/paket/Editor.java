@@ -26,6 +26,7 @@ public class Editor extends JFrame implements ActionListener{
 	private ActionEvent event;
 	private State activeState;
 	private int selectedElements;
+	private MouseAdapter mouseListener;
 
 	public int getSelectedElements() {
 		return selectedElements;
@@ -64,7 +65,17 @@ public class Editor extends JFrame implements ActionListener{
 	
 	public Editor() {
 	
-		
+		mouseListener = new MouseAdapter() {
+    	    @Override
+    	    public void mouseClicked(MouseEvent e) {
+    	    	doAction();
+    	    	panel.revalidate();
+    	    	System.out.println("posle do action : ima "+selectedElements +" selekt elemenataa");
+
+    	    	
+    	    };    
+    	 
+		};
 		group = new GroupOfElements();
 		setBounds(0, 0, 800, 600);
 		setMinimumSize(new Dimension(400, 300));
@@ -104,7 +115,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.inductor.addActionListener(this);
         toolb.resistor.addActionListener(this);
         toolb.select.addActionListener(this);
-       /* toolb.deleteB.addActionListener(new ActionListener() {
+        toolb.deleteB.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -118,9 +129,10 @@ public class Editor extends JFrame implements ActionListener{
 			    		}
 			    	}
 				}
+				panel.revalidate();
 		    	panel.repaint();
 			}
-		});*/
+		});
 		//setVisible(true);
 		panel.setBackground(Color.white);
 		panel.setVisible(true);
@@ -166,32 +178,19 @@ public class Editor extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		event = e;
+		removeMouseListener(mouseListener);
+		if(event.getActionCommand() == "selectElement"){
+    		setState(new SelectElement(Editor.this));
+    	}
+    	else{
+    		selectedElements = 0;
+    		for(Element elem: panel.getElements()){
+    			elem.setSelect(false);
+    		}
+    		setState(new AddElement(Editor.this));
+    	}
+		this.addMouseListener(mouseListener);
 		
-		addMouseListener(new MouseAdapter() {
-    	    @Override
-    	    public void mouseClicked(MouseEvent e) {
-    	    	if(event.getActionCommand() == "selectElement"){
-		    		setState(new SelectElement(Editor.this));
-		    		System.out.println("set state selct");
-		    	}
-    	    	else{
-		    		System.out.println("set state add");
-
-    	    		/*selectedElements = 0;
-    	    		for(Element elem: panel.getElements()){
-    	    			elem.setSelect(false);
-    	    		}*/
-    	    		setState(new AddElement(Editor.this));
-    	    	}
-	    		System.out.println("posle set state");
-
-    	    	doAction();
-    	    	panel.revalidate();
-    	    	System.out.println("posle do action : ima "+selectedElements +" selekt elemenataa");
-
-    	    	
-    	    };    
-		});
 	
 	}
 }
