@@ -1,5 +1,6 @@
 package paket;
 
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -12,7 +13,15 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
+import electricalElements.Capacitor;
+import electricalElements.CurrentSource;
+import electricalElements.Ground;
+import electricalElements.Inductor;
+import electricalElements.Resistor;
+import electricalElements.VoltageSource;
 
 
 public class Editor extends JFrame implements ActionListener{
@@ -62,6 +71,62 @@ public class Editor extends JFrame implements ActionListener{
 		return event;
 	}
 	
+	public void enterValue(Element elem){
+		panel.setLayout(null);
+		JLabel label = null;
+		String ret = null;
+		if(elem instanceof Ground){
+			return;
+			
+		}else if(elem instanceof Capacitor){
+			ret = JOptionPane.showInputDialog("Please input capacity (μF): ");
+			((Capacitor) elem).setCapacity(Float.valueOf(ret));
+			ret = ret + "μF";
+			label = new JLabel(ret);
+			label.setBounds(elem.rect);
+			label.setVisible(true);
+			
+		}else if(elem instanceof CurrentSource){
+			ret = JOptionPane.showInputDialog("Please input power (A): ");	
+			((CurrentSource)elem).setPower(Float.valueOf(ret));
+			ret = ret + "A";
+			label = new JLabel(ret);
+			label.setBounds(elem.rect);
+			label.setVisible(true);
+		
+		}else if(elem instanceof Inductor){
+			ret = JOptionPane.showInputDialog("Please input inductance (μH): ");
+			((Inductor)elem).setInductance(Float.valueOf(ret));
+			ret = ret + "μH";
+			label = new JLabel(ret);
+			label.setBounds(elem.rect);
+			label.setVisible(true);
+		
+		}else if(elem instanceof Resistor){
+			ret = JOptionPane.showInputDialog("Please input resistance (Ω): ");
+			((Resistor)elem).setResistance(Float.valueOf(ret));
+			ret = ret + "Ω";
+			label = new JLabel(ret);
+			label.setBounds(elem.rect);
+			label.setVisible(true);
+		
+		}else if(elem instanceof VoltageSource){
+			ret = JOptionPane.showInputDialog("Please input voltage (V): ");
+			((VoltageSource)elem).setVoltage(Float.valueOf(ret));
+			ret = ret + "V";
+			label = new JLabel(ret);
+			label.setBounds(elem.rect);
+			label.setVisible(true);
+		}
+		
+		panel.add(label);
+		panel.setVisible(true);
+		panel.revalidate();
+		panel.repaint();
+
+	}
+
+	
 	
 	public Editor() {
 	
@@ -106,6 +171,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.deleteB.setActionCommand("deleteElement");
         toolb.select.setActionCommand("selectElement");
         toolb.connect.setActionCommand("connectElements");
+        toolb.addParams.setActionCommand("addParams");
         
         toolb.ground.addActionListener(this);
         toolb.capacitor.addActionListener(this);
@@ -132,6 +198,19 @@ public class Editor extends JFrame implements ActionListener{
 		    	panel.repaint();
 			}
 		});
+        
+        toolb.addParams.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				for(Element el : panel.getElements()){
+					if(el.isSelect()){
+						enterValue(el);
+					}
+				}
+			}
+		});
+  
         toolb.connect.addActionListener(new ActionListener() {
 			
 			@Override
@@ -168,6 +247,7 @@ public class Editor extends JFrame implements ActionListener{
 		setVisible(true);
 	}
 	
+
 	
 	public void updateGroupSize(Element e){
 		//ako se serijski dodaje
