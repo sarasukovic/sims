@@ -26,6 +26,8 @@ public class ToolBar extends JToolBar {
 	public JButton deleteB = new JButton(new ImageIcon("images/delete.jpg"));
 	public JButton moveB = new JButton(new ImageIcon("images/move.jpg"));
 	public JButton select = new JButton(new ImageIcon("images/select.jpg"));
+	public JButton addParams = new JButton(new ImageIcon("images/addP.jpg"));
+	public JButton line = new JButton(new ImageIcon("images/line.jpg"));
 	
 	protected List<JButton> buttons = new ArrayList<JButton>();
 	
@@ -84,6 +86,10 @@ public class ToolBar extends JToolBar {
 		add(addImageButton(moveB));
 		addSeparator();
 		add(addImageButton(select));
+		addSeparator();
+		add(addImageButton(addParams));
+		addSeparator();
+		add(addImageButton(line));
 		addSeparator();
 	}	
 }
