@@ -21,10 +21,12 @@ public class SelectElement extends State {
 					}
 					else{
 						el.setSelect(true);
+						editor.selected.add(el);
 						editor.setSelectedElements(editor.getSelectedElements()+1);
 
 					}
 					System.out.println("slect do action: element je selektovans, sad ih je "+editor.getSelectedElements());
+					System.out.println("u listi " + editor.selected.size());
 					break;
 
 				}

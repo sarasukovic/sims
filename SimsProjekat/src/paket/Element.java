@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JLabel;
 /*
  Klasa koja predstavlja element koji se iscrtava. 
  atributi: x, y koordinate, sirina i visina*/
@@ -27,7 +28,29 @@ public class Element {
 	private int width;
 	public Rectangle rect;
 	private boolean select;
+	private String id;
+	public JLabel paramLabel;
+	public JLabel idLabel;
 	
+	public JLabel getParamLabel() {
+		return paramLabel;
+	}
+	public void setParamLabel(JLabel paramLabel) {
+		this.paramLabel = paramLabel;
+	}
+	public JLabel getIdLabel() {
+		return idLabel;
+	}
+
+	public void setIdLabel(JLabel idLabel) {
+		this.idLabel = idLabel;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public boolean isSelect() {
 		return select;
 	}
@@ -88,6 +111,9 @@ public class Element {
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
 		this.rect = new Rectangle(0, 0, image.getWidth()+60, image.getHeight()+60);
+		id = null;
+		paramLabel = new JLabel();
+		idLabel = new JLabel();
 	}
 	public Element(String path) {
 		try {
@@ -101,13 +127,19 @@ public class Element {
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
+
+		paramLabel = new JLabel();
+		idLabel = new JLabel();
+		id = null;
 		this.select = false;
 		this.heigth = this.image.getHeight();
-		//System.out.println(image.getHeight());
 		this.width =this.image.getWidth();
 		this.rect = new Rectangle(0, 0, image.getWidth()+60, image.getHeight()+60);
 	}
 	public Element(Element e){
+		id = null;
+		paramLabel = new JLabel();
+		idLabel = new JLabel();
 		x = e.x;
 		y = e.y;
 		type = e.type;
@@ -134,6 +166,9 @@ public class Element {
 	public Element(int x, int y, BufferedImage image, Element.elementType t) {
 		super();
 		type = t;
+		id = null;
+		paramLabel = new JLabel();
+		idLabel = new JLabel();
 		this.x = x;
 		this.y = y;
 		this.select = false;
@@ -144,7 +179,10 @@ public class Element {
 	}
 	public Element(int x, int y, String path) {
 		super();
+		paramLabel = new JLabel();
+		idLabel = new JLabel();
 		this.x = x;
+		id = null;
 		this.y = y;
 		this.select = false;
 		try {

@@ -10,11 +10,13 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.border.EmptyBorder;
 
 import electricalElements.Capacitor;
 import electricalElements.CurrentSource;
@@ -36,6 +38,8 @@ public class Editor extends JFrame implements ActionListener{
 	private State activeState;
 	private int selectedElements;
 	private MouseAdapter mouseListener;
+	public ArrayList<Element> selected;
+	
 
 	public int getSelectedElements() {
 		return selectedElements;
@@ -71,62 +75,298 @@ public class Editor extends JFrame implements ActionListener{
 		return event;
 	}
 	
+	public boolean checkId(Element elem){
+		boolean t = false;
+		if(elem instanceof Capacitor){
+			if(elem.getId() == null){
+				t = true;
+			}
+		}else if(elem instanceof CurrentSource){
+			if(elem.getId() == null){
+				t = true;
+			}
+		}else if(elem instanceof Inductor){
+			if(elem.getId() == null){
+				t = true;
+			}
+		}else if(elem instanceof Resistor){
+			if(elem.getId() == null){
+				t = true;
+			}
+		}else if(elem instanceof VoltageSource){
+			if(elem.getId() == null){
+				t = true;
+			}
+		}
+		return t;
+	}
+	
+	public boolean checkParam(Element elem){
+		boolean t = false;
+		if(elem instanceof Capacitor){
+			if(((Capacitor) elem).getCapacity() == 0){
+				t = true;
+			}
+		}else if(elem instanceof CurrentSource){
+			if(((CurrentSource) elem).getPower() == 0){
+				t = true;
+			}
+		}else if(elem instanceof Inductor){
+			if(((Inductor) elem).getInductance() == 0){
+				t = true;
+			}
+		}else if(elem instanceof Resistor){
+			if(((Resistor) elem).getResistance() == 0){
+				t = true;
+			}
+		}else if(elem instanceof VoltageSource){
+			if(((VoltageSource) elem).getVoltage() == 0){
+				t = true;
+			}
+		}
+		return t;
+	}
+	
+	
 	public void enterValue(Element elem){
 		panel.setLayout(null);
-		JLabel label = null;
 		String ret = null;
+		String id = null;
+		String oldId = null;
+		float old = 0;
 		if(elem instanceof Ground){
 			return;
 			
 		}else if(elem instanceof Capacitor){
 			ret = JOptionPane.showInputDialog("Please input capacity (μF): ");
-			((Capacitor) elem).setCapacity(Float.valueOf(ret));
-			ret = ret + "μF";
-			label = new JLabel(ret);
-			label.setBounds(elem.rect);
-			label.setVisible(true);
+			old = ((Capacitor) elem).getCapacity();
+			if(ret.length() == 0){
+				elem.paramLabel.setText(String.valueOf(old) + "μF");
+			}else{
+				if(((Capacitor) elem).getCapacity() != 0){
+					if(ret.length() > 0){
+						elem.paramLabel.setText(ret + "μF");
+					}
+				}else{
+					elem.paramLabel = new JLabel(ret + "μF");
+					elem.paramLabel.setBounds(elem.rect);
+					elem.paramLabel.setVisible(true);
+				}
+			}
+
+			try{
+				((Capacitor) elem).setCapacity(Float.valueOf(ret));
+			}catch(NumberFormatException e){}
+			
+			id = JOptionPane.showInputDialog("Please input id : ");
+			oldId = elem.getId();
+			if(id.length() == 0){
+				elem.idLabel.setText(oldId);
+			}else{
+				int t = (Integer.valueOf(id));
+				if(elem.getId() != null){
+					if(id.length() > 0){
+						elem.idLabel.setText("C" + id);
+						elem.setId("C" + t);
+					}
+				}else{
+					elem.setId("C" + t);
+					elem.idLabel = new JLabel("C" + t);
+					elem.idLabel.setBounds(elem.rect.x+20, elem.rect.y+20, elem.rect.width, elem.rect.height);
+					elem.idLabel.setVisible(true);
+				}
+			}
+			panel.add(elem.paramLabel);
+			EmptyBorder b = new EmptyBorder(5, 0, 5, 0);
+			elem.paramLabel.setBorder(b);
+			panel.add(elem.idLabel);
 			
 		}else if(elem instanceof CurrentSource){
 			ret = JOptionPane.showInputDialog("Please input power (A): ");	
-			((CurrentSource)elem).setPower(Float.valueOf(ret));
-			ret = ret + "A";
-			label = new JLabel(ret);
-			label.setBounds(elem.rect);
-			label.setVisible(true);
+			old = ((CurrentSource) elem).getPower();
+			if(ret.length() == 0){
+				elem.paramLabel.setText(String.valueOf(old) + "A");
+			}else{
+				if(((CurrentSource) elem).getPower() != 0){
+					if(ret.length() > 0){
+						elem.paramLabel.setText(ret + "A");
+					}
+				}else{
+					elem.paramLabel = new JLabel(ret + "A");
+					elem.paramLabel.setBounds(elem.rect);
+					elem.paramLabel.setVisible(true);
+				}
+			}
+
+			try{
+				((CurrentSource) elem).setPower(Float.valueOf(ret));
+			}catch(NumberFormatException e){}
+			
+			id = JOptionPane.showInputDialog("Please input id : ");
+			oldId = elem.getId();
+			if(id.length() == 0){
+				elem.idLabel.setText(oldId);
+			}else{
+				int t = (Integer.valueOf(id));
+				if(elem.getId() != null){
+					if(id.length() > 0){
+						elem.idLabel.setText("I" + id);
+						elem.setId("I" + t);
+					}
+				}else{
+					elem.setId("I" + t);
+					elem.idLabel = new JLabel("I" + t);
+					elem.idLabel.setBounds(elem.rect.x+20, elem.rect.y+20, elem.rect.width, elem.rect.height);
+					elem.idLabel.setVisible(true);
+				}
+			}
+			
+			panel.add(elem.paramLabel);
+			EmptyBorder b = new EmptyBorder(5, 0, 5, 0);
+			elem.paramLabel.setBorder(b);
+			panel.add(elem.idLabel);
 		
 		}else if(elem instanceof Inductor){
 			ret = JOptionPane.showInputDialog("Please input inductance (μH): ");
-			((Inductor)elem).setInductance(Float.valueOf(ret));
-			ret = ret + "μH";
-			label = new JLabel(ret);
-			label.setBounds(elem.rect);
-			label.setVisible(true);
-		
+			old = ((Inductor) elem).getInductance();
+			if(ret.length() == 0){
+				elem.paramLabel.setText(String.valueOf(old) + "μH");
+			}else{
+				if(((Inductor) elem).getInductance() != 0){
+					if(ret.length() > 0){
+						elem.paramLabel.setText(ret + "μH");
+					}
+				}else{
+					elem.paramLabel = new JLabel(ret + "μH");
+					elem.paramLabel.setBounds(elem.rect);
+					elem.paramLabel.setVisible(true);
+				}
+			}
+
+			try{
+				((Inductor) elem).setInductance(Float.valueOf(ret));
+			}catch(NumberFormatException e){}
+			
+			id = JOptionPane.showInputDialog("Please input id : ");
+			oldId = elem.getId();
+			if(id.length() == 0){
+				elem.idLabel.setText(oldId);
+			}else{
+				int t = (Integer.valueOf(id));
+				if(elem.getId() != null){
+					if(id.length() > 0){
+						elem.idLabel.setText("L" + id);
+						elem.setId("L" + t);
+					}
+				}else{
+					elem.setId("L" + t);
+					elem.idLabel = new JLabel("L" + t);
+					elem.idLabel.setBounds(elem.rect.x+20, elem.rect.y+20, elem.rect.width, elem.rect.height);
+					elem.idLabel.setVisible(true);
+				}
+			}
+			
+			panel.add(elem.paramLabel);
+			EmptyBorder b = new EmptyBorder(5, 0, 5, 0);
+			elem.paramLabel.setBorder(b);
+			panel.add(elem.idLabel);
+			
 		}else if(elem instanceof Resistor){
 			ret = JOptionPane.showInputDialog("Please input resistance (Ω): ");
-			((Resistor)elem).setResistance(Float.valueOf(ret));
-			ret = ret + "Ω";
-			label = new JLabel(ret);
-			label.setBounds(elem.rect);
-			label.setVisible(true);
-		
+			old = ((Resistor) elem).getResistance();
+			if(ret.length() == 0){
+				elem.paramLabel.setText(String.valueOf(old) + "Ω");
+			}else{
+				if(((Resistor) elem).getResistance() != 0){
+					if(ret.length() > 0){
+						elem.paramLabel.setText(ret + "Ω");
+					}
+				}else{
+					elem.paramLabel = new JLabel(ret + "Ω");
+					elem.paramLabel.setBounds(elem.rect);
+					elem.paramLabel.setVisible(true);
+				}
+			}
+
+			try{
+				((Resistor) elem).setResistance(Float.valueOf(ret));
+			}catch(NumberFormatException e){}
+			
+			id = JOptionPane.showInputDialog("Please input id : ");
+			oldId = elem.getId();
+			if(id.length() == 0){
+				elem.idLabel.setText(oldId);
+			}else{
+				int t = (Integer.valueOf(id));
+				if(elem.getId() != null){
+					if(id.length() > 0){
+						elem.idLabel.setText("R" + id);
+						elem.setId("R" + t);
+					}
+				}else{
+					elem.setId("R" + t);
+					elem.idLabel = new JLabel("R" + t);
+					elem.idLabel.setBounds(elem.rect.x+20, elem.rect.y+20, elem.rect.width, elem.rect.height);
+					elem.idLabel.setVisible(true);
+				}
+			}
+			
+			panel.add(elem.paramLabel);
+			EmptyBorder b = new EmptyBorder(5, 0, 5, 0);
+			elem.paramLabel.setBorder(b);
+			panel.add(elem.idLabel);
+			
 		}else if(elem instanceof VoltageSource){
 			ret = JOptionPane.showInputDialog("Please input voltage (V): ");
-			((VoltageSource)elem).setVoltage(Float.valueOf(ret));
-			ret = ret + "V";
-			label = new JLabel(ret);
-			label.setBounds(elem.rect);
-			label.setVisible(true);
+			old = ((VoltageSource) elem).getVoltage();
+			if(ret.length() == 0){
+				elem.paramLabel.setText(String.valueOf(old) + "V");
+			}else{
+				if(((VoltageSource) elem).getVoltage() != 0){
+					if(ret.length() > 0){
+						elem.paramLabel.setText(ret + "V");
+					}
+				}else{
+					elem.paramLabel = new JLabel(ret + "V");
+					elem.paramLabel.setBounds(elem.rect);
+					elem.paramLabel.setVisible(true);
+				}
+			}
+
+			try{
+				((VoltageSource) elem).setVoltage(Float.valueOf(ret));
+			}catch(NumberFormatException e){}
+			
+			id = JOptionPane.showInputDialog("Please input id : ");
+			oldId = elem.getId();
+			if(id.length() == 0){
+				elem.idLabel.setText(oldId);
+			}else{
+				int t = (Integer.valueOf(id));
+				if(elem.getId() != null){
+					if(id.length() > 0){
+						elem.idLabel.setText("V" + id);
+						elem.setId("V" + t);
+					}
+				}else{
+					elem.setId("V" + t);
+					elem.idLabel = new JLabel("V" + t);
+					elem.idLabel.setBounds(elem.rect.x+20, elem.rect.y+20, elem.rect.width, elem.rect.height);
+					elem.idLabel.setVisible(true);
+				}
+			}
+			
+			panel.add(elem.paramLabel);
+			EmptyBorder b = new EmptyBorder(5, 0, 5, 0);
+			elem.paramLabel.setBorder(b);
+			panel.add(elem.idLabel);
 		}
-		
-		panel.add(label);
+	
 		panel.setVisible(true);
 		panel.revalidate();
 		panel.repaint();
 
 	}
-
-	
 	
 	public Editor() {
 	
@@ -142,6 +382,7 @@ public class Editor extends JFrame implements ActionListener{
     	 
 		};
 		group = new GroupOfElements();
+		selected = new ArrayList<Element>();
 		setBounds(0, 0, 800, 600);
 		setMinimumSize(new Dimension(400, 300));
 		setLocationRelativeTo(null);
@@ -204,10 +445,26 @@ public class Editor extends JFrame implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				for(Element el : panel.getElements()){
-					if(el.isSelect()){
+					if(selectedElements == 1 && el.isSelect()){
 						enterValue(el);
+					}else{
+						if(selectedElements > 1){
+							selectedElements = 1;
+							for(Element elem : panel.getElements()){
+								if(elem != selected.get(selected.size()-1)){
+									elem.setSelect(false);
+								}
+							}
+							enterValue(selected.get(selected.size()-1));
+							break;
+						}
 					}
 				}
+				selectedElements = 0;
+	    		for(Element elem: panel.getElements()){
+	    			elem.setSelect(false);
+	    		}
+	    		selected.removeAll(selected);
 			}
 		});
   
@@ -240,14 +497,12 @@ public class Editor extends JFrame implements ActionListener{
 				}
 			}
 		});
-		//setVisible(true);
 		panel.setBackground(Color.white);
 		panel.setVisible(true);
         this.add(panel);
 		setVisible(true);
 	}
 	
-
 	
 	public void updateGroupSize(Element e){
 		//ako se serijski dodaje
