@@ -27,6 +27,7 @@ public class Element {
 	private int heigth;
 	private int width;
 	public Rectangle rect;
+	public Rectangle rectSelect;
 	private boolean select;
 	private String id;
 	public JLabel paramLabel;
@@ -111,6 +112,7 @@ public class Element {
 		this.heigth = image.getHeight();
 		this.width =image.getWidth();
 		this.rect = new Rectangle(0, 0, image.getWidth()+60, image.getHeight()+60);
+		this.rectSelect = new Rectangle(0, 0, image.getWidth(), image.getHeight());
 		id = null;
 		paramLabel = new JLabel();
 		idLabel = new JLabel();
@@ -135,6 +137,7 @@ public class Element {
 		this.heigth = this.image.getHeight();
 		this.width =this.image.getWidth();
 		this.rect = new Rectangle(0, 0, image.getWidth()+60, image.getHeight()+60);
+		this.rectSelect = new Rectangle(0, 0, image.getWidth(), image.getHeight());
 	}
 	public Element(Element e){
 		id = null;
@@ -161,6 +164,7 @@ public class Element {
 	       heigth = image.getHeight();
 	       width = image.getWidth();
 	       rect = new Rectangle(x-30, y-30, image.getWidth()+60, image.getHeight()+60);
+	   	   this.rectSelect = new Rectangle(x, y, image.getWidth(), image.getHeight());
 
 	}
 	public Element(int x, int y, BufferedImage image, Element.elementType t) {
@@ -176,6 +180,7 @@ public class Element {
 		this.width = image.getWidth();
 		this.image = image;
 		this.rect = new Rectangle(x-30, y-30, image.getWidth()+60, image.getHeight()+60);
+		this.rectSelect = new Rectangle(x, y, image.getWidth(), image.getHeight());
 	}
 	public Element(int x, int y, String path) {
 		super();
@@ -202,6 +207,7 @@ public class Element {
 		this.width =image.getWidth();
 		this.rect = new Rectangle(x-30, y-30, image.getWidth()+60, image.getHeight()+60);
 	
+		this.rectSelect = new Rectangle(x, y, image.getWidth(), image.getHeight());
 	}
 
 }

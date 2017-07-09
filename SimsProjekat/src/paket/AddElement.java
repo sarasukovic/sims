@@ -44,6 +44,8 @@ public class AddElement extends State {
 	    editor.getElementFromPanel().setY((int)editor.panel.getMousePosition().getY());
 	    editor.getElementFromPanel().rect.x = editor.getElementFromPanel().getX()-30;
 	    editor.getElementFromPanel().rect.y = editor.getElementFromPanel().getY()-30;
+	    editor.getElementFromPanel().rectSelect.x = editor.getElementFromPanel().getX();
+	    editor.getElementFromPanel().rectSelect.y = editor.getElementFromPanel().getY();
 	    	
 	    	// doda u listu pa ako postoji na toj poziciji obrise ga
 	    editor.getGroup().getElements().add(editor.getElementFromPanel());

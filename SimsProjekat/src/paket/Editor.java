@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
@@ -33,11 +35,14 @@ public class Editor extends JFrame implements ActionListener{
     private ToolBar toolb;	
     public Panel panel;
     private Element e1;
+    public Element elementMoved;
 	private GroupOfElements group;
 	private ActionEvent event;
 	private State activeState;
 	private int selectedElements;
 	private MouseAdapter mouseListener;
+	public MouseListener mouseListener2;
+	public MouseMotionListener mouseMotionLis;
 	public ArrayList<Element> selected;
 	
 
@@ -413,6 +418,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.select.setActionCommand("selectElement");
         toolb.connect.setActionCommand("connectElements");
         toolb.addParams.setActionCommand("addParams");
+        toolb.moveB.setActionCommand("moveElement");
         
         toolb.ground.addActionListener(this);
         toolb.capacitor.addActionListener(this);
@@ -421,6 +427,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.inductor.addActionListener(this);
         toolb.resistor.addActionListener(this);
         toolb.select.addActionListener(this);
+        toolb.moveB.addActionListener(this);
         toolb.deleteB.addActionListener(new ActionListener() {
 			
 			@Override
@@ -536,7 +543,17 @@ public class Editor extends JFrame implements ActionListener{
 		}
 		return false;
 	}
-
+	
+	public boolean checkPositionMove(Element e){
+		for(int i = 0; i < panel.getElements().size(); i++){
+			if(panel.getElements().get(i).getX() == e.getX() && panel.getElements().get(i).getY() == e.getY()) {
+				return false;
+			}else if(panel.getElements().get(i).rect.contains(e.getX(), e.getY())){
+				return true;
+			}
+		}
+		return false;
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -544,16 +561,35 @@ public class Editor extends JFrame implements ActionListener{
 		removeMouseListener(mouseListener);
 		if(event.getActionCommand() == "selectElement"){
     		setState(new SelectElement(Editor.this));
+    	}else if(event.getActionCommand() == "moveElement") {
+    		//removeMouseListener(mouseListener);
+    		System.out.println("usao u move");
+    		setState(new MoveElement(Editor.this));
+    		activeState.doAction();
+    		//this.addMouseListener(mouseListener);
+    		/*if(event.getActionCommand() == "addElement") {
+    			removeMouseListener(mouseListener);
+    			System.out.prntln("ponovo sam u adddd");
+    			selectedElements = 0;
+        		for(Element elem: panel.getElements()){
+        			elem.setSelect(false);
+        		}
+        		setState(new AddElement(Editor.this));
+    		}*/
     	}
     	else{
+    		panel.removeMouseListener(mouseListener2);
+    		panel.removeMouseMotionListener(mouseMotionLis);
+    		//this.removeMouseListener(mouseListener);
+    		System.out.println("u add saaam");
     		selectedElements = 0;
     		for(Element elem: panel.getElements()){
     			elem.setSelect(false);
     		}
     		setState(new AddElement(Editor.this));
+    		
+    		
     	}
 		this.addMouseListener(mouseListener);
-		
-	
 	}
 }

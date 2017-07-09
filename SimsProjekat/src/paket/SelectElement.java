@@ -12,7 +12,7 @@ public class SelectElement extends State {
 
 	    //if(editor.getEvent().getActionCommand() != "deleteElement"){
 			for(Element el: editor.panel.getElements()){
-				if(el.rect.contains((int)editor.panel.getMousePosition().getX(),
+				if(el.rectSelect.contains((int)editor.panel.getMousePosition().getX(),
 						(int)editor.panel.getMousePosition().getY())){
 					if(el.isSelect()){
 						el.setSelect(false);
