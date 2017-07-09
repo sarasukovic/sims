@@ -548,7 +548,7 @@ public class Editor extends JFrame implements ActionListener{
 	public boolean checkPositionMove(Element e){
 		for(int i = 0; i < panel.getElements().size(); i++){
 			if(panel.getElements().get(i).getX() == e.getX() && panel.getElements().get(i).getY() == e.getY()) {
-				return false;
+				continue;
 			}else if(panel.getElements().get(i).rect.contains(e.getX(), e.getY())){
 				return true;
 			}
