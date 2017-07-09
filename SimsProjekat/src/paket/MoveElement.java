@@ -15,8 +15,6 @@ public class MoveElement extends State {
 	@Override
 	public void doAction(){
 	    
-		System.out.println("moveeeee do action");
-
         MouseListener m = new MouseListener() {
         	@Override
 			public void mouseReleased(MouseEvent e) {
@@ -63,7 +61,6 @@ public class MoveElement extends State {
    			}catch (NullPointerException i) {
 				
 			}
-                System.out.println("nasao element " + editor.elementMoved.getHeigth());
 				
 				
 				
@@ -110,10 +107,6 @@ public class MoveElement extends State {
 			
 			@Override
 			public void mouseDragged(MouseEvent e) {
-				if(editor.elementMoved == null) {
-					System.out.println("null je iz nekog razloga");
-					
-				}
 				for(Element el: editor.panel.getElements()){
 					if(el.getX() == editor.elementMoved.getX() && el.getY() == editor.elementMoved.getY() ){
 						el.setX(e.getX());

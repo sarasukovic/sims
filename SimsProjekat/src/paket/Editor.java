@@ -562,26 +562,13 @@ public class Editor extends JFrame implements ActionListener{
 		if(event.getActionCommand() == "selectElement"){
     		setState(new SelectElement(Editor.this));
     	}else if(event.getActionCommand() == "moveElement") {
-    		//removeMouseListener(mouseListener);
-    		System.out.println("usao u move");
     		setState(new MoveElement(Editor.this));
     		activeState.doAction();
-    		//this.addMouseListener(mouseListener);
-    		/*if(event.getActionCommand() == "addElement") {
-    			removeMouseListener(mouseListener);
-    			System.out.prntln("ponovo sam u adddd");
-    			selectedElements = 0;
-        		for(Element elem: panel.getElements()){
-        			elem.setSelect(false);
-        		}
-        		setState(new AddElement(Editor.this));
-    		}*/
+    		
     	}
     	else{
     		panel.removeMouseListener(mouseListener2);
     		panel.removeMouseMotionListener(mouseMotionLis);
-    		//this.removeMouseListener(mouseListener);
-    		System.out.println("u add saaam");
     		selectedElements = 0;
     		for(Element elem: panel.getElements()){
     			elem.setSelect(false);
