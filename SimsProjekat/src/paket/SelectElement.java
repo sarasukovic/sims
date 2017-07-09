@@ -27,6 +27,8 @@ public class SelectElement extends State {
 					}
 					System.out.println("slect do action: element je selektovans, sad ih je "+editor.getSelectedElements());
 					System.out.println("u listi " + editor.selected.size());
+					editor.panel.revalidate();
+					editor.panel.repaint();
 					break;
 
 				}

@@ -436,6 +436,8 @@ public class Editor extends JFrame implements ActionListener{
 				while(selectedElements>0){
 			    	for(Element el: panel.getElements()){
 			    		if(el.isSelect()){
+			    			e1.idLabel.setVisible(false);
+			    			e1.paramLabel.setVisible(false);
 			    			panel.getElements().remove(el);
 			    			selectedElements--;
 			    			break;
@@ -507,7 +509,7 @@ public class Editor extends JFrame implements ActionListener{
 		panel.setBackground(Color.white);
 		panel.setVisible(true);
         this.add(panel);
-		setVisible(true);
+		
 	}
 	
 	

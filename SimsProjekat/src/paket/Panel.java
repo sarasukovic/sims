@@ -46,7 +46,10 @@ public class Panel extends JPanel {
         for(Element e : elements){
         	g.drawImage(e.getImage(), e.getX(), e.getY(), null);
         	//System.out.println("_______"+e.getType());
-        	//g.drawRect(e.rect.x, e.rect.y, e.rect.width, e.rect.width);
+        	if(e.isSelect()){
+        		
+        	    g.drawRect(e.rectSelect.x, e.rectSelect.y, e.rectSelect.width, e.rectSelect.height);
+        	}
         }
         for(CustomLine l : lines){
         	g.drawLine(l.getX1(),l.getY1(),l.getX2(),l.getY2());

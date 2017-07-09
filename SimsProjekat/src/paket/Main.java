@@ -7,6 +7,7 @@ public class Main {
     	//lala
 
     	Editor e = new Editor();
+    	e.setVisible(true);
     
     }
 	
