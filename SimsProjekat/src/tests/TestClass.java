@@ -13,6 +13,8 @@ import electricalElements.Resistor;
 import paket.Editor;
 import paket.Element;
 
+// Bojana Ivanovic sw5/2015
+
 public class TestClass {
 
 	@BeforeClass
