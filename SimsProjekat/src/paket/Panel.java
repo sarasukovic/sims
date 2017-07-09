@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 public class Panel extends JPanel {
 	private ArrayList<Element> elements;
 	private ArrayList<CustomLine> lines;
+
 	public Panel() {
 		this.elements= new ArrayList<Element>();
 		this.lines = new ArrayList<CustomLine>();
@@ -45,7 +46,6 @@ public class Panel extends JPanel {
         super.paintComponent(g);
         for(Element e : elements){
         	g.drawImage(e.getImage(), e.getX(), e.getY(), null);
-        	//System.out.println("_______"+e.getType());
         	if(e.isSelect()){
         		
         	    g.drawRect(e.rectSelect.x, e.rectSelect.y, e.rectSelect.width, e.rectSelect.height);

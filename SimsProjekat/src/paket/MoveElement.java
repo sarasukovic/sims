@@ -18,7 +18,7 @@ public class MoveElement extends State {
         MouseListener m = new MouseListener() {
         	@Override
 			public void mouseReleased(MouseEvent e) {
-                //ako spusti element preko drugod
+                //ako spusti element preko drugog
 				if(editor.checkPositionMove(editor.elementMoved) == true) {
 					for(Element el: editor.panel.getElements()){
 						if(el.getX() == editor.elementMoved.getX() && el.getY() == editor.elementMoved.getY() ){
@@ -134,12 +134,6 @@ public class MoveElement extends State {
 		editor.mouseMotionLis = mm;
 		editor.panel.addMouseListener(m);
 		editor.panel.addMouseMotionListener(mm);
-		
-		
-		
-
-			}
-			
-	
+		}
 }
 

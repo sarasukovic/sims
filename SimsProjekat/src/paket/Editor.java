@@ -163,7 +163,7 @@ public class Editor extends JFrame implements ActionListener{
 				((Capacitor) elem).setCapacity(Float.valueOf(ret));
 			}catch(NumberFormatException e){}
 			
-			id = JOptionPane.showInputDialog("Please input id : ");
+			id = JOptionPane.showInputDialog("Please input id (number) : ");
 			oldId = elem.getId();
 			if(id.length() == 0){
 				elem.idLabel.setText(oldId);
@@ -207,7 +207,7 @@ public class Editor extends JFrame implements ActionListener{
 				((CurrentSource) elem).setPower(Float.valueOf(ret));
 			}catch(NumberFormatException e){}
 			
-			id = JOptionPane.showInputDialog("Please input id : ");
+			id = JOptionPane.showInputDialog("Please input id (number) : ");
 			oldId = elem.getId();
 			if(id.length() == 0){
 				elem.idLabel.setText(oldId);
@@ -252,7 +252,7 @@ public class Editor extends JFrame implements ActionListener{
 				((Inductor) elem).setInductance(Float.valueOf(ret));
 			}catch(NumberFormatException e){}
 			
-			id = JOptionPane.showInputDialog("Please input id : ");
+			id = JOptionPane.showInputDialog("Please input id (number) : ");
 			oldId = elem.getId();
 			if(id.length() == 0){
 				elem.idLabel.setText(oldId);
@@ -297,7 +297,7 @@ public class Editor extends JFrame implements ActionListener{
 				((Resistor) elem).setResistance(Float.valueOf(ret));
 			}catch(NumberFormatException e){}
 			
-			id = JOptionPane.showInputDialog("Please input id : ");
+			id = JOptionPane.showInputDialog("Please input id (number) : ");
 			oldId = elem.getId();
 			if(id.length() == 0){
 				elem.idLabel.setText(oldId);
@@ -342,7 +342,7 @@ public class Editor extends JFrame implements ActionListener{
 				((VoltageSource) elem).setVoltage(Float.valueOf(ret));
 			}catch(NumberFormatException e){}
 			
-			id = JOptionPane.showInputDialog("Please input id : ");
+			id = JOptionPane.showInputDialog("Please input id (number) : ");
 			oldId = elem.getId();
 			if(id.length() == 0){
 				elem.idLabel.setText(oldId);
@@ -380,9 +380,6 @@ public class Editor extends JFrame implements ActionListener{
     	    public void mouseClicked(MouseEvent e) {
     	    	doAction();
     	    	panel.revalidate();
-    	    	System.out.println("posle do action : ima "+selectedElements +" selekt elemenataa");
-
-    	    	
     	    };    
     	 
 		};
@@ -432,7 +429,6 @@ public class Editor extends JFrame implements ActionListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("pokusaj brisanja");
 				while(selectedElements>0){
 			    	for(Element el: panel.getElements()){
 			    		if(el.isSelect()){
@@ -502,6 +498,7 @@ public class Editor extends JFrame implements ActionListener{
 			    	panel.repaint();
 				}
 				else{
+					// dodaj da iskoci dijalog da mora da selektuje ta 2
 					System.out.println("moraju biti 2 elementa selektovana");
 				}
 			}

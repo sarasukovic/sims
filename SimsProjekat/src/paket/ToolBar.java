@@ -49,16 +49,6 @@ public class ToolBar extends JToolBar {
 		buttons.add(b);
 		return b;
 	}
-	/*private void select(JButton button) {
-		for(JButton b : buttons) {
-			b.setSelected(false);
-			b.setBackground(null);
-		}
-		button.setSelected(true);
-		button.setBackground(Color.white);
-	}*/
-	
-	
 	
 	public ToolBar(Editor editor) {
 		this.editor = editor;

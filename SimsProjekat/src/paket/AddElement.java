@@ -12,8 +12,6 @@ public class AddElement extends State {
 	
 	@Override
 	public void doAction(){
-		System.out.println("add do action");
-
 		if(editor.getEvent().getActionCommand() == Element.elementType.GROUND.name()){
     		editor.setElementOnPanel(new Ground("images/ground.png"));
     	}
@@ -53,18 +51,12 @@ public class AddElement extends State {
 	    	
 	    if(editor.checkPosition(editor.getElementFromPanel()) == false){
               	    		
-    		/*group.getElements().add(e1);
-    		panel.getElements().add(e1);*/
 	    	editor.panel.repaint();
 	    		
 	    	}else{
 	    		editor.panel.getElements().remove(editor.getElementFromPanel());
 	    		editor.panel.revalidate();
 	    		editor.panel.repaint();
-	    /*	JOptionPane.showMessageDialog(null, "Symbol is already on this position ",
-    				"InfoBox: " + " Error",	JOptionPane.INFORMATION_MESSAGE);
-	    		
-	    		*/
     	}
 	}
 
