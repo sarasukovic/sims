@@ -8,8 +8,6 @@ public class SelectElement extends State {
 	
 	@Override
 	public void doAction(){
-		System.out.println("select do action");
-
 			for(Element el: editor.panel.getElements()){
 				if(el.rectSelect.contains((int)editor.panel.getMousePosition().getX(),
 						(int)editor.panel.getMousePosition().getY())){

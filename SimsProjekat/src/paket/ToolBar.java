@@ -55,6 +55,18 @@ public class ToolBar extends JToolBar {
 		setOrientation(HORIZONTAL);
 		setFloatable(false);
 		
+		capacitor.setToolTipText("Capacitor");
+		currentSrc.setToolTipText("Current source");
+		ground.setToolTipText("Ground");
+		inductor.setToolTipText("Inductor");
+		resistor.setToolTipText("Resistor");
+		voltageSrc.setToolTipText("Voltage source");
+		select.setToolTipText("Select element (elements) ");
+		deleteB.setToolTipText("Delete selected element (elements) ");
+		moveB.setToolTipText("Move element");
+		addParams.setToolTipText("Add parameters for selected element");
+		connect.setToolTipText("Draw line between 2 selected elements");
+		
 		add(addImageButton(capacitor));
 		addSeparator();
 		add(addImageButton(currentSrc));

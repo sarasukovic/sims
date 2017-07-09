@@ -80,6 +80,7 @@ public class Editor extends JFrame implements ActionListener{
 		return event;
 	}
 	
+	// checkId returns true if there is no id for elem
 	public boolean checkId(Element elem){
 		boolean t = false;
 		if(elem instanceof Capacitor){
@@ -106,6 +107,7 @@ public class Editor extends JFrame implements ActionListener{
 		return t;
 	}
 	
+	//  checkParam returns true if there is no params for elem
 	public boolean checkParam(Element elem){
 		boolean t = false;
 		if(elem instanceof Capacitor){
