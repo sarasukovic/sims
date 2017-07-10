@@ -1,8 +1,5 @@
 package paket;
 
-
-
-import java.awt.Color;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +21,7 @@ public class ToolBar extends JToolBar {
 	public JCheckBox ser = new JCheckBox("Serial link");
 	public JCheckBox par = new JCheckBox("Parallel link");
 	public JButton deleteB = new JButton(new ImageIcon("images/delete.jpg"));
-	public JButton deleteC = new JButton("cut line");
+	public JButton deleteC = new JButton(new ImageIcon("images/cut.jpg"));
 	public JButton moveB = new JButton(new ImageIcon("images/move.jpg"));
 	public JButton select = new JButton(new ImageIcon("images/select.jpg"));
 	public JButton addParams = new JButton(new ImageIcon("images/addP.jpg"));
