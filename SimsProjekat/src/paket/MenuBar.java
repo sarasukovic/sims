@@ -100,6 +100,9 @@ public class MenuBar extends JMenuBar {
                 			editor.panel.getElements().add(eli);
                 		}
                 	}
+                	for(CustomLine l : p.getLines()){
+                		editor.panel.getLines().add(l);
+                	}
                 	editor.panel.revalidate();	
                 	editor.panel.repaint();
                 }

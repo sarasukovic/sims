@@ -437,6 +437,33 @@ public class Editor extends JFrame implements ActionListener{
 			    		if(el.isSelect()){
 			    			e1.idLabel.setVisible(false);
 			    			e1.paramLabel.setVisible(false);
+			    			
+			    			 ArrayList<CustomLine> indeksi = new ArrayList<CustomLine>();
+								for(CustomLine l : panel.getLines()){
+									if(l.getE1().equals(el)){
+										indeksi.add(l);
+										if(l.isUp2()){
+											l.getE2().setUpEnd(false);
+										}
+										else{
+											l.getE2().setDownEnd(false);
+										}
+									}
+									else if( l.getE2().equals(el)){
+										indeksi.add(l);
+										if(l.isUp1()){
+											l.getE1().setUpEnd(false);
+										}
+										else{
+											l.getE1().setDownEnd(false);
+										}
+									}
+								}
+								for(CustomLine i : indeksi){
+									panel.getLines().remove(i);
+								}
+								indeksi.clear();
+			    			
 			    			panel.getElements().remove(el);
 			    			selectedElements--;
 			    			break;
@@ -451,9 +478,12 @@ public class Editor extends JFrame implements ActionListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ArrayList<Integer> indeksi = new ArrayList<Integer>();
+				
+				ArrayList<CustomLine> indeksi = new ArrayList<CustomLine>();
 				for(CustomLine l : panel.getLines()){
+
 					if(l.getE1().isSelect() && l.getE2().isSelect()){
+
 						if(l.isUp1()){
 							l.getE1().setUpEnd(false);
 						}
@@ -466,12 +496,13 @@ public class Editor extends JFrame implements ActionListener{
 						else{
 							l.getE2().setDownEnd(false);
 						}
-						indeksi.add(panel.getLines().indexOf(l));		
+						indeksi.add(l);		
 					}
 				}
-				for(int i : indeksi){
+				for(CustomLine i : indeksi){
 					panel.getLines().remove(i);
 				}
+				indeksi.clear();
 				panel.revalidate();
 		    	panel.repaint();
 			}

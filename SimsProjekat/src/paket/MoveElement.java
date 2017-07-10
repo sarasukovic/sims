@@ -3,6 +3,7 @@ package paket;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.util.ArrayList;
 
 public class MoveElement extends State {
 
@@ -48,6 +49,35 @@ public class MoveElement extends State {
 					     if(el.rectSelect.contains((int)editor.panel.getMousePosition().getX(),
 						    	(int)editor.panel.getMousePosition().getY())){
 						    editor.elementMoved = el;
+						    
+						    el.setUpEnd(false);
+						    el.setDownEnd(false);
+						    ArrayList<CustomLine> indeksi = new ArrayList<CustomLine>();
+							for(CustomLine l : editor.panel.getLines()){
+								if(l.getE1().equals(el)){
+									indeksi.add(l);
+									if(l.isUp2()){
+										l.getE2().setUpEnd(false);
+									}
+									else{
+										l.getE2().setDownEnd(false);
+									}
+								}
+								else if( l.getE2().equals(el)){
+									indeksi.add(l);
+									if(l.isUp1()){
+										l.getE1().setUpEnd(false);
+									}
+									else{
+										l.getE1().setDownEnd(false);
+									}
+								}
+							}
+							for(CustomLine i : indeksi){
+								editor.panel.getLines().remove(i);
+							}
+							indeksi.clear();
+						    
 						    break;
 					     }
 				    }
