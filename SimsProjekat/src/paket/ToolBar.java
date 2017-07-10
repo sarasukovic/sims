@@ -3,7 +3,6 @@ package paket;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
-import images.*;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -12,20 +11,21 @@ import javax.swing.JToolBar;
 
 
 public class ToolBar extends JToolBar {
-	public JButton capacitor = new JButton(new ImageIcon("src/images/capacitor.png"));
-	public JButton currentSrc = new JButton(new ImageIcon("src/images/currentSrc.png"));
-	public JButton ground= new JButton(new ImageIcon("src/images/ground.png"));
-	public JButton inductor = new JButton(new ImageIcon("src/images/inductor.png"));
-	public JButton resistor = new JButton(new ImageIcon("src/images/resistor.png"));
-	public JButton voltageSrc = new JButton(new ImageIcon("src/images/voltageSrc.png"));
+	public JButton capacitor = new JButton(new ImageIcon("images/capacitor.png"));
+	public JButton currentSrc = new JButton(new ImageIcon("images/currentSrc.png"));
+	public JButton ground= new JButton(new ImageIcon("images/ground.png"));
+	public JButton inductor = new JButton(new ImageIcon("images/inductor.png"));
+	public JButton resistor = new JButton(new ImageIcon("images/resistor.png"));
+	public JButton voltageSrc = new JButton(new ImageIcon("images/voltageSrc.png"));
 	public JCheckBox ser = new JCheckBox("Serial link");
 	public JCheckBox par = new JCheckBox("Parallel link");
-	public JButton deleteB = new JButton(new ImageIcon("src/images/delete.jpg"));
-	public JButton deleteC = new JButton(new ImageIcon("src/images/cut.jpg"));
-	public JButton moveB = new JButton(new ImageIcon("src/images/move.jpg"));
-	public JButton select = new JButton(new ImageIcon("src/images/select.jpg"));
-	public JButton addParams = new JButton(new ImageIcon("src/images/addP.jpg"));
-	public JButton connect = new JButton(new ImageIcon("src/images/line.jpg"));
+	public JButton deleteB = new JButton(new ImageIcon("images/delete.jpg"));
+	public JButton deleteC = new JButton(new ImageIcon("images/cut.jpg"));
+	public JButton moveB = new JButton(new ImageIcon("images/move.jpg"));
+	public JButton select = new JButton(new ImageIcon("images/select.jpg"));
+	public JButton addParams = new JButton(new ImageIcon("images/addP.jpg"));
+	public JButton connect = new JButton(new ImageIcon("images/line.jpg"));
+	public JButton rotate = new JButton(new ImageIcon("images/rotate.png"));
 	
 	protected List<JButton> buttons = new ArrayList<JButton>();
 	
@@ -93,6 +93,8 @@ public class ToolBar extends JToolBar {
 		add(addImageButton(addParams));
 		addSeparator();
 		add(addImageButton(connect));
+		addSeparator();
+		add(addImageButton(rotate));
 		addSeparator();
 	}	
 }
