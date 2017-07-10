@@ -34,14 +34,9 @@ public class MoveElement extends State {
 							editor.panel.revalidate();
 							editor.panel.repaint();
 							break;
-							
-
 						}
-					}
-					
-					
+					}	
 				}
-				
 				editor.elementMoved = null;
 			}
 			
@@ -54,16 +49,11 @@ public class MoveElement extends State {
 						    	(int)editor.panel.getMousePosition().getY())){
 						    editor.elementMoved = el;
 						    break;
-						
-
-					    }
-				   }
-   			}catch (NullPointerException i) {
-				
-			}
-				
-				
-				
+					     }
+				    }
+				}
+				catch (NullPointerException i) {				
+				}
 			}
 			
 			@Override
@@ -88,10 +78,7 @@ public class MoveElement extends State {
 
 				    }
 			   }
-
 			}
-	
-			
 		};
 
 		
@@ -122,8 +109,6 @@ public class MoveElement extends State {
 						editor.panel.revalidate();
 						editor.panel.repaint();
 						break;
-						
-
 					}
 				}
 

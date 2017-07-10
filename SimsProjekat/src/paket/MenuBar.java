@@ -47,6 +47,7 @@ public class MenuBar extends JMenuBar {
             public void actionPerformed(ActionEvent arg0) {
             	// drawing area
 				editor.panel.removeAll();
+				editor.panel.getLines().clear();
 				editor.panel.getElements().clear();
 				editor.panel.repaint();
             }

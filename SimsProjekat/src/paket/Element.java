@@ -32,7 +32,22 @@ public class Element {
 	private String id;
 	public JLabel paramLabel;
 	public JLabel idLabel;
+	private boolean upEnd;
+	private boolean downEnd;
 	
+	
+	public boolean isUpEnd() {
+		return upEnd;
+	}
+	public void setUpEnd(boolean upEnd) {
+		this.upEnd = upEnd;
+	}
+	public boolean isDownEnd() {
+		return downEnd;
+	}
+	public void setDownEnd(boolean downEnd) {
+		this.downEnd = downEnd;
+	}
 	public JLabel getParamLabel() {
 		return paramLabel;
 	}
@@ -101,7 +116,9 @@ public class Element {
 
 	private BufferedImage image;
 	public Element() {
-		
+		upEnd = false;
+		downEnd = false;
+		select = false;
 	}
 	
 	
@@ -116,6 +133,8 @@ public class Element {
 		id = null;
 		paramLabel = new JLabel();
 		idLabel = new JLabel();
+		upEnd = false;
+		downEnd = false;
 	}
 	public Element(String path) {
 		try {
@@ -129,7 +148,8 @@ public class Element {
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
-
+		upEnd = false;
+		downEnd = false;
 		paramLabel = new JLabel();
 		idLabel = new JLabel();
 		id = null;
@@ -140,6 +160,8 @@ public class Element {
 		this.rectSelect = new Rectangle(0, 0, image.getWidth(), image.getHeight());
 	}
 	public Element(Element e){
+		upEnd = e.upEnd;
+		downEnd = e.downEnd;
 		id = null;
 		paramLabel = new JLabel();
 		idLabel = new JLabel();
@@ -168,8 +190,11 @@ public class Element {
 
 	}
 	public Element(int x, int y, BufferedImage image, Element.elementType t) {
+		
 		super();
 		type = t;
+		upEnd = false;
+		downEnd = false;
 		id = null;
 		paramLabel = new JLabel();
 		idLabel = new JLabel();
@@ -184,6 +209,8 @@ public class Element {
 	}
 	public Element(int x, int y, String path) {
 		super();
+		upEnd = false;
+		downEnd = false;
 		paramLabel = new JLabel();
 		idLabel = new JLabel();
 		this.x = x;
@@ -209,6 +236,24 @@ public class Element {
 	
 		this.rectSelect = new Rectangle(x, y, image.getWidth(), image.getHeight());
 	}
+	public boolean isLeft(Element e){
+		return (x-e.getX())<0;
+	}
+	public boolean isAbove(Element e){
+		return (y-e.getY())<0;
+	}
 
+	@Override
+	public boolean equals(Object obj) {
+		
+		Element other = (Element) obj;
+		if (x != other.x)
+			return false;
+		if (y != other.y)
+			return false;
+		return true;
+	}
+	
+	
 }
 

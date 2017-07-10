@@ -467,41 +467,42 @@ public class Editor extends JFrame implements ActionListener{
 						}
 					}
 				}
-				selectedElements = 0;
-	    		for(Element elem: panel.getElements()){
-	    			elem.setSelect(false);
-	    		}
+				deselectAll();
 	    		selected.removeAll(selected);
 			}
 		});
   
-        toolb.connect.addActionListener(new ActionListener() {
-			
+        toolb.connect.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(selectedElements == 2){
 					boolean prva = true;
-					CustomLine l = new CustomLine();
 					for (Element el : panel.getElements()){
-						if (el.isSelect() ){
-							if(!prva){
-								l.setX1(el.getX());
-								l.setY1(el.getY());
+						if (el.isSelect()){
+							prva = false;
+							for(Element el2:panel.getElements()){
+								if(!el2.equals(el)&& el2.isSelect()){
+									if(toolb.ser.isSelected() && !toolb.par.isSelected()){
+										serial(el, el2);
+									}
+									else if(toolb.par.isSelected() && !toolb.ser.isSelected()){
+										parallel(el,el2);
+									}
+									else{
+										JOptionPane.showMessageDialog(null, "Choose 1 type of connection!");
+									}
+									break;
+								}
 							}
-							else{
-								prva = false;
-								l.setX2(el.getX());
-								l.setY2(el.getY());
-							}
+							break;
 						}
 					}
-					panel.getLines().add(l);
+					deselectAll();
 					panel.revalidate();
 			    	panel.repaint();
 				}
 				else{
-					// dodaj da iskoci dijalog da mora da selektuje ta 2
-					System.out.println("moraju biti 2 elementa selektovana");
+					JOptionPane.showMessageDialog(null, "There must be exectly 2 elements selected");
 				}
 			}
 		});
@@ -511,6 +512,120 @@ public class Editor extends JFrame implements ActionListener{
 		
 	}
 	
+	public void parallel(Element e1, Element e2){
+		int x1 = e1.getX() + e1.getWidth()/2, y1 = e1.getY(), x2 =  e2.getX() + e2.getWidth()/2, y2 = e2.getY();
+		boolean down1 = e1.isDownEnd(), up1 = e1.isUpEnd(), down2 = e2.isDownEnd(), up2 = e2.isUpEnd();
+		if(!(down1||down2||up1||up2)){
+			CustomLine hor1 = new CustomLine();
+			CustomLine ver1 = new CustomLine();
+			CustomLine hor2 = new CustomLine();
+			CustomLine ver2 = new CustomLine();
+			if(e1.getY() + e1.getHeigth()<e2.getY()){
+				hor1.set(x1, y1, x2, y1);
+				ver1.set(x1, y1 + e1.getHeigth(), x1, y2 + e2.getHeigth());
+				hor2.set(x1, y2 + e2.getHeigth(), x2, y2+e2.getHeigth());
+				ver2.set(x2, y1, x2, y2);
+			}
+			else{
+				hor1.set(x2, y2, x1, y2);
+				ver1.set(x2, y2 + e2.getHeigth(), x2, y1 + e1.getHeigth());
+				hor2.set(x2, y1 + e1.getHeigth(), x1, y1+e1.getHeigth());
+				ver2.set(x1, y2, x1, y1);
+			}
+			panel.getLines().add(hor1);
+			panel.getLines().add(ver2);
+			panel.getLines().add(hor2);
+			panel.getLines().add(ver1);
+			e1.setUpEnd(true);
+			e1.setDownEnd(true);
+			e2.setUpEnd(true);
+			e2.setDownEnd(true);
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "Element is allready connected!");
+		}
+	}
+	
+	public void serial(Element e1, Element e2){
+		int x1 = e1.getX() + e1.getWidth()/2, y1 = e1.getY(), x2 =  e2.getX() + e2.getWidth()/2, y2 = e2.getY();
+		boolean ono = false,  ono3 = false;
+		boolean down1 = e1.isDownEnd(), up1 = e1.isUpEnd(), down2 = e2.isDownEnd(), up2 = e2.isUpEnd();
+		CustomLine hor = new CustomLine();
+		CustomLine ver = new CustomLine();
+		if(e1.getY() + e1.getHeigth()<e2.getY()){
+			ono = e2.isUpEnd() && e1.isDownEnd();
+			ono3 = e1.isDownEnd();
+			if( !e1.isDownEnd()){
+				y1 = e1.getY()+e1.getHeigth();
+				down1 = true;
+			}
+			else if(!e1.isUpEnd()){
+				up1 = true;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Element is allready connected on both ends");
+				return;
+			}
+			if(!e2.isUpEnd()){
+				up2 = true;
+			}
+			else if(!e2.isDownEnd()){
+				y2 = e2.getY()+e2.getHeigth();
+				down2 = true;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Element is allready connected on both ends");
+				return;
+			}
+			
+		}
+		else{
+			ono3 = e1.isUpEnd();
+			ono = e1.isUpEnd() && e2.isDownEnd();			
+			if( !e2.isDownEnd()){
+				y2 = e2.getY()+e2.getHeigth();
+				down2 = true;
+			}
+			else if(!e2.isUpEnd()){
+				up2 = true;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Element is allready connected on both ends");
+				return;
+			}
+			if(!e1.isUpEnd()){
+				up1 = true;
+			}
+			else if(!e1.isDownEnd()){
+				y1 = e1.getY()+e1.getHeigth();
+				down1 = true;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Element is allready connected on both ends");
+				return;
+			}
+		}
+		e1.setDownEnd(down1);
+		e1.setUpEnd(up1);
+		e2.setDownEnd(down2);
+		e2.setUpEnd(up2);
+		if(ono){
+			CustomLine third = new CustomLine((x1+x2)/2,y1,(x1+x2)/2,y2);
+			hor.set(x1, y1, (x1+x2)/2,y1);
+			ver.set(x2,y2,(x1+x2)/2,y2);
+			panel.getLines().add(third);
+		}
+		else if(ono3 ){
+			hor.set(x1,y1,x2,y1);
+			ver.set(x2,y1,x2,y2);
+		}
+		else{
+			hor.set(x1,y1,x1,y2);
+			ver.set(x1,y2,x2,y2);
+		}	
+		panel.getLines().add(hor);
+		panel.getLines().add(ver);
+	}
 	
 	public void updateGroupSize(Element e){
 		//ako se serijski dodaje
@@ -570,14 +685,17 @@ public class Editor extends JFrame implements ActionListener{
     	else{
     		panel.removeMouseListener(mouseListener2);
     		panel.removeMouseMotionListener(mouseMotionLis);
-    		selectedElements = 0;
-    		for(Element elem: panel.getElements()){
-    			elem.setSelect(false);
-    		}
+    		deselectAll();
     		setState(new AddElement(Editor.this));
     		
     		
     	}
 		this.addMouseListener(mouseListener);
+	}
+	public void deselectAll(){
+		for(Element e: panel.getElements()){
+			e.setSelect(false);
+		}
+		selectedElements = 0;
 	}
 }

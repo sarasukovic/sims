@@ -15,7 +15,7 @@ public class CustomLine {
 		this.y2 = 0;
 	}
 	
-	public CustomLine(int x1, int x2, int y1, int y2) {
+	public CustomLine(int x1, int y1, int x2, int y2) {
 		super();
 		this.x1 = x1;
 		this.x2 = x2;
@@ -54,4 +54,11 @@ public class CustomLine {
 	public void setY2(int y2) {
 		this.y2 = y2;
 	}
+	public void set(int x1, int y1, int x2, int y2){
+		this.x1 = x1;
+		this.x2 = x2;
+		this.y1 = y1;
+		this.y2 = y2;
+	}
+	
 }

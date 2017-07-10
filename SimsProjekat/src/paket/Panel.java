@@ -44,15 +44,14 @@ public class Panel extends JPanel {
 	@Override
     protected void paintComponent(final Graphics g) {
         super.paintComponent(g);
+        for(CustomLine l : lines){
+        	g.drawLine(l.getX1(),l.getY1(),l.getX2(),l.getY2());
+        }
         for(Element e : elements){
         	g.drawImage(e.getImage(), e.getX(), e.getY(), null);
         	if(e.isSelect()){
-        		
         	    g.drawRect(e.rectSelect.x, e.rectSelect.y, e.rectSelect.width, e.rectSelect.height);
         	}
-        }
-        for(CustomLine l : lines){
-        	g.drawLine(l.getX1(),l.getY1(),l.getX2(),l.getY2());
         }
     }
 
