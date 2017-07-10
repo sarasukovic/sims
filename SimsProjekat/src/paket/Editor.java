@@ -414,6 +414,7 @@ public class Editor extends JFrame implements ActionListener{
         toolb.inductor.setActionCommand(Element.elementType.INDUCTOR.name());
         toolb.resistor.setActionCommand(Element.elementType.RESISTOR.name());
         toolb.deleteB.setActionCommand("deleteElement");
+        toolb.deleteC.setActionCommand("cutLine");
         toolb.select.setActionCommand("selectElement");
         toolb.connect.setActionCommand("connectElements");
         toolb.addParams.setActionCommand("addParams");
@@ -441,6 +442,36 @@ public class Editor extends JFrame implements ActionListener{
 			    			break;
 			    		}
 			    	}
+				}
+				panel.revalidate();
+		    	panel.repaint();
+			}
+		});
+        toolb.deleteC.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ArrayList<Integer> indeksi = new ArrayList<Integer>();
+				for(CustomLine l : panel.getLines()){
+					if(l.getE1().isSelect() && l.getE2().isSelect()){
+						if(l.isUp1()){
+							l.getE1().setUpEnd(false);
+						}
+						else{
+							l.getE1().setDownEnd(false);
+						}
+						if(l.isUp2()){
+							l.getE2().setUpEnd(false);
+						}
+						else{
+							l.getE2().setDownEnd(false);
+						}
+						System.out.println(panel.getLines().indexOf(l));
+						indeksi.add(panel.getLines().indexOf(l));		
+					}
+				}
+				for(int i : indeksi){
+					panel.getLines().remove(i);
 				}
 				panel.revalidate();
 		    	panel.repaint();
@@ -522,24 +553,36 @@ public class Editor extends JFrame implements ActionListener{
 			CustomLine ver2 = new CustomLine();
 			if(e1.getY() + e1.getHeigth()<e2.getY()){
 				hor1.set(x1, y1, x2, y1);
+				hor1.set2(e1, e2, true, true);
 				ver1.set(x1, y1 + e1.getHeigth(), x1, y2 + e2.getHeigth());
+				ver1.set2(e1, e2, false, false);
 				hor2.set(x1, y2 + e2.getHeigth(), x2, y2+e2.getHeigth());
+				hor2.set2(e1, e2, false, false);
 				ver2.set(x2, y1, x2, y2);
+				ver2.set2(e1, e2, true, true);
 			}
 			else{
 				hor1.set(x2, y2, x1, y2);
+				hor1.set2(e1, e2, true, true);
 				ver1.set(x2, y2 + e2.getHeigth(), x2, y1 + e1.getHeigth());
+				ver1.set2(e1, e2, false, false);
+
 				hor2.set(x2, y1 + e1.getHeigth(), x1, y1+e1.getHeigth());
+				hor2.set2(e1, e2, false, false);
+
 				ver2.set(x1, y2, x1, y1);
+				ver2.set2(e1, e2, true, true);
+
 			}
-			panel.getLines().add(hor1);
-			panel.getLines().add(ver2);
-			panel.getLines().add(hor2);
-			panel.getLines().add(ver1);
 			e1.setUpEnd(true);
 			e1.setDownEnd(true);
 			e2.setUpEnd(true);
 			e2.setDownEnd(true);
+			panel.getLines().add(hor1);
+			panel.getLines().add(ver2);
+			panel.getLines().add(hor2);
+			panel.getLines().add(ver1);
+
 		}
 		else{
 			JOptionPane.showMessageDialog(null, "Element is allready connected!");
@@ -550,17 +593,24 @@ public class Editor extends JFrame implements ActionListener{
 		int x1 = e1.getX() + e1.getWidth()/2, y1 = e1.getY(), x2 =  e2.getX() + e2.getWidth()/2, y2 = e2.getY();
 		boolean ono = false,  ono3 = false;
 		boolean down1 = e1.isDownEnd(), up1 = e1.isUpEnd(), down2 = e2.isDownEnd(), up2 = e2.isUpEnd();
+		boolean lup2 =false, lup1 = false;
 		CustomLine hor = new CustomLine();
 		CustomLine ver = new CustomLine();
 		if(e1.getY() + e1.getHeigth()<e2.getY()){
-			ono = e2.isUpEnd() && e1.isDownEnd();
-			ono3 = e1.isDownEnd();
+			if( e2.isUpEnd() && e1.isDownEnd()){
+				ono = true;
+			}
+			else if(e1.isDownEnd()){
+				ono3 = true;
+			}
 			if( !e1.isDownEnd()){
 				y1 = e1.getY()+e1.getHeigth();
 				down1 = true;
+				
 			}
 			else if(!e1.isUpEnd()){
 				up1 = true;
+				lup1 = true;
 			}
 			else{
 				JOptionPane.showMessageDialog(null, "Element is allready connected on both ends");
@@ -568,6 +618,7 @@ public class Editor extends JFrame implements ActionListener{
 			}
 			if(!e2.isUpEnd()){
 				up2 = true;
+				lup2 = true;
 			}
 			else if(!e2.isDownEnd()){
 				y2 = e2.getY()+e2.getHeigth();
@@ -588,6 +639,7 @@ public class Editor extends JFrame implements ActionListener{
 			}
 			else if(!e2.isUpEnd()){
 				up2 = true;
+				lup2 = true;
 			}
 			else{
 				JOptionPane.showMessageDialog(null, "Element is allready connected on both ends");
@@ -595,6 +647,7 @@ public class Editor extends JFrame implements ActionListener{
 			}
 			if(!e1.isUpEnd()){
 				up1 = true;
+				lup1 = true;
 			}
 			else if(!e1.isDownEnd()){
 				y1 = e1.getY()+e1.getHeigth();
@@ -611,6 +664,7 @@ public class Editor extends JFrame implements ActionListener{
 		e2.setUpEnd(up2);
 		if(ono){
 			CustomLine third = new CustomLine((x1+x2)/2,y1,(x1+x2)/2,y2);
+			third.set2(e1, e2, lup1, lup2);
 			hor.set(x1, y1, (x1+x2)/2,y1);
 			ver.set(x2,y2,(x1+x2)/2,y2);
 			panel.getLines().add(third);
@@ -623,6 +677,9 @@ public class Editor extends JFrame implements ActionListener{
 			hor.set(x1,y1,x1,y2);
 			ver.set(x1,y2,x2,y2);
 		}	
+		hor.set2(e1, e2, lup1, lup2);
+		ver.set2(e1, e2, lup1, lup2);
+		System.out.println(hor.getE1().isSelect());
 		panel.getLines().add(hor);
 		panel.getLines().add(ver);
 	}

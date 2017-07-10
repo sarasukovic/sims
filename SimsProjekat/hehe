@@ -1,0 +1,2808 @@
+<paket.Panel serialization="custom">
+  <java.awt.Component>
+    <default>
+      <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+      <boundsOp>3</boundsOp>
+      <componentSerializedDataVersion>4</componentSerializedDataVersion>
+      <enabled>true</enabled>
+      <eventMask>4104</eventMask>
+      <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+      <focusable>true</focusable>
+      <height>496</height>
+      <ignoreRepaint>false</ignoreRepaint>
+      <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+      <isPacked>false</isPacked>
+      <maxSizeSet>false</maxSizeSet>
+      <minSizeSet>false</minSizeSet>
+      <nameExplicitlySet>false</nameExplicitlySet>
+      <newEventsOnly>true</newEventsOnly>
+      <prefSizeSet>false</prefSizeSet>
+      <valid>true</valid>
+      <visible>true</visible>
+      <width>782</width>
+      <x>0</x>
+      <y>34</y>
+      <background>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </background>
+      <font class="javax.swing.plaf.FontUIResource">
+        <attributes>
+          <entry>
+            <awt-text-attribute>family</awt-text-attribute>
+            <string>Dialog</string>
+          </entry>
+          <entry>
+            <awt-text-attribute>width</awt-text-attribute>
+            <null/>
+          </entry>
+          <entry>
+            <awt-text-attribute>tracking</awt-text-attribute>
+            <null/>
+          </entry>
+          <entry>
+            <awt-text-attribute>transform</awt-text-attribute>
+            <null/>
+          </entry>
+          <entry>
+            <awt-text-attribute>weight</awt-text-attribute>
+            <null/>
+          </entry>
+          <entry>
+            <awt-text-attribute>posture</awt-text-attribute>
+            <null/>
+          </entry>
+          <entry>
+            <awt-text-attribute>size</awt-text-attribute>
+            <null/>
+          </entry>
+          <entry>
+            <awt-text-attribute>superscript</awt-text-attribute>
+            <null/>
+          </entry>
+        </attributes>
+      </font>
+      <foreground class="sun.swing.PrintColorUIResource" resolves-to="javax.swing.plaf.ColorUIResource">
+        <value>-13421773</value>
+        <falpha>0.0</falpha>
+      </foreground>
+      <locale>en_US</locale>
+      <peerFont class="javax.swing.plaf.FontUIResource" reference="../font"/>
+    </default>
+    <null/>
+    <java.awt.ComponentOrientation>
+      <orientation>7</orientation>
+    </java.awt.ComponentOrientation>
+    <null/>
+    <null/>
+  </java.awt.Component>
+  <java.awt.Container>
+    <default>
+      <ncomponents>0</ncomponents>
+      <component/>
+      <layoutMgr class="java.awt.FlowLayout" serialization="custom">
+        <java.awt.FlowLayout>
+          <default>
+            <align>1</align>
+            <alignOnBaseline>false</alignOnBaseline>
+            <hgap>5</hgap>
+            <newAlign>1</newAlign>
+            <serialVersionOnStream>1</serialVersionOnStream>
+            <vgap>5</vgap>
+          </default>
+        </java.awt.FlowLayout>
+      </layoutMgr>
+      <focusCycleRoot>false</focusCycleRoot>
+      <containerSerializedDataVersion>1</containerSerializedDataVersion>
+      <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+    </default>
+    <null/>
+    <null/>
+  </java.awt.Container>
+  <javax.swing.JComponent>
+    <default>
+      <alignmentX>0.0</alignmentX>
+      <alignmentY>0.0</alignmentY>
+      <autoscrolls>false</autoscrolls>
+      <flags>16393</flags>
+      <isAlignmentXSet>false</isAlignmentXSet>
+      <isAlignmentYSet>false</isAlignmentYSet>
+      <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+      <listenerList serialization="custom">
+        <javax.swing.event.EventListenerList>
+          <default/>
+          <null/>
+        </javax.swing.event.EventListenerList>
+      </listenerList>
+    </default>
+    <int>0</int>
+  </javax.swing.JComponent>
+  <javax.swing.JPanel>
+    <default/>
+  </javax.swing.JPanel>
+  <paket.Panel>
+    <default>
+      <elements>
+        <electricalElements.Ground>
+          <type>GROUND</type>
+          <x>132</x>
+          <y>266</y>
+          <heigth>32</heigth>
+          <width>20</width>
+          <rect>
+            <x>102</x>
+            <y>236</y>
+            <width>80</width>
+            <height>92</height>
+          </rect>
+          <rectSelect>
+            <x>132</x>
+            <y>266</y>
+            <width>20</width>
+            <height>32</height>
+          </rectSelect>
+          <select>false</select>
+          <paramLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource">
+                  <value>-1118482</value>
+                  <falpha>0.0</falpha>
+                </background>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource">
+                  <attributes>
+                    <entry>
+                      <awt-text-attribute>family</awt-text-attribute>
+                      <string>Dialog</string>
+                    </entry>
+                    <entry>
+                      <awt-text-attribute>width</awt-text-attribute>
+                      <null/>
+                    </entry>
+                    <entry>
+                      <awt-text-attribute>tracking</awt-text-attribute>
+                      <null/>
+                    </entry>
+                    <entry>
+                      <awt-text-attribute>transform</awt-text-attribute>
+                      <null/>
+                    </entry>
+                    <entry>
+                      <awt-text-attribute>weight</awt-text-attribute>
+                      <float>2.0</float>
+                    </entry>
+                    <entry>
+                      <awt-text-attribute>posture</awt-text-attribute>
+                      <null/>
+                    </entry>
+                    <entry>
+                      <awt-text-attribute>size</awt-text-attribute>
+                      <null/>
+                    </entry>
+                    <entry>
+                      <awt-text-attribute>superscript</awt-text-attribute>
+                      <null/>
+                    </entry>
+                  </attributes>
+                </font>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </paramLabel>
+          <idLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </idLabel>
+          <upEnd>true</upEnd>
+          <downEnd>false</downEnd>
+          <image>
+            <accelerationPriority>0.5</accelerationPriority>
+            <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+              <bImg reference="../.."/>
+              <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                <pData>520168288</pData>
+                <valid>true</valid>
+                <surfaceLost>false</surfaceLost>
+                <surfaceType>
+                  <uniqueID>14</uniqueID>
+                  <desc>4 Byte ABGR</desc>
+                  <next>
+                    <uniqueID>7</uniqueID>
+                    <desc>Any 4 Byte Component</desc>
+                    <next>
+                      <uniqueID>1</uniqueID>
+                      <desc>Any Surface</desc>
+                      <pixelConverter>
+                        <alphaMask>0</alphaMask>
+                      </pixelConverter>
+                    </next>
+                    <pixelConverter reference="../next/pixelConverter"/>
+                  </next>
+                  <pixelConverter class="sun.awt.image.PixelConverter$Rgba">
+                    <alphaMask>255</alphaMask>
+                  </pixelConverter>
+                </surfaceType>
+                <colorModel class="java.awt.image.ComponentColorModel">
+                  <pData>0</pData>
+                  <pixel__bits>32</pixel__bits>
+                  <nBits>
+                    <int>8</int>
+                    <int>8</int>
+                    <int>8</int>
+                    <int>8</int>
+                  </nBits>
+                  <transparency>3</transparency>
+                  <supportsAlpha>true</supportsAlpha>
+                  <isAlphaPremultiplied>false</isAlphaPremultiplied>
+                  <numComponents>4</numComponents>
+                  <numColorComponents>3</numColorComponents>
+                  <colorSpace class="java.awt.color.ICC_ColorSpace">
+                    <type>5</type>
+                    <numComponents>3</numComponents>
+                    <thisProfile class="java.awt.color.ICC_ProfileRGB" serialization="custom">
+                      <java.awt.color.ICC__Profile>
+                        <default>
+                          <iccProfileSerializedDataVersion>1</iccProfileSerializedDataVersion>
+                        </default>
+                        <string>CS_sRGB</string>
+                        <null/>
+                      </java.awt.color.ICC__Profile>
+                    </thisProfile>
+                    <minVal>
+                      <float>0.0</float>
+                      <float>0.0</float>
+                      <float>0.0</float>
+                    </minVal>
+                    <maxVal>
+                      <float>1.0</float>
+                      <float>1.0</float>
+                      <float>1.0</float>
+                    </maxVal>
+                    <needScaleInit>true</needScaleInit>
+                  </colorSpace>
+                  <colorSpaceType>5</colorSpaceType>
+                  <maxBits>8</maxBits>
+                  <is__sRGB>true</is__sRGB>
+                  <transferType>0</transferType>
+                  <signed>false</signed>
+                  <is__sRGB__stdScale>true</is__sRGB__stdScale>
+                  <is__LinearRGB__stdScale>false</is__LinearRGB__stdScale>
+                  <is__LinearGray__stdScale>false</is__LinearGray__stdScale>
+                  <is__ICCGray__stdScale>false</is__ICCGray__stdScale>
+                  <needScaleInit>true</needScaleInit>
+                  <noUnnorm>false</noUnnorm>
+                  <nonStdScale>false</nonStdScale>
+                </colorModel>
+                <disposerReferent/>
+                <stateDelegate>
+                  <theState>STABLE</theState>
+                  <numDynamicAgents>0</numDynamicAgents>
+                </stateDelegate>
+                <haveLCDLoop>0</haveLCDLoop>
+                <havePgramXORLoop>0</havePgramXORLoop>
+                <havePgramSolidLoop>0</havePgramSolidLoop>
+                <bufImg reference="../../.."/>
+                <solidloops>
+                  <drawLineLoop>
+                    <methodSignature>DrawLine(...)</methodSignature>
+                    <uniqueID>134680612</uniqueID>
+                    <sourceType>
+                      <uniqueID>36</uniqueID>
+                      <desc>Single Color</desc>
+                      <next>
+                        <uniqueID>35</uniqueID>
+                        <desc>Paint Object</desc>
+                        <next reference="../../../../../surfaceType/next/next"/>
+                        <pixelConverter reference="../../../../../surfaceType/next/next/pixelConverter"/>
+                      </next>
+                      <pixelConverter reference="../../../../surfaceType/next/next/pixelConverter"/>
+                    </sourceType>
+                    <compositeType>
+                      <uniqueID>16</uniqueID>
+                      <desc>Porter-Duff Src, No Extra Alpha</desc>
+                      <next>
+                        <uniqueID>5</uniqueID>
+                        <desc>Porter-Duff Src</desc>
+                        <next>
+                          <uniqueID>2</uniqueID>
+                          <desc>Any AlphaComposite Rule</desc>
+                          <next>
+                            <uniqueID>1</uniqueID>
+                            <desc>Any CompositeContext</desc>
+                          </next>
+                        </next>
+                      </next>
+                    </compositeType>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611589024</pNativePrim>
+                  </drawLineLoop>
+                  <fillRectLoop>
+                    <methodSignature>FillRect(...)</methodSignature>
+                    <uniqueID>67571748</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611588800</pNativePrim>
+                  </fillRectLoop>
+                  <drawRectLoop>
+                    <methodSignature>DrawRect(...)</methodSignature>
+                    <uniqueID>151457828</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611589080</pNativePrim>
+                  </drawRectLoop>
+                  <drawPolygonsLoop>
+                    <methodSignature>DrawPolygons(...)</methodSignature>
+                    <uniqueID>168235044</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611589136</pNativePrim>
+                  </drawPolygonsLoop>
+                  <drawPathLoop>
+                    <methodSignature>DrawPath(...)</methodSignature>
+                    <uniqueID>185012260</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611589192</pNativePrim>
+                  </drawPathLoop>
+                  <fillPathLoop>
+                    <methodSignature>FillPath(...)</methodSignature>
+                    <uniqueID>201789476</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611589248</pNativePrim>
+                  </fillPathLoop>
+                  <fillSpansLoop>
+                    <methodSignature>FillSpans(...)</methodSignature>
+                    <uniqueID>84348964</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611588856</pNativePrim>
+                  </fillSpansLoop>
+                  <fillParallelogramLoop>
+                    <methodSignature>FillParallelogram(...)</methodSignature>
+                    <uniqueID>101126180</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611588912</pNativePrim>
+                  </fillParallelogramLoop>
+                  <drawParallelogramLoop>
+                    <methodSignature>DrawParallelogram(...)</methodSignature>
+                    <uniqueID>117903396</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611588968</pNativePrim>
+                  </drawParallelogramLoop>
+                  <drawGlyphListLoop>
+                    <methodSignature>DrawGlyphList(...)</methodSignature>
+                    <uniqueID>252121124</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType/next"/>
+                    <pNativePrim>1611589696</pNativePrim>
+                  </drawGlyphListLoop>
+                  <drawGlyphListAALoop>
+                    <methodSignature>DrawGlyphListAA(...)</methodSignature>
+                    <uniqueID>269357092</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType"/>
+                    <pNativePrim>1611604280</pNativePrim>
+                  </drawGlyphListAALoop>
+                  <drawGlyphListLCDLoop>
+                    <methodSignature>DrawGlyphListLCD(...)</methodSignature>
+                    <uniqueID>286134308</uniqueID>
+                    <sourceType reference="../../drawLineLoop/sourceType"/>
+                    <compositeType reference="../../drawLineLoop/compositeType"/>
+                    <destType reference="../../../surfaceType"/>
+                    <pNativePrim>1611604336</pNativePrim>
+                  </drawGlyphListLCDLoop>
+                </solidloops>
+              </sdDefault>
+            </surfaceManager>
+            <imageType>6</imageType>
+            <colorModel class="java.awt.image.ComponentColorModel" reference="../surfaceManager/sdDefault/colorModel"/>
+            <raster class="sun.awt.image.ByteInterleavedRaster">
+              <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                <width>20</width>
+                <height>32</height>
+                <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                <dataType>0</dataType>
+                <bandOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </bandOffsets>
+                <bankIndices>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </bankIndices>
+                <numBands>4</numBands>
+                <numBanks>1</numBanks>
+                <scanlineStride>80</scanlineStride>
+                <pixelStride>4</pixelStride>
+              </sampleModel>
+              <dataBuffer class="java.awt.image.DataBufferByte">
+                <dataType>0</dataType>
+                <banks>1</banks>
+                <offset>0</offset>
+                <size>2560</size>
+                <offsets>
+                  <int>0</int>
+                </offsets>
+                <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                <data>////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////Pz8//v7+///////////////////////////
+///////////////////////////////////////////////////////////////////////U1NT/
+q6ur////////////////////////////////////////////////////////////////////////
+/////////////////////////8rKyv+Wlpb/////////////////////////////////////////
+////////////////////////////////////////////////////////zc3N/5ubm///////////
+////////////////////////////////////////////////////////////////////////////
+///////////Nzc3/m5ub////////////////////////////////////////////////////////
+/////////////////////////////////////////83Nzf+bm5v/////////////////////////
+////////////////////////////////////////////////////////////////////////zc3N
+/5ubm///////////////////////////////////////////////////////////////////////
+///////////////////////////Nzc3/m5ub////////////////////////////////////////
+/////////////////////////////////////////////////////////83Nzf+bm5v/////////
+////////////////////////////////////////////////////////////////////////////
+////////////zc3N/5ubm///////////////////////////////////////////////////////
+///////////////////////////////////////////Nzc3/m5ub////////////////////////
+/////////////////////////////////////////////////////////////////////////83N
+zf+bm5v/////////////////////////////////////////////////////////////////////
+////////////////////////////zc3N/5ubm///////////////////////////////////////
+///////////////////////////////////////////////////////////Nzc3/m5ub////////
+////////////////////////////////////////////////////////////////////////////
+/////////////83Nzf+bm5v/////////////////////////////////////////////////////
+////////////////////////////////////////////zs7O/5ubm///////////////////////
+//////////////////////////////////////z8/P////////////r6+v/7+/v/+/v7//z8/P/G
+xsb/kpKS//z8/P/8/Pz/+/v7//v7+//6+vr////////////9/f3//////////////////Pz8/3l5
+ef9zc3P/hISE/4KCgv+CgoL/g4OD/3V1df9paWn/g4OD/4KCgv+CgoL/goKC/4WFhf9ycnL/mJiY
+////////////////////////////sbGx/4ODg//9/f3/+fn5//n5+f/5+fn//Pz8///////5+fn/
++fn5//n5+f/6+vr/+vr6/35+fv/BwcH/////////////////////////////////goKC/8fHx///
+//////////////////////////////////////////////+wsLD/kZGR////////////////////
+///////////////////c3Nz/enp6//r6+v//////////////////////////////////////4eHh
+/3R0dP/v7+////////////////////////////////////////////+YmJj/q6ur////////////
+//////////////////////7+/v+CgoL/xcXF///////+/v7/////////////////////////////
+//////////Dw8P92dnb/5+fn////////////////////////////qqqq/5KSkv//////////////
+/////////////////////////////////////////////7a2tv+NjY3/////////////////////
+/9bW1v90dHT/9vb2////////////////////////////////////////////////////////////
+/f39/319ff/Ozs7////////////7+/v/e3t7/9TU1P//////////////////////////////////
+////////////////////////////////////19fX/3p6ev/7+/v//////6Ojo/+enp7/////////
+////////////////////////////////////////////////////////////////////////kpKS
+/7m5uf/f39//enp6//j4+P//////////////////////////////////////////////////////
+///////////////////////////u7u7/cnJy/2dnZ//W1tb/////////////////////////////
+//////////////////////////////////////////////////////////////+vr6//pqam////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////w==</data>
+                <bankdata>
+                  <byte-array reference="../../data"/>
+                </bankdata>
+              </dataBuffer>
+              <minX>0</minX>
+              <minY>0</minY>
+              <width>20</width>
+              <height>32</height>
+              <sampleModelTranslateX>0</sampleModelTranslateX>
+              <sampleModelTranslateY>0</sampleModelTranslateY>
+              <numBands>4</numBands>
+              <numDataElements>4</numDataElements>
+              <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+              <bandOffset>3</bandOffset>
+              <dataOffsets>
+                <int>3</int>
+                <int>2</int>
+                <int>1</int>
+                <int>0</int>
+              </dataOffsets>
+              <scanlineStride>80</scanlineStride>
+              <pixelStride>4</pixelStride>
+              <data reference="../dataBuffer/data"/>
+              <type>1</type>
+              <maxX defined-in="sun.awt.image.ByteComponentRaster">20</maxX>
+              <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+              <inOrder>false</inOrder>
+              <dbOffset>0</dbOffset>
+              <dbOffsetPacked>0</dbOffsetPacked>
+              <packed>false</packed>
+              <maxX>20</maxX>
+              <maxY>32</maxY>
+            </raster>
+          </image>
+        </electricalElements.Ground>
+        <electricalElements.Ground>
+          <type>GROUND</type>
+          <x>249</x>
+          <y>68</y>
+          <heigth>32</heigth>
+          <width>20</width>
+          <rect>
+            <x>219</x>
+            <y>38</y>
+            <width>80</width>
+            <height>92</height>
+          </rect>
+          <rectSelect>
+            <x>249</x>
+            <y>68</y>
+            <width>20</width>
+            <height>32</height>
+          </rectSelect>
+          <select>false</select>
+          <paramLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </paramLabel>
+          <idLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </idLabel>
+          <upEnd>true</upEnd>
+          <downEnd>true</downEnd>
+          <image>
+            <accelerationPriority>0.5</accelerationPriority>
+            <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+              <bImg reference="../.."/>
+              <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                <pData>520168672</pData>
+                <valid>true</valid>
+                <surfaceLost>false</surfaceLost>
+                <surfaceType reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/surfaceType"/>
+                <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+                <disposerReferent/>
+                <stateDelegate>
+                  <theState>STABLE</theState>
+                  <numDynamicAgents>0</numDynamicAgents>
+                </stateDelegate>
+                <haveLCDLoop>0</haveLCDLoop>
+                <havePgramXORLoop>0</havePgramXORLoop>
+                <havePgramSolidLoop>0</havePgramSolidLoop>
+                <bufImg reference="../../.."/>
+                <solidloops reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/solidloops"/>
+              </sdDefault>
+            </surfaceManager>
+            <imageType>6</imageType>
+            <colorModel class="java.awt.image.ComponentColorModel" reference="../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+            <raster class="sun.awt.image.ByteInterleavedRaster">
+              <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                <width>20</width>
+                <height>32</height>
+                <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                <dataType>0</dataType>
+                <bandOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </bandOffsets>
+                <bankIndices>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </bankIndices>
+                <numBands>4</numBands>
+                <numBanks>1</numBanks>
+                <scanlineStride>80</scanlineStride>
+                <pixelStride>4</pixelStride>
+              </sampleModel>
+              <dataBuffer class="java.awt.image.DataBufferByte">
+                <dataType>0</dataType>
+                <banks>1</banks>
+                <offset>0</offset>
+                <size>2560</size>
+                <offsets>
+                  <int>0</int>
+                </offsets>
+                <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                <data>////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////Pz8//v7+///////////////////////////
+///////////////////////////////////////////////////////////////////////U1NT/
+q6ur////////////////////////////////////////////////////////////////////////
+/////////////////////////8rKyv+Wlpb/////////////////////////////////////////
+////////////////////////////////////////////////////////zc3N/5ubm///////////
+////////////////////////////////////////////////////////////////////////////
+///////////Nzc3/m5ub////////////////////////////////////////////////////////
+/////////////////////////////////////////83Nzf+bm5v/////////////////////////
+////////////////////////////////////////////////////////////////////////zc3N
+/5ubm///////////////////////////////////////////////////////////////////////
+///////////////////////////Nzc3/m5ub////////////////////////////////////////
+/////////////////////////////////////////////////////////83Nzf+bm5v/////////
+////////////////////////////////////////////////////////////////////////////
+////////////zc3N/5ubm///////////////////////////////////////////////////////
+///////////////////////////////////////////Nzc3/m5ub////////////////////////
+/////////////////////////////////////////////////////////////////////////83N
+zf+bm5v/////////////////////////////////////////////////////////////////////
+////////////////////////////zc3N/5ubm///////////////////////////////////////
+///////////////////////////////////////////////////////////Nzc3/m5ub////////
+////////////////////////////////////////////////////////////////////////////
+/////////////83Nzf+bm5v/////////////////////////////////////////////////////
+////////////////////////////////////////////zs7O/5ubm///////////////////////
+//////////////////////////////////////z8/P////////////r6+v/7+/v/+/v7//z8/P/G
+xsb/kpKS//z8/P/8/Pz/+/v7//v7+//6+vr////////////9/f3//////////////////Pz8/3l5
+ef9zc3P/hISE/4KCgv+CgoL/g4OD/3V1df9paWn/g4OD/4KCgv+CgoL/goKC/4WFhf9ycnL/mJiY
+////////////////////////////sbGx/4ODg//9/f3/+fn5//n5+f/5+fn//Pz8///////5+fn/
++fn5//n5+f/6+vr/+vr6/35+fv/BwcH/////////////////////////////////goKC/8fHx///
+//////////////////////////////////////////////+wsLD/kZGR////////////////////
+///////////////////c3Nz/enp6//r6+v//////////////////////////////////////4eHh
+/3R0dP/v7+////////////////////////////////////////////+YmJj/q6ur////////////
+//////////////////////7+/v+CgoL/xcXF///////+/v7/////////////////////////////
+//////////Dw8P92dnb/5+fn////////////////////////////qqqq/5KSkv//////////////
+/////////////////////////////////////////////7a2tv+NjY3/////////////////////
+/9bW1v90dHT/9vb2////////////////////////////////////////////////////////////
+/f39/319ff/Ozs7////////////7+/v/e3t7/9TU1P//////////////////////////////////
+////////////////////////////////////19fX/3p6ev/7+/v//////6Ojo/+enp7/////////
+////////////////////////////////////////////////////////////////////////kpKS
+/7m5uf/f39//enp6//j4+P//////////////////////////////////////////////////////
+///////////////////////////u7u7/cnJy/2dnZ//W1tb/////////////////////////////
+//////////////////////////////////////////////////////////////+vr6//pqam////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////w==</data>
+                <bankdata>
+                  <byte-array reference="../../data"/>
+                </bankdata>
+              </dataBuffer>
+              <minX>0</minX>
+              <minY>0</minY>
+              <width>20</width>
+              <height>32</height>
+              <sampleModelTranslateX>0</sampleModelTranslateX>
+              <sampleModelTranslateY>0</sampleModelTranslateY>
+              <numBands>4</numBands>
+              <numDataElements>4</numDataElements>
+              <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+              <bandOffset>3</bandOffset>
+              <dataOffsets>
+                <int>3</int>
+                <int>2</int>
+                <int>1</int>
+                <int>0</int>
+              </dataOffsets>
+              <scanlineStride>80</scanlineStride>
+              <pixelStride>4</pixelStride>
+              <data reference="../dataBuffer/data"/>
+              <type>1</type>
+              <maxX defined-in="sun.awt.image.ByteComponentRaster">20</maxX>
+              <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+              <inOrder>false</inOrder>
+              <dbOffset>0</dbOffset>
+              <dbOffsetPacked>0</dbOffsetPacked>
+              <packed>false</packed>
+              <maxX>20</maxX>
+              <maxY>32</maxY>
+            </raster>
+          </image>
+        </electricalElements.Ground>
+        <electricalElements.Ground>
+          <type>GROUND</type>
+          <x>289</x>
+          <y>261</y>
+          <heigth>32</heigth>
+          <width>20</width>
+          <rect>
+            <x>259</x>
+            <y>231</y>
+            <width>80</width>
+            <height>92</height>
+          </rect>
+          <rectSelect>
+            <x>289</x>
+            <y>261</y>
+            <width>20</width>
+            <height>32</height>
+          </rectSelect>
+          <select>false</select>
+          <paramLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </paramLabel>
+          <idLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </idLabel>
+          <upEnd>true</upEnd>
+          <downEnd>false</downEnd>
+          <image>
+            <accelerationPriority>0.5</accelerationPriority>
+            <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+              <bImg reference="../.."/>
+              <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                <pData>520173920</pData>
+                <valid>true</valid>
+                <surfaceLost>false</surfaceLost>
+                <surfaceType reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/surfaceType"/>
+                <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+                <disposerReferent/>
+                <stateDelegate>
+                  <theState>STABLE</theState>
+                  <numDynamicAgents>0</numDynamicAgents>
+                </stateDelegate>
+                <haveLCDLoop>0</haveLCDLoop>
+                <havePgramXORLoop>0</havePgramXORLoop>
+                <havePgramSolidLoop>0</havePgramSolidLoop>
+                <bufImg reference="../../.."/>
+                <solidloops reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/solidloops"/>
+              </sdDefault>
+            </surfaceManager>
+            <imageType>6</imageType>
+            <colorModel class="java.awt.image.ComponentColorModel" reference="../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+            <raster class="sun.awt.image.ByteInterleavedRaster">
+              <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                <width>20</width>
+                <height>32</height>
+                <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                <dataType>0</dataType>
+                <bandOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </bandOffsets>
+                <bankIndices>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </bankIndices>
+                <numBands>4</numBands>
+                <numBanks>1</numBanks>
+                <scanlineStride>80</scanlineStride>
+                <pixelStride>4</pixelStride>
+              </sampleModel>
+              <dataBuffer class="java.awt.image.DataBufferByte">
+                <dataType>0</dataType>
+                <banks>1</banks>
+                <offset>0</offset>
+                <size>2560</size>
+                <offsets>
+                  <int>0</int>
+                </offsets>
+                <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                <data>////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////Pz8//v7+///////////////////////////
+///////////////////////////////////////////////////////////////////////U1NT/
+q6ur////////////////////////////////////////////////////////////////////////
+/////////////////////////8rKyv+Wlpb/////////////////////////////////////////
+////////////////////////////////////////////////////////zc3N/5ubm///////////
+////////////////////////////////////////////////////////////////////////////
+///////////Nzc3/m5ub////////////////////////////////////////////////////////
+/////////////////////////////////////////83Nzf+bm5v/////////////////////////
+////////////////////////////////////////////////////////////////////////zc3N
+/5ubm///////////////////////////////////////////////////////////////////////
+///////////////////////////Nzc3/m5ub////////////////////////////////////////
+/////////////////////////////////////////////////////////83Nzf+bm5v/////////
+////////////////////////////////////////////////////////////////////////////
+////////////zc3N/5ubm///////////////////////////////////////////////////////
+///////////////////////////////////////////Nzc3/m5ub////////////////////////
+/////////////////////////////////////////////////////////////////////////83N
+zf+bm5v/////////////////////////////////////////////////////////////////////
+////////////////////////////zc3N/5ubm///////////////////////////////////////
+///////////////////////////////////////////////////////////Nzc3/m5ub////////
+////////////////////////////////////////////////////////////////////////////
+/////////////83Nzf+bm5v/////////////////////////////////////////////////////
+////////////////////////////////////////////zs7O/5ubm///////////////////////
+//////////////////////////////////////z8/P////////////r6+v/7+/v/+/v7//z8/P/G
+xsb/kpKS//z8/P/8/Pz/+/v7//v7+//6+vr////////////9/f3//////////////////Pz8/3l5
+ef9zc3P/hISE/4KCgv+CgoL/g4OD/3V1df9paWn/g4OD/4KCgv+CgoL/goKC/4WFhf9ycnL/mJiY
+////////////////////////////sbGx/4ODg//9/f3/+fn5//n5+f/5+fn//Pz8///////5+fn/
++fn5//n5+f/6+vr/+vr6/35+fv/BwcH/////////////////////////////////goKC/8fHx///
+//////////////////////////////////////////////+wsLD/kZGR////////////////////
+///////////////////c3Nz/enp6//r6+v//////////////////////////////////////4eHh
+/3R0dP/v7+////////////////////////////////////////////+YmJj/q6ur////////////
+//////////////////////7+/v+CgoL/xcXF///////+/v7/////////////////////////////
+//////////Dw8P92dnb/5+fn////////////////////////////qqqq/5KSkv//////////////
+/////////////////////////////////////////////7a2tv+NjY3/////////////////////
+/9bW1v90dHT/9vb2////////////////////////////////////////////////////////////
+/f39/319ff/Ozs7////////////7+/v/e3t7/9TU1P//////////////////////////////////
+////////////////////////////////////19fX/3p6ev/7+/v//////6Ojo/+enp7/////////
+////////////////////////////////////////////////////////////////////////kpKS
+/7m5uf/f39//enp6//j4+P//////////////////////////////////////////////////////
+///////////////////////////u7u7/cnJy/2dnZ//W1tb/////////////////////////////
+//////////////////////////////////////////////////////////////+vr6//pqam////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////w==</data>
+                <bankdata>
+                  <byte-array reference="../../data"/>
+                </bankdata>
+              </dataBuffer>
+              <minX>0</minX>
+              <minY>0</minY>
+              <width>20</width>
+              <height>32</height>
+              <sampleModelTranslateX>0</sampleModelTranslateX>
+              <sampleModelTranslateY>0</sampleModelTranslateY>
+              <numBands>4</numBands>
+              <numDataElements>4</numDataElements>
+              <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+              <bandOffset>3</bandOffset>
+              <dataOffsets>
+                <int>3</int>
+                <int>2</int>
+                <int>1</int>
+                <int>0</int>
+              </dataOffsets>
+              <scanlineStride>80</scanlineStride>
+              <pixelStride>4</pixelStride>
+              <data reference="../dataBuffer/data"/>
+              <type>1</type>
+              <maxX defined-in="sun.awt.image.ByteComponentRaster">20</maxX>
+              <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+              <inOrder>false</inOrder>
+              <dbOffset>0</dbOffset>
+              <dbOffsetPacked>0</dbOffsetPacked>
+              <packed>false</packed>
+              <maxX>20</maxX>
+              <maxY>32</maxY>
+            </raster>
+          </image>
+        </electricalElements.Ground>
+        <electricalElements.Ground>
+          <type>GROUND</type>
+          <x>417</x>
+          <y>169</y>
+          <heigth>32</heigth>
+          <width>20</width>
+          <rect>
+            <x>387</x>
+            <y>139</y>
+            <width>80</width>
+            <height>92</height>
+          </rect>
+          <rectSelect>
+            <x>417</x>
+            <y>169</y>
+            <width>20</width>
+            <height>32</height>
+          </rectSelect>
+          <select>false</select>
+          <paramLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </paramLabel>
+          <idLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </idLabel>
+          <upEnd>true</upEnd>
+          <downEnd>true</downEnd>
+          <image>
+            <accelerationPriority>0.5</accelerationPriority>
+            <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+              <bImg reference="../.."/>
+              <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                <pData>520169696</pData>
+                <valid>true</valid>
+                <surfaceLost>false</surfaceLost>
+                <surfaceType reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/surfaceType"/>
+                <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+                <disposerReferent/>
+                <stateDelegate>
+                  <theState>STABLE</theState>
+                  <numDynamicAgents>0</numDynamicAgents>
+                </stateDelegate>
+                <haveLCDLoop>0</haveLCDLoop>
+                <havePgramXORLoop>0</havePgramXORLoop>
+                <havePgramSolidLoop>0</havePgramSolidLoop>
+                <bufImg reference="../../.."/>
+                <solidloops reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/solidloops"/>
+              </sdDefault>
+            </surfaceManager>
+            <imageType>6</imageType>
+            <colorModel class="java.awt.image.ComponentColorModel" reference="../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+            <raster class="sun.awt.image.ByteInterleavedRaster">
+              <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                <width>20</width>
+                <height>32</height>
+                <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                <dataType>0</dataType>
+                <bandOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </bandOffsets>
+                <bankIndices>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </bankIndices>
+                <numBands>4</numBands>
+                <numBanks>1</numBanks>
+                <scanlineStride>80</scanlineStride>
+                <pixelStride>4</pixelStride>
+              </sampleModel>
+              <dataBuffer class="java.awt.image.DataBufferByte">
+                <dataType>0</dataType>
+                <banks>1</banks>
+                <offset>0</offset>
+                <size>2560</size>
+                <offsets>
+                  <int>0</int>
+                </offsets>
+                <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                <data>////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////Pz8//v7+///////////////////////////
+///////////////////////////////////////////////////////////////////////U1NT/
+q6ur////////////////////////////////////////////////////////////////////////
+/////////////////////////8rKyv+Wlpb/////////////////////////////////////////
+////////////////////////////////////////////////////////zc3N/5ubm///////////
+////////////////////////////////////////////////////////////////////////////
+///////////Nzc3/m5ub////////////////////////////////////////////////////////
+/////////////////////////////////////////83Nzf+bm5v/////////////////////////
+////////////////////////////////////////////////////////////////////////zc3N
+/5ubm///////////////////////////////////////////////////////////////////////
+///////////////////////////Nzc3/m5ub////////////////////////////////////////
+/////////////////////////////////////////////////////////83Nzf+bm5v/////////
+////////////////////////////////////////////////////////////////////////////
+////////////zc3N/5ubm///////////////////////////////////////////////////////
+///////////////////////////////////////////Nzc3/m5ub////////////////////////
+/////////////////////////////////////////////////////////////////////////83N
+zf+bm5v/////////////////////////////////////////////////////////////////////
+////////////////////////////zc3N/5ubm///////////////////////////////////////
+///////////////////////////////////////////////////////////Nzc3/m5ub////////
+////////////////////////////////////////////////////////////////////////////
+/////////////83Nzf+bm5v/////////////////////////////////////////////////////
+////////////////////////////////////////////zs7O/5ubm///////////////////////
+//////////////////////////////////////z8/P////////////r6+v/7+/v/+/v7//z8/P/G
+xsb/kpKS//z8/P/8/Pz/+/v7//v7+//6+vr////////////9/f3//////////////////Pz8/3l5
+ef9zc3P/hISE/4KCgv+CgoL/g4OD/3V1df9paWn/g4OD/4KCgv+CgoL/goKC/4WFhf9ycnL/mJiY
+////////////////////////////sbGx/4ODg//9/f3/+fn5//n5+f/5+fn//Pz8///////5+fn/
++fn5//n5+f/6+vr/+vr6/35+fv/BwcH/////////////////////////////////goKC/8fHx///
+//////////////////////////////////////////////+wsLD/kZGR////////////////////
+///////////////////c3Nz/enp6//r6+v//////////////////////////////////////4eHh
+/3R0dP/v7+////////////////////////////////////////////+YmJj/q6ur////////////
+//////////////////////7+/v+CgoL/xcXF///////+/v7/////////////////////////////
+//////////Dw8P92dnb/5+fn////////////////////////////qqqq/5KSkv//////////////
+/////////////////////////////////////////////7a2tv+NjY3/////////////////////
+/9bW1v90dHT/9vb2////////////////////////////////////////////////////////////
+/f39/319ff/Ozs7////////////7+/v/e3t7/9TU1P//////////////////////////////////
+////////////////////////////////////19fX/3p6ev/7+/v//////6Ojo/+enp7/////////
+////////////////////////////////////////////////////////////////////////kpKS
+/7m5uf/f39//enp6//j4+P//////////////////////////////////////////////////////
+///////////////////////////u7u7/cnJy/2dnZ//W1tb/////////////////////////////
+//////////////////////////////////////////////////////////////+vr6//pqam////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////w==</data>
+                <bankdata>
+                  <byte-array reference="../../data"/>
+                </bankdata>
+              </dataBuffer>
+              <minX>0</minX>
+              <minY>0</minY>
+              <width>20</width>
+              <height>32</height>
+              <sampleModelTranslateX>0</sampleModelTranslateX>
+              <sampleModelTranslateY>0</sampleModelTranslateY>
+              <numBands>4</numBands>
+              <numDataElements>4</numDataElements>
+              <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+              <bandOffset>3</bandOffset>
+              <dataOffsets>
+                <int>3</int>
+                <int>2</int>
+                <int>1</int>
+                <int>0</int>
+              </dataOffsets>
+              <scanlineStride>80</scanlineStride>
+              <pixelStride>4</pixelStride>
+              <data reference="../dataBuffer/data"/>
+              <type>1</type>
+              <maxX defined-in="sun.awt.image.ByteComponentRaster">20</maxX>
+              <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+              <inOrder>false</inOrder>
+              <dbOffset>0</dbOffset>
+              <dbOffsetPacked>0</dbOffsetPacked>
+              <packed>false</packed>
+              <maxX>20</maxX>
+              <maxY>32</maxY>
+            </raster>
+          </image>
+        </electricalElements.Ground>
+        <electricalElements.Ground>
+          <type>GROUND</type>
+          <x>580</x>
+          <y>112</y>
+          <heigth>32</heigth>
+          <width>20</width>
+          <rect>
+            <x>550</x>
+            <y>82</y>
+            <width>80</width>
+            <height>92</height>
+          </rect>
+          <rectSelect>
+            <x>580</x>
+            <y>112</y>
+            <width>20</width>
+            <height>32</height>
+          </rectSelect>
+          <select>false</select>
+          <paramLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </paramLabel>
+          <idLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </idLabel>
+          <upEnd>true</upEnd>
+          <downEnd>true</downEnd>
+          <image>
+            <accelerationPriority>0.5</accelerationPriority>
+            <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+              <bImg reference="../.."/>
+              <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                <pData>520172768</pData>
+                <valid>true</valid>
+                <surfaceLost>false</surfaceLost>
+                <surfaceType reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/surfaceType"/>
+                <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+                <disposerReferent/>
+                <stateDelegate>
+                  <theState>STABLE</theState>
+                  <numDynamicAgents>0</numDynamicAgents>
+                </stateDelegate>
+                <haveLCDLoop>0</haveLCDLoop>
+                <havePgramXORLoop>0</havePgramXORLoop>
+                <havePgramSolidLoop>0</havePgramSolidLoop>
+                <bufImg reference="../../.."/>
+                <solidloops reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/solidloops"/>
+              </sdDefault>
+            </surfaceManager>
+            <imageType>6</imageType>
+            <colorModel class="java.awt.image.ComponentColorModel" reference="../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+            <raster class="sun.awt.image.ByteInterleavedRaster">
+              <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                <width>20</width>
+                <height>32</height>
+                <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                <dataType>0</dataType>
+                <bandOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </bandOffsets>
+                <bankIndices>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </bankIndices>
+                <numBands>4</numBands>
+                <numBanks>1</numBanks>
+                <scanlineStride>80</scanlineStride>
+                <pixelStride>4</pixelStride>
+              </sampleModel>
+              <dataBuffer class="java.awt.image.DataBufferByte">
+                <dataType>0</dataType>
+                <banks>1</banks>
+                <offset>0</offset>
+                <size>2560</size>
+                <offsets>
+                  <int>0</int>
+                </offsets>
+                <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                <data>////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////Pz8//v7+///////////////////////////
+///////////////////////////////////////////////////////////////////////U1NT/
+q6ur////////////////////////////////////////////////////////////////////////
+/////////////////////////8rKyv+Wlpb/////////////////////////////////////////
+////////////////////////////////////////////////////////zc3N/5ubm///////////
+////////////////////////////////////////////////////////////////////////////
+///////////Nzc3/m5ub////////////////////////////////////////////////////////
+/////////////////////////////////////////83Nzf+bm5v/////////////////////////
+////////////////////////////////////////////////////////////////////////zc3N
+/5ubm///////////////////////////////////////////////////////////////////////
+///////////////////////////Nzc3/m5ub////////////////////////////////////////
+/////////////////////////////////////////////////////////83Nzf+bm5v/////////
+////////////////////////////////////////////////////////////////////////////
+////////////zc3N/5ubm///////////////////////////////////////////////////////
+///////////////////////////////////////////Nzc3/m5ub////////////////////////
+/////////////////////////////////////////////////////////////////////////83N
+zf+bm5v/////////////////////////////////////////////////////////////////////
+////////////////////////////zc3N/5ubm///////////////////////////////////////
+///////////////////////////////////////////////////////////Nzc3/m5ub////////
+////////////////////////////////////////////////////////////////////////////
+/////////////83Nzf+bm5v/////////////////////////////////////////////////////
+////////////////////////////////////////////zs7O/5ubm///////////////////////
+//////////////////////////////////////z8/P////////////r6+v/7+/v/+/v7//z8/P/G
+xsb/kpKS//z8/P/8/Pz/+/v7//v7+//6+vr////////////9/f3//////////////////Pz8/3l5
+ef9zc3P/hISE/4KCgv+CgoL/g4OD/3V1df9paWn/g4OD/4KCgv+CgoL/goKC/4WFhf9ycnL/mJiY
+////////////////////////////sbGx/4ODg//9/f3/+fn5//n5+f/5+fn//Pz8///////5+fn/
++fn5//n5+f/6+vr/+vr6/35+fv/BwcH/////////////////////////////////goKC/8fHx///
+//////////////////////////////////////////////+wsLD/kZGR////////////////////
+///////////////////c3Nz/enp6//r6+v//////////////////////////////////////4eHh
+/3R0dP/v7+////////////////////////////////////////////+YmJj/q6ur////////////
+//////////////////////7+/v+CgoL/xcXF///////+/v7/////////////////////////////
+//////////Dw8P92dnb/5+fn////////////////////////////qqqq/5KSkv//////////////
+/////////////////////////////////////////////7a2tv+NjY3/////////////////////
+/9bW1v90dHT/9vb2////////////////////////////////////////////////////////////
+/f39/319ff/Ozs7////////////7+/v/e3t7/9TU1P//////////////////////////////////
+////////////////////////////////////19fX/3p6ev/7+/v//////6Ojo/+enp7/////////
+////////////////////////////////////////////////////////////////////////kpKS
+/7m5uf/f39//enp6//j4+P//////////////////////////////////////////////////////
+///////////////////////////u7u7/cnJy/2dnZ//W1tb/////////////////////////////
+//////////////////////////////////////////////////////////////+vr6//pqam////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////w==</data>
+                <bankdata>
+                  <byte-array reference="../../data"/>
+                </bankdata>
+              </dataBuffer>
+              <minX>0</minX>
+              <minY>0</minY>
+              <width>20</width>
+              <height>32</height>
+              <sampleModelTranslateX>0</sampleModelTranslateX>
+              <sampleModelTranslateY>0</sampleModelTranslateY>
+              <numBands>4</numBands>
+              <numDataElements>4</numDataElements>
+              <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+              <bandOffset>3</bandOffset>
+              <dataOffsets>
+                <int>3</int>
+                <int>2</int>
+                <int>1</int>
+                <int>0</int>
+              </dataOffsets>
+              <scanlineStride>80</scanlineStride>
+              <pixelStride>4</pixelStride>
+              <data reference="../dataBuffer/data"/>
+              <type>1</type>
+              <maxX defined-in="sun.awt.image.ByteComponentRaster">20</maxX>
+              <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+              <inOrder>false</inOrder>
+              <dbOffset>0</dbOffset>
+              <dbOffsetPacked>0</dbOffsetPacked>
+              <packed>false</packed>
+              <maxX>20</maxX>
+              <maxY>32</maxY>
+            </raster>
+          </image>
+        </electricalElements.Ground>
+        <electricalElements.Ground>
+          <type>GROUND</type>
+          <x>429</x>
+          <y>420</y>
+          <heigth>32</heigth>
+          <width>20</width>
+          <rect>
+            <x>399</x>
+            <y>390</y>
+            <width>80</width>
+            <height>92</height>
+          </rect>
+          <rectSelect>
+            <x>429</x>
+            <y>420</y>
+            <width>20</width>
+            <height>32</height>
+          </rectSelect>
+          <select>false</select>
+          <paramLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </paramLabel>
+          <idLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </idLabel>
+          <upEnd>true</upEnd>
+          <downEnd>true</downEnd>
+          <image>
+            <accelerationPriority>0.5</accelerationPriority>
+            <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+              <bImg reference="../.."/>
+              <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                <pData>520174048</pData>
+                <valid>true</valid>
+                <surfaceLost>false</surfaceLost>
+                <surfaceType reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/surfaceType"/>
+                <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+                <disposerReferent/>
+                <stateDelegate>
+                  <theState>STABLE</theState>
+                  <numDynamicAgents>0</numDynamicAgents>
+                </stateDelegate>
+                <haveLCDLoop>0</haveLCDLoop>
+                <havePgramXORLoop>0</havePgramXORLoop>
+                <havePgramSolidLoop>0</havePgramSolidLoop>
+                <bufImg reference="../../.."/>
+                <solidloops reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/solidloops"/>
+              </sdDefault>
+            </surfaceManager>
+            <imageType>6</imageType>
+            <colorModel class="java.awt.image.ComponentColorModel" reference="../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+            <raster class="sun.awt.image.ByteInterleavedRaster">
+              <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                <width>20</width>
+                <height>32</height>
+                <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                <dataType>0</dataType>
+                <bandOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </bandOffsets>
+                <bankIndices>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </bankIndices>
+                <numBands>4</numBands>
+                <numBanks>1</numBanks>
+                <scanlineStride>80</scanlineStride>
+                <pixelStride>4</pixelStride>
+              </sampleModel>
+              <dataBuffer class="java.awt.image.DataBufferByte">
+                <dataType>0</dataType>
+                <banks>1</banks>
+                <offset>0</offset>
+                <size>2560</size>
+                <offsets>
+                  <int>0</int>
+                </offsets>
+                <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                <data>////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////Pz8//v7+///////////////////////////
+///////////////////////////////////////////////////////////////////////U1NT/
+q6ur////////////////////////////////////////////////////////////////////////
+/////////////////////////8rKyv+Wlpb/////////////////////////////////////////
+////////////////////////////////////////////////////////zc3N/5ubm///////////
+////////////////////////////////////////////////////////////////////////////
+///////////Nzc3/m5ub////////////////////////////////////////////////////////
+/////////////////////////////////////////83Nzf+bm5v/////////////////////////
+////////////////////////////////////////////////////////////////////////zc3N
+/5ubm///////////////////////////////////////////////////////////////////////
+///////////////////////////Nzc3/m5ub////////////////////////////////////////
+/////////////////////////////////////////////////////////83Nzf+bm5v/////////
+////////////////////////////////////////////////////////////////////////////
+////////////zc3N/5ubm///////////////////////////////////////////////////////
+///////////////////////////////////////////Nzc3/m5ub////////////////////////
+/////////////////////////////////////////////////////////////////////////83N
+zf+bm5v/////////////////////////////////////////////////////////////////////
+////////////////////////////zc3N/5ubm///////////////////////////////////////
+///////////////////////////////////////////////////////////Nzc3/m5ub////////
+////////////////////////////////////////////////////////////////////////////
+/////////////83Nzf+bm5v/////////////////////////////////////////////////////
+////////////////////////////////////////////zs7O/5ubm///////////////////////
+//////////////////////////////////////z8/P////////////r6+v/7+/v/+/v7//z8/P/G
+xsb/kpKS//z8/P/8/Pz/+/v7//v7+//6+vr////////////9/f3//////////////////Pz8/3l5
+ef9zc3P/hISE/4KCgv+CgoL/g4OD/3V1df9paWn/g4OD/4KCgv+CgoL/goKC/4WFhf9ycnL/mJiY
+////////////////////////////sbGx/4ODg//9/f3/+fn5//n5+f/5+fn//Pz8///////5+fn/
++fn5//n5+f/6+vr/+vr6/35+fv/BwcH/////////////////////////////////goKC/8fHx///
+//////////////////////////////////////////////+wsLD/kZGR////////////////////
+///////////////////c3Nz/enp6//r6+v//////////////////////////////////////4eHh
+/3R0dP/v7+////////////////////////////////////////////+YmJj/q6ur////////////
+//////////////////////7+/v+CgoL/xcXF///////+/v7/////////////////////////////
+//////////Dw8P92dnb/5+fn////////////////////////////qqqq/5KSkv//////////////
+/////////////////////////////////////////////7a2tv+NjY3/////////////////////
+/9bW1v90dHT/9vb2////////////////////////////////////////////////////////////
+/f39/319ff/Ozs7////////////7+/v/e3t7/9TU1P//////////////////////////////////
+////////////////////////////////////19fX/3p6ev/7+/v//////6Ojo/+enp7/////////
+////////////////////////////////////////////////////////////////////////kpKS
+/7m5uf/f39//enp6//j4+P//////////////////////////////////////////////////////
+///////////////////////////u7u7/cnJy/2dnZ//W1tb/////////////////////////////
+//////////////////////////////////////////////////////////////+vr6//pqam////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////w==</data>
+                <bankdata>
+                  <byte-array reference="../../data"/>
+                </bankdata>
+              </dataBuffer>
+              <minX>0</minX>
+              <minY>0</minY>
+              <width>20</width>
+              <height>32</height>
+              <sampleModelTranslateX>0</sampleModelTranslateX>
+              <sampleModelTranslateY>0</sampleModelTranslateY>
+              <numBands>4</numBands>
+              <numDataElements>4</numDataElements>
+              <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+              <bandOffset>3</bandOffset>
+              <dataOffsets>
+                <int>3</int>
+                <int>2</int>
+                <int>1</int>
+                <int>0</int>
+              </dataOffsets>
+              <scanlineStride>80</scanlineStride>
+              <pixelStride>4</pixelStride>
+              <data reference="../dataBuffer/data"/>
+              <type>1</type>
+              <maxX defined-in="sun.awt.image.ByteComponentRaster">20</maxX>
+              <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+              <inOrder>false</inOrder>
+              <dbOffset>0</dbOffset>
+              <dbOffsetPacked>0</dbOffsetPacked>
+              <packed>false</packed>
+              <maxX>20</maxX>
+              <maxY>32</maxY>
+            </raster>
+          </image>
+        </electricalElements.Ground>
+        <electricalElements.Ground>
+          <type>GROUND</type>
+          <x>590</x>
+          <y>377</y>
+          <heigth>32</heigth>
+          <width>20</width>
+          <rect>
+            <x>560</x>
+            <y>347</y>
+            <width>80</width>
+            <height>92</height>
+          </rect>
+          <rectSelect>
+            <x>590</x>
+            <y>377</y>
+            <width>20</width>
+            <height>32</height>
+          </rectSelect>
+          <select>false</select>
+          <paramLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </paramLabel>
+          <idLabel serialization="custom">
+            <java.awt.Component>
+              <default>
+                <autoFocusTransferOnDisposal>true</autoFocusTransferOnDisposal>
+                <boundsOp>3</boundsOp>
+                <componentSerializedDataVersion>4</componentSerializedDataVersion>
+                <enabled>true</enabled>
+                <eventMask>4104</eventMask>
+                <focusTraversalKeysEnabled>true</focusTraversalKeysEnabled>
+                <focusable>true</focusable>
+                <height>0</height>
+                <ignoreRepaint>false</ignoreRepaint>
+                <isFocusTraversableOverridden>0</isFocusTraversableOverridden>
+                <isPacked>false</isPacked>
+                <maxSizeSet>false</maxSizeSet>
+                <minSizeSet>false</minSizeSet>
+                <nameExplicitlySet>false</nameExplicitlySet>
+                <newEventsOnly>true</newEventsOnly>
+                <prefSizeSet>false</prefSizeSet>
+                <valid>false</valid>
+                <visible>true</visible>
+                <width>0</width>
+                <x>0</x>
+                <y>0</y>
+                <background class="javax.swing.plaf.ColorUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/background"/>
+                <changeSupport serialization="custom">
+                  <java.beans.PropertyChangeSupport>
+                    <default>
+                      <source class="javax.swing.JLabel" reference="../../../../../.."/>
+                      <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                    </default>
+                    <null/>
+                  </java.beans.PropertyChangeSupport>
+                </changeSupport>
+                <font class="javax.swing.plaf.FontUIResource" reference="../../../../../electricalElements.Ground/paramLabel/java.awt.Component/default/font"/>
+                <foreground class="sun.swing.PrintColorUIResource" reference="../../../../../../../../java.awt.Component/default/foreground"/>
+                <locale reference="../../../../../../../../java.awt.Component/default/locale"/>
+              </default>
+              <null/>
+              <java.awt.ComponentOrientation reference="../../../../../../../java.awt.Component/java.awt.ComponentOrientation"/>
+              <null/>
+              <null/>
+            </java.awt.Component>
+            <java.awt.Container>
+              <default>
+                <ncomponents>0</ncomponents>
+                <component reference="../../../../../../../../java.awt.Container/default/component"/>
+                <focusCycleRoot>false</focusCycleRoot>
+                <containerSerializedDataVersion>1</containerSerializedDataVersion>
+                <focusTraversalPolicyProvider>false</focusTraversalPolicyProvider>
+              </default>
+              <null/>
+              <null/>
+            </java.awt.Container>
+            <javax.swing.JComponent>
+              <default>
+                <alignmentX>0.0</alignmentX>
+                <alignmentY>0.0</alignmentY>
+                <autoscrolls>false</autoscrolls>
+                <flags>8404992</flags>
+                <isAlignmentXSet>true</isAlignmentXSet>
+                <isAlignmentYSet>false</isAlignmentYSet>
+                <verifyInputWhenFocusTarget>true</verifyInputWhenFocusTarget>
+                <listenerList serialization="custom">
+                  <javax.swing.event.EventListenerList>
+                    <default/>
+                    <null/>
+                  </javax.swing.event.EventListenerList>
+                </listenerList>
+              </default>
+              <int>0</int>
+            </javax.swing.JComponent>
+            <javax.swing.JLabel>
+              <default>
+                <disabledIconSet>false</disabledIconSet>
+                <horizontalAlignment>10</horizontalAlignment>
+                <horizontalTextPosition>11</horizontalTextPosition>
+                <iconTextGap>4</iconTextGap>
+                <mnemonic>0</mnemonic>
+                <mnemonicIndex>-1</mnemonicIndex>
+                <verticalAlignment>0</verticalAlignment>
+                <verticalTextPosition>0</verticalTextPosition>
+                <text></text>
+              </default>
+            </javax.swing.JLabel>
+          </idLabel>
+          <upEnd>true</upEnd>
+          <downEnd>true</downEnd>
+          <image>
+            <accelerationPriority>0.5</accelerationPriority>
+            <surfaceManager class="sun.awt.image.BufImgSurfaceManager">
+              <bImg reference="../.."/>
+              <sdDefault class="sun.awt.image.BufImgSurfaceData">
+                <pData>520169568</pData>
+                <valid>true</valid>
+                <surfaceLost>false</surfaceLost>
+                <surfaceType reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/surfaceType"/>
+                <colorModel class="java.awt.image.ComponentColorModel" reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+                <disposerReferent/>
+                <stateDelegate>
+                  <theState>STABLE</theState>
+                  <numDynamicAgents>0</numDynamicAgents>
+                </stateDelegate>
+                <haveLCDLoop>0</haveLCDLoop>
+                <havePgramXORLoop>0</havePgramXORLoop>
+                <havePgramSolidLoop>0</havePgramSolidLoop>
+                <bufImg reference="../../.."/>
+                <solidloops reference="../../../../../electricalElements.Ground/image/surfaceManager/sdDefault/solidloops"/>
+              </sdDefault>
+            </surfaceManager>
+            <imageType>6</imageType>
+            <colorModel class="java.awt.image.ComponentColorModel" reference="../../../electricalElements.Ground/image/surfaceManager/sdDefault/colorModel"/>
+            <raster class="sun.awt.image.ByteInterleavedRaster">
+              <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+                <width>20</width>
+                <height>32</height>
+                <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+                <dataType>0</dataType>
+                <bandOffsets>
+                  <int>3</int>
+                  <int>2</int>
+                  <int>1</int>
+                  <int>0</int>
+                </bandOffsets>
+                <bankIndices>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                  <int>0</int>
+                </bankIndices>
+                <numBands>4</numBands>
+                <numBanks>1</numBanks>
+                <scanlineStride>80</scanlineStride>
+                <pixelStride>4</pixelStride>
+              </sampleModel>
+              <dataBuffer class="java.awt.image.DataBufferByte">
+                <dataType>0</dataType>
+                <banks>1</banks>
+                <offset>0</offset>
+                <size>2560</size>
+                <offsets>
+                  <int>0</int>
+                </offsets>
+                <theTrackable reference="../../../surfaceManager/sdDefault/stateDelegate"/>
+                <data>////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////Pz8//v7+///////////////////////////
+///////////////////////////////////////////////////////////////////////U1NT/
+q6ur////////////////////////////////////////////////////////////////////////
+/////////////////////////8rKyv+Wlpb/////////////////////////////////////////
+////////////////////////////////////////////////////////zc3N/5ubm///////////
+////////////////////////////////////////////////////////////////////////////
+///////////Nzc3/m5ub////////////////////////////////////////////////////////
+/////////////////////////////////////////83Nzf+bm5v/////////////////////////
+////////////////////////////////////////////////////////////////////////zc3N
+/5ubm///////////////////////////////////////////////////////////////////////
+///////////////////////////Nzc3/m5ub////////////////////////////////////////
+/////////////////////////////////////////////////////////83Nzf+bm5v/////////
+////////////////////////////////////////////////////////////////////////////
+////////////zc3N/5ubm///////////////////////////////////////////////////////
+///////////////////////////////////////////Nzc3/m5ub////////////////////////
+/////////////////////////////////////////////////////////////////////////83N
+zf+bm5v/////////////////////////////////////////////////////////////////////
+////////////////////////////zc3N/5ubm///////////////////////////////////////
+///////////////////////////////////////////////////////////Nzc3/m5ub////////
+////////////////////////////////////////////////////////////////////////////
+/////////////83Nzf+bm5v/////////////////////////////////////////////////////
+////////////////////////////////////////////zs7O/5ubm///////////////////////
+//////////////////////////////////////z8/P////////////r6+v/7+/v/+/v7//z8/P/G
+xsb/kpKS//z8/P/8/Pz/+/v7//v7+//6+vr////////////9/f3//////////////////Pz8/3l5
+ef9zc3P/hISE/4KCgv+CgoL/g4OD/3V1df9paWn/g4OD/4KCgv+CgoL/goKC/4WFhf9ycnL/mJiY
+////////////////////////////sbGx/4ODg//9/f3/+fn5//n5+f/5+fn//Pz8///////5+fn/
++fn5//n5+f/6+vr/+vr6/35+fv/BwcH/////////////////////////////////goKC/8fHx///
+//////////////////////////////////////////////+wsLD/kZGR////////////////////
+///////////////////c3Nz/enp6//r6+v//////////////////////////////////////4eHh
+/3R0dP/v7+////////////////////////////////////////////+YmJj/q6ur////////////
+//////////////////////7+/v+CgoL/xcXF///////+/v7/////////////////////////////
+//////////Dw8P92dnb/5+fn////////////////////////////qqqq/5KSkv//////////////
+/////////////////////////////////////////////7a2tv+NjY3/////////////////////
+/9bW1v90dHT/9vb2////////////////////////////////////////////////////////////
+/f39/319ff/Ozs7////////////7+/v/e3t7/9TU1P//////////////////////////////////
+////////////////////////////////////19fX/3p6ev/7+/v//////6Ojo/+enp7/////////
+////////////////////////////////////////////////////////////////////////kpKS
+/7m5uf/f39//enp6//j4+P//////////////////////////////////////////////////////
+///////////////////////////u7u7/cnJy/2dnZ//W1tb/////////////////////////////
+//////////////////////////////////////////////////////////////+vr6//pqam////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////w==</data>
+                <bankdata>
+                  <byte-array reference="../../data"/>
+                </bankdata>
+              </dataBuffer>
+              <minX>0</minX>
+              <minY>0</minY>
+              <width>20</width>
+              <height>32</height>
+              <sampleModelTranslateX>0</sampleModelTranslateX>
+              <sampleModelTranslateY>0</sampleModelTranslateY>
+              <numBands>4</numBands>
+              <numDataElements>4</numDataElements>
+              <theTrackable reference="../../surfaceManager/sdDefault/stateDelegate"/>
+              <bandOffset>3</bandOffset>
+              <dataOffsets>
+                <int>3</int>
+                <int>2</int>
+                <int>1</int>
+                <int>0</int>
+              </dataOffsets>
+              <scanlineStride>80</scanlineStride>
+              <pixelStride>4</pixelStride>
+              <data reference="../dataBuffer/data"/>
+              <type>1</type>
+              <maxX defined-in="sun.awt.image.ByteComponentRaster">20</maxX>
+              <maxY defined-in="sun.awt.image.ByteComponentRaster">32</maxY>
+              <inOrder>false</inOrder>
+              <dbOffset>0</dbOffset>
+              <dbOffsetPacked>0</dbOffsetPacked>
+              <packed>false</packed>
+              <maxX>20</maxX>
+              <maxY>32</maxY>
+            </raster>
+          </image>
+        </electricalElements.Ground>
+      </elements>
+      <lines>
+        <paket.CustomLine>
+          <x1>142</x1>
+          <x2>142</x2>
+          <y1>266</y1>
+          <y2>100</y2>
+          <up1>true</up1>
+          <up2>false</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[2]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>142</x1>
+          <x2>259</x2>
+          <y1>100</y1>
+          <y2>100</y2>
+          <up1>true</up1>
+          <up2>false</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[2]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>259</x1>
+          <x2>299</x2>
+          <y1>68</y1>
+          <y2>68</y2>
+          <up1>true</up1>
+          <up2>true</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[2]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[3]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>299</x1>
+          <x2>299</x2>
+          <y1>68</y1>
+          <y2>261</y2>
+          <up1>true</up1>
+          <up2>true</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[2]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[3]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>590</x1>
+          <x2>427</x2>
+          <y1>112</y1>
+          <y2>112</y2>
+          <up1>true</up1>
+          <up2>true</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[4]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[5]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>427</x1>
+          <x2>427</x2>
+          <y1>112</y1>
+          <y2>169</y2>
+          <up1>true</up1>
+          <up2>true</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[4]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[5]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>590</x1>
+          <x2>427</x2>
+          <y1>201</y1>
+          <y2>201</y2>
+          <up1>false</up1>
+          <up2>false</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[4]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[5]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>590</x1>
+          <x2>590</x2>
+          <y1>144</y1>
+          <y2>201</y2>
+          <up1>false</up1>
+          <up2>false</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[4]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[5]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>600</x1>
+          <x2>439</x2>
+          <y1>377</y1>
+          <y2>377</y2>
+          <up1>true</up1>
+          <up2>true</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[6]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[7]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>439</x1>
+          <x2>439</x2>
+          <y1>377</y1>
+          <y2>420</y2>
+          <up1>true</up1>
+          <up2>true</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[6]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[7]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>600</x1>
+          <x2>439</x2>
+          <y1>452</y1>
+          <y2>452</y2>
+          <up1>false</up1>
+          <up2>false</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[6]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[7]"/>
+        </paket.CustomLine>
+        <paket.CustomLine>
+          <x1>600</x1>
+          <x2>600</x2>
+          <y1>409</y1>
+          <y2>452</y2>
+          <up1>false</up1>
+          <up2>false</up2>
+          <down1>false</down1>
+          <down2>false</down2>
+          <e1 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[6]"/>
+          <e2 class="electricalElements.Ground" reference="../../../elements/electricalElements.Ground[7]"/>
+        </paket.CustomLine>
+      </lines>
+    </default>
+  </paket.Panel>
+</paket.Panel>

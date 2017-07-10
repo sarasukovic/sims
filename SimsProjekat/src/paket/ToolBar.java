@@ -24,6 +24,7 @@ public class ToolBar extends JToolBar {
 	public JCheckBox ser = new JCheckBox("Serial link");
 	public JCheckBox par = new JCheckBox("Parallel link");
 	public JButton deleteB = new JButton(new ImageIcon("images/delete.jpg"));
+	public JButton deleteC = new JButton("cut line");
 	public JButton moveB = new JButton(new ImageIcon("images/move.jpg"));
 	public JButton select = new JButton(new ImageIcon("images/select.jpg"));
 	public JButton addParams = new JButton(new ImageIcon("images/addP.jpg"));
@@ -63,6 +64,7 @@ public class ToolBar extends JToolBar {
 		voltageSrc.setToolTipText("Voltage source");
 		select.setToolTipText("Select element (elements) ");
 		deleteB.setToolTipText("Delete selected element (elements) ");
+		deleteC.setToolTipText("Cuts connections between selected elements");
 		moveB.setToolTipText("Move element");
 		addParams.setToolTipText("Add parameters for selected element");
 		connect.setToolTipText("Draw line between 2 selected elements");
@@ -84,6 +86,8 @@ public class ToolBar extends JToolBar {
 		add(par);
 		addSeparator();
 		add(addImageButton(deleteB));
+		addSeparator();
+		add(addImageButton(deleteC));
 		addSeparator();
 		add(addImageButton(moveB));
 		addSeparator();
