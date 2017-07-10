@@ -25,7 +25,6 @@ public class ToolBar extends JToolBar {
 	public JButton select = new JButton(new ImageIcon(getClass().getResource("/select.jpg")));
 	public JButton addParams = new JButton(new ImageIcon(getClass().getResource("/addP.jpg")));
 	public JButton connect = new JButton(new ImageIcon(getClass().getResource("/line.jpg")));
-	public JButton rotate = new JButton(new ImageIcon(getClass().getResource("/rotate.png")));
 	
 	protected List<JButton> buttons = new ArrayList<JButton>();
 	
@@ -94,7 +93,6 @@ public class ToolBar extends JToolBar {
 		addSeparator();
 		add(addImageButton(connect));
 		addSeparator();
-		add(addImageButton(rotate));
-		addSeparator();
+		
 	}	
 }
