@@ -34,6 +34,7 @@ public class Element {
 	public JLabel idLabel;
 	private boolean upEnd;
 	private boolean downEnd;
+	protected BufferedImage image;
 	
 	
 	public boolean isUpEnd() {
@@ -113,8 +114,6 @@ public class Element {
 		this.type = type;
 	}
 
-
-	private BufferedImage image;
 	public Element() {
 		upEnd = false;
 		downEnd = false;
@@ -138,13 +137,13 @@ public class Element {
 	}
 	public Element(String path) {
 		try {
-		       this.image = ImageIO.read(new File(path));
-		       if(path.compareTo("images/capacitor.png")==0) this.type = elementType.CAPACITOR;
-		       if(path.compareTo("images/currentSrc.png")==0) this.type = elementType.CURRENTSRC;
-		       if(path.compareTo("images/ground.png")==0) this.type = elementType.GROUND;
-		       if(path.compareTo("images/inductor.png")==0) this.type = elementType.INDUCTOR;
-		       if(path.compareTo("images/resistor.png")==0) this.type = elementType.RESISTOR;
-		       if(path.compareTo("images/voltageSrc.png")==0) this.type = elementType.VOLTAGESRC;
+		       this.image = ImageIO.read(getClass().getResource(path));
+		       if(path.compareTo("/capacitor.png")==0) this.type = elementType.CAPACITOR;
+		       if(path.compareTo("/currentSrc.png")==0) this.type = elementType.CURRENTSRC;
+		       if(path.compareTo("/ground.png")==0) this.type = elementType.GROUND;
+		       if(path.compareTo("/inductor.png")==0) this.type = elementType.INDUCTOR;
+		       if(path.compareTo("/resistor.png")==0) this.type = elementType.RESISTOR;
+		       if(path.compareTo("/voltageSrc.png")==0) this.type = elementType.VOLTAGESRC;
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
@@ -170,15 +169,15 @@ public class Element {
 		type = e.type;
 		this.select = e.select;
 		String path="";
-		 if(type == elementType.CAPACITOR) path = "images/capacitor.png";
-	       if(this.type == elementType.CURRENTSRC) path="images/currentSrc.png" ;
-	       if(this.type == elementType.GROUND) path="images/ground.png" ;
-	       if(this.type == elementType.INDUCTOR) path="images/inductor.png" ;
-	       if(this.type == elementType.RESISTOR) path="images/resistor.png" ;
-	       if(this.type == elementType.VOLTAGESRC) path="images/voltageSrc.png" ;
+		 if(type == elementType.CAPACITOR) path = "/capacitor.png";
+	       if(this.type == elementType.CURRENTSRC) path="/currentSrc.png" ;
+	       if(this.type == elementType.GROUND) path="/ground.png" ;
+	       if(this.type == elementType.INDUCTOR) path="/inductor.png" ;
+	       if(this.type == elementType.RESISTOR) path="/resistor.png" ;
+	       if(this.type == elementType.VOLTAGESRC) path="/voltageSrc.png" ;
 
 	       try {
-		       this.image = ImageIO.read(new File(path));
+		       this.image = ImageIO.read(getClass().getResource(path));
 		       
 		   } catch (IOException exc) {
 			   exc.printStackTrace();
@@ -218,17 +217,17 @@ public class Element {
 		this.y = y;
 		this.select = false;
 		try {
-		       this.image = ImageIO.read(new File(path));
+		       this.image = ImageIO.read(getClass().getResource(path));
 		       
 		   } catch (IOException e) {
 			   e.printStackTrace();
 		   }
-		 if(path.compareTo("images/capacitor.png")==1) this.type = elementType.CAPACITOR;
-	       if(path.compareTo("images/currentSrc.png")==1) this.type = elementType.CURRENTSRC;
-	       if(path.compareTo("images/ground.png")==1) this.type = elementType.GROUND;
-	       if(path.compareTo("images/inductor.png")==1) this.type = elementType.INDUCTOR;
-	       if(path.compareTo("images/resistor.png")==1) this.type = elementType.RESISTOR;
-	       if(path.compareTo("images/voltageSrc.png")==1) this.type = elementType.VOLTAGESRC;
+		 if(path.compareTo("/capacitor.png")==1) this.type = elementType.CAPACITOR;
+	       if(path.compareTo("/currentSrc.png")==1) this.type = elementType.CURRENTSRC;
+	       if(path.compareTo("/ground.png")==1) this.type = elementType.GROUND;
+	       if(path.compareTo("/inductor.png")==1) this.type = elementType.INDUCTOR;
+	       if(path.compareTo("/resistor.png")==1) this.type = elementType.RESISTOR;
+	       if(path.compareTo("/voltageSrc.png")==1) this.type = elementType.VOLTAGESRC;
 
 	    this.heigth = image.getHeight();
 		this.width =image.getWidth();
@@ -253,7 +252,5 @@ public class Element {
 			return false;
 		return true;
 	}
-	
-	
 }
 

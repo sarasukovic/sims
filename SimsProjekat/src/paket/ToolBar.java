@@ -11,21 +11,21 @@ import javax.swing.JToolBar;
 
 
 public class ToolBar extends JToolBar {
-	public JButton capacitor = new JButton(new ImageIcon("images/capacitor.png"));
-	public JButton currentSrc = new JButton(new ImageIcon("images/currentSrc.png"));
-	public JButton ground= new JButton(new ImageIcon("images/ground.png"));
-	public JButton inductor = new JButton(new ImageIcon("images/inductor.png"));
-	public JButton resistor = new JButton(new ImageIcon("images/resistor.png"));
-	public JButton voltageSrc = new JButton(new ImageIcon("images/voltageSrc.png"));
+	public JButton capacitor = new JButton(new ImageIcon(getClass().getResource("/capacitor.png")));
+	public JButton currentSrc = new JButton(new ImageIcon(getClass().getResource("/currentSrc.png")));
+	public JButton ground= new JButton(new ImageIcon(getClass().getResource("/ground.png")));
+	public JButton inductor = new JButton(new ImageIcon(getClass().getResource("/inductor.png")));
+	public JButton resistor = new JButton(new ImageIcon(getClass().getResource("/resistor.png")));
+	public JButton voltageSrc = new JButton(new ImageIcon(getClass().getResource("/voltageSrc.png")));
 	public JCheckBox ser = new JCheckBox("Serial link");
 	public JCheckBox par = new JCheckBox("Parallel link");
-	public JButton deleteB = new JButton(new ImageIcon("images/delete.jpg"));
-	public JButton deleteC = new JButton(new ImageIcon("images/cut.jpg"));
-	public JButton moveB = new JButton(new ImageIcon("images/move.jpg"));
-	public JButton select = new JButton(new ImageIcon("images/select.jpg"));
-	public JButton addParams = new JButton(new ImageIcon("images/addP.jpg"));
-	public JButton connect = new JButton(new ImageIcon("images/line.jpg"));
-	public JButton rotate = new JButton(new ImageIcon("images/rotate.png"));
+	public JButton deleteB = new JButton(new ImageIcon(getClass().getResource("/delete.jpg")));
+	public JButton deleteC = new JButton(new ImageIcon(getClass().getResource("/cut.jpg")));
+	public JButton moveB = new JButton(new ImageIcon(getClass().getResource("/move.jpg")));
+	public JButton select = new JButton(new ImageIcon(getClass().getResource("/select.jpg")));
+	public JButton addParams = new JButton(new ImageIcon(getClass().getResource("/addP.jpg")));
+	public JButton connect = new JButton(new ImageIcon(getClass().getResource("/line.jpg")));
+	public JButton rotate = new JButton(new ImageIcon(getClass().getResource("/rotate.png")));
 	
 	protected List<JButton> buttons = new ArrayList<JButton>();
 	

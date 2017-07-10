@@ -13,22 +13,22 @@ public class AddElement extends State {
 	@Override
 	public void doAction(){
 		if(editor.getEvent().getActionCommand() == Element.elementType.GROUND.name()){
-    		editor.setElementOnPanel(new Ground("images/ground.png"));
+    		editor.setElementOnPanel(new Ground("/ground.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.CAPACITOR.name()){
-    		editor.setElementOnPanel(new Capacitor("images/capacitor.png"));
+    		editor.setElementOnPanel(new Capacitor("/capacitor.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.VOLTAGESRC.name()){
-    		editor.setElementOnPanel(new VoltageSource("images/voltageSrc.png"));
+    		editor.setElementOnPanel(new VoltageSource("/voltageSrc.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.CURRENTSRC.name()){
-    		editor.setElementOnPanel(new CurrentSource("images/currentSrc.png"));
+    		editor.setElementOnPanel(new CurrentSource("/currentSrc.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.INDUCTOR.name()){
-    		editor.setElementOnPanel(new Inductor("images/inductor.png"));
+    		editor.setElementOnPanel(new Inductor("/inductor.png"));
     	}
     	else if(editor.getEvent().getActionCommand() == Element.elementType.RESISTOR.name()){
-    		editor.setElementOnPanel(new Resistor("images/resistor.png"));
+    		editor.setElementOnPanel(new Resistor("/resistor.png"));
     	}else{
     		JOptionPane.showMessageDialog(null, "Symbol is not chosen ",
     				"InfoBox: " + "Error",	JOptionPane.INFORMATION_MESSAGE);
