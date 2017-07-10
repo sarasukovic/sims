@@ -142,8 +142,8 @@ public class Editor extends JFrame implements ActionListener{
 		String oldId = null;
 		float old = 0;
 		if(elem instanceof Ground){
-			return;
-			
+			JOptionPane.showMessageDialog(null, "Ground has no parameters!");
+
 		}else if(elem instanceof Capacitor){
 			ret = JOptionPane.showInputDialog("Please input capacity (μF): ");
 			old = ((Capacitor) elem).getCapacity();
@@ -739,7 +739,6 @@ public class Editor extends JFrame implements ActionListener{
     	}else if(event.getActionCommand() == "moveElement") {
     		setState(new MoveElement(Editor.this));
     		activeState.doAction();
-    		
     	}
     	else{
     		panel.removeMouseListener(mouseListener2);
