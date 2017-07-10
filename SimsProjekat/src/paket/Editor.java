@@ -391,7 +391,7 @@ public class Editor extends JFrame implements ActionListener{
 		setMinimumSize(new Dimension(400, 300));
 		setLocationRelativeTo(null);
 		setTitle("ADMS Editor");
-		ImageIcon img = new ImageIcon("images/icon.jpg");
+		ImageIcon img = new ImageIcon(getClass().getResource("/icon.jpg"));
 		setIconImage(img.getImage());
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		addWindowListener(new WindowAdapter() {
@@ -466,7 +466,6 @@ public class Editor extends JFrame implements ActionListener{
 						else{
 							l.getE2().setDownEnd(false);
 						}
-						System.out.println(panel.getLines().indexOf(l));
 						indeksi.add(panel.getLines().indexOf(l));		
 					}
 				}
